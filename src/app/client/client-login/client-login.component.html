@@ -1,0 +1,35 @@
+<div class="login-form-container">
+    <div class="container-form">
+     <div>
+         <h3><b>Login now</b></h3>
+        <form class="login-form">
+            <mat-form-field class="input-field">
+                <mat-label>User account</mat-label>
+                <input  autocomplete="off" matInput>
+            </mat-form-field>
+            <mat-form-field class="input-field">
+                <mat-label>User password</mat-label>
+                <input  type="password" autocomplete="off"  matInput>
+            </mat-form-field>
+        </form>
+    
+    <div class="group-buttons">
+        <div class="register-account">
+            <a href="register-account">Don't have an account? Click here!</a>
+        </div>
+        <div class="basic-login">
+            <button  routerLinkActive="router-link-active" [routerLink]="['/client/admin']" routerLinkActive="router-link-active" > <i class="fas fa-sign-in-alt"></i> Login</button>
+        </div>
+        <br>
+        <hr>
+        <div class="social-login">
+            <button  class="login-fb" >
+                <div><i class="fab fa-facebook-square"></i></div>
+                <p>Continue with Facebook</p></button>
+            <button class="login-google">
+                <i class="fab fa-google-plus-square"></i>
+                <p>Continue with Google</p></button>
+        </div>
+    </div>
+    </div>
+</div>

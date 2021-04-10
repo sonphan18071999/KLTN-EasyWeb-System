@@ -1,0 +1,42 @@
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="../../../assets/images/LogoEasyWeb_02.png" width="150px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li  class="nav-item active">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      
+      <div class="input-group my-4 col-5 mx-auto">
+        <input class="form-control py-2 border-right-0 border" type="search" placeholder="Type something..." id="example-search-input">
+        <span class="input-group-append">
+            <button class="btn" type="button">
+                <i class="fas fa-search"></i>
+            </button>
+           
+        </span>
+    </div>
+
+      <button *ngIf="!isLogged" class="button-loggin" routerLink='/login' routerLinkActive="router-link-active" > Login <i class="fas fa-chevron-right"></i></button>
+    </div>
+  </nav> -->
+  <div class="Header-Container">
+    <img src="../../../assets/images/LogoEasyWeb_02.png" >
+    <ul>
+      <li>Home</li>
+      <li>Discovery</li>
+      <li>Inspiration</li>
+    </ul>
+    <button *ngIf="!isLogged" class="button-loggin" routerLink='/login' routerLinkActive="router-link-active" > Login <i class="fas fa-chevron-right"></i></button>
+    
+  </div>

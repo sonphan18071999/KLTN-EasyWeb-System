@@ -1,0 +1,87 @@
+.Preview-Website-Container{
+    width: 1280px;
+    height: 270px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 20px;
+    border-radius: 10px;
+    display: block;
+    margin-top: 5px;
+}
+.Preivew-Website-Upper{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+}
+.Preview-Square{
+    width: 180px;
+    height: 180px;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+.Preview-Square h2{
+    padding-left: 15px;
+    padding-top: 50px;
+    font-size: 20px;
+}
+.Preview-Square-Below{
+    width: 100%;
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: gray;
+    margin-top: 67px;
+    text-align: center;
+    color: white;
+}
+.Preview-Square-Below label{
+    margin-top: 5px;
+}
+.Preview-Website-Name{
+    margin-left: 20px;
+    display: flex;
+}
+.btn-site-action{
+    border-radius: 50px;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 640px;
+}
+.btn-site-action i{
+    font-size: 20px;
+    padding-left: 5px;
+    
+}
+.btn-site-action:hover{
+    background-color: black;
+    color: white;
+}
+.Preview-Website-Name hr{
+    width: 1030px;
+    background-color: black;
+    position: absolute;
+    margin-top: 180px;
+
+}
+.Preview-Website-Below{
+    margin-top: 10px;
+    display: flex;
+    text-align: left;
+}
+.Preview-Website-Below-Item{
+    display: block;
+    width: 250px;
+}
+.Preview-Webiste-Below-Item-Devider{
+    width: 2px;
+    height: 40px;
+    background-color: gray;
+}
+
+.row{
+    margin-left:-78px;
+}

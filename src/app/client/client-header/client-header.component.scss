@@ -1,0 +1,100 @@
+// ul li a{
+//     color: rgb(7,65,91);
+//     padding: 20px;
+//     font-size: 18px;
+// }
+// ul li a:hover{
+//     color: rgb(37, 150, 202);
+// }
+
+// i{
+//     font-size: 13px;
+// }
+
+// .navbar{
+//     color: white;
+//     padding-bottom: 10px;
+// }
+// .form-inline .form-control{
+//     width: 350px;
+//     margin-left: 200px;
+// }
+// .btn-search{
+//     color: white;
+//     padding: 5px 20px 5px 20px;
+//     border-radius: 5px;
+//     border-color: white;
+//     border-width: 1px ;
+// }
+// .btn-search:hover{
+//     background-color: rgb(10,143,244);
+// }
+// .form-control{
+//     border-radius: 20px;
+//     border-width: 0px;
+//     width: 200px;
+// }
+// .input-group-text{
+//     border-radius: 20px 0px 0px 20px;
+//     width: 50px;
+// }
+// .btn{
+//     border-color: white;
+//     border-width: 1px;
+//     border-style: solid;
+//     color: white;
+//     border-radius: 0px 20px 20px 0px;
+// }
+// .btn:hover{
+//     background-color: rgb(10,143,244);
+// }
+// .navbar-brand{
+//     width: 150px;
+// }
+.Header-Container{
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    display: flex;
+}
+.Header-Container ul{
+    display: flex;
+    color: white;
+    margin-top: 30px;
+    padding-left: 550px;
+}
+.Header-Container ul li{
+    list-style: none;
+    margin-right: 70px;
+    font-size: 18px;
+}
+.Header-Container ul li:hover{
+    color: rgb(218, 102, 204);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button-loggin{
+    margin-top: 20px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    color: rgb(218, 102, 204);
+    border-color: rgb(218, 102, 204);
+    border-width: 1px;
+    border-style: solid;
+    height: 40px;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-left: 150px;
+    width: 150px;
+}
+.button-loggin:hover{
+    background-color: rgb(10,143,244);
+    color: white;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+}
+.Header-Container img{
+    margin-left:30px ;
+    width: 200px;
+}
