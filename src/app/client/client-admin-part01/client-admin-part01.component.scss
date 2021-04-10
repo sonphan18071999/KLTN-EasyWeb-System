@@ -5,11 +5,14 @@
     border-style: solid;
     border-width: 2px;
     margin-left: 20px;
-    border-radius: 10px;
     margin-top: 10px;
     display: block;
     margin-bottom: 20px;
+    overflow-x: hidden;
 
+}
+*{
+    color: rgb(161, 214, 243);
 }
 h2{
     margin-top: 20px;
@@ -18,7 +21,6 @@ h2{
 .Client-Admin-Part01{
     margin-left: 20px;
     width: 1235px;
-    background-color: gray;
     height: 840px;
     border-radius: 10px;
 }

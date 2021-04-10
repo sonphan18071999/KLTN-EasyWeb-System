@@ -25,6 +25,9 @@ import { ClientAdminPart04Component } from './client/client-admin-part04/client-
 import { ClientPreviewWebsiteComponent } from './client/client-preview-website/client-preview-website.component';
 import { ClientProgressBarPartsComponent } from './client/client-progress-bar-parts/client-progress-bar-parts.component';
 import { ClientHeaderAfterLoginComponent } from './client/client-header-after-login/client-header-after-login.component';
+import { ClientAdminDashboardComponent } from './client/client-admin-dashboard/client-admin-dashboard.component';
+import { ClientAdminDashboardHeaderComponent } from './client/client-admin-dashboard-header/client-admin-dashboard-header.component';
+import { ClientAdminDashboardNavigationComponent } from './client/client-admin-dashboard-navigation/client-admin-dashboard-navigation.component';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import { ClientHeaderAfterLoginComponent } from './client/client-header-after-lo
     ClientPreviewWebsiteComponent,
     ClientProgressBarPartsComponent,
     ClientHeaderAfterLoginComponent,
+    ClientAdminDashboardComponent,
+    ClientAdminDashboardHeaderComponent,
+    ClientAdminDashboardNavigationComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+
+.navigation-container{
+    width: 290px;
+    background-color: #24303C;
+    height: 100%;
+}
+ul{
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+ul li{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: rgb(82, 181, 235);
+    font-size: 18px;
+    height: 60px;
+}
+
+ul li i{
+    float:left;
+    padding-left: 50px;
+    margin-right: -100px;
+    color: rgb(82, 181, 235);
+    font-size: 20px;
+}
+span{
+    float: left;
+    margin-left: 110px;
+}
+
+ul li:hover{
+    cursor: pointer;
+    background-color:  rgb(172, 64, 172);
+    color: white;
+}
+
+
+.button-exit{
+    position: absolute;
+    bottom: 0px;
+}
+

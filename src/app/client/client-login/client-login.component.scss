@@ -2,7 +2,7 @@
 
 .login-form-container{
 
-    background-image: url(../../../assets/images/banner-with-surprised-children-peeking-edge.jpg);
+    background-image: url(../../../assets/images/2635178.jpg);
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -10,16 +10,17 @@
   }
   
   .container-form{
-    border-radius: 4px;
     margin-top: 100px;
     margin-left: 100px;
     width: 25%;
-    height: 80%;
+    height: 83%;
     background-color: white;
   }
   .container-form h3{
-  padding: 30px;
+  padding:30px 30px 0px 30px;
   font-size: 30px;
+  text-align: center;
+  color: rgb(56,154,214);
   }
   
   .container-form .group-buttons{
@@ -39,6 +40,7 @@
   .input-field {
     width: 100%;
     margin: auto;
+    color: rgb(56,154,214);
   }
   .mat-form-field-wrapper {
     margin-left: 30%;
@@ -49,21 +51,7 @@
   .basic-login{
     margin-top: 10px;
   }
-  .basic-login button{
-      border-radius: 25px;
-      border-style: solid;
-      border-color: rgb(17,109,255);
-      border-width: 2px;
-      background-color: transparent;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      width: 100%;
-      color: rgb(17,109,255);
-  }
-  .basic-login button:hover{
-      background-color: rgb(105, 157, 241);
-      color: white;
-  }
+
   .check-is-admin{
     padding-left: 26px;
   }
@@ -101,3 +89,38 @@
     padding-top: 15px;
 }
 
+.btn {
+  width: 280px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  color: rgb(56,154,214);
+}
+svg {
+  position: absolute;
+  left: 130px;
+  top: 408px;
+  fill: none;
+  stroke: rgb(158,84,161);
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+  
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  color: rgb(158,84,161);
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+.logo{
+  margin-left: 20px;
+  margin-top: 20px;
+  
+}

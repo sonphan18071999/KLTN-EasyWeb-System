@@ -1,14 +1,16 @@
 <div class="login-form-container">
     <div class="container-form">
      <div>
-         <h3><b>Login now</b></h3>
+        <img class="logo" src="../../../assets/images/LogoEasyWeb_02.png" width="100px" height="40px">
+        <h3><b>Login now</b></h3>
+
         <form class="login-form">
             <mat-form-field class="input-field">
-                <mat-label>User account</mat-label>
+                <mat-label> Account</mat-label>
                 <input  autocomplete="off" matInput>
             </mat-form-field>
             <mat-form-field class="input-field">
-                <mat-label>User password</mat-label>
+                <mat-label> Password</mat-label>
                 <input  type="password" autocomplete="off"  matInput>
             </mat-form-field>
         </form>
@@ -18,7 +20,13 @@
             <a href="register-account">Don't have an account? Click here!</a>
         </div>
         <div class="basic-login">
-            <button  routerLinkActive="router-link-active" [routerLink]="['/client/admin']" routerLinkActive="router-link-active" > <i class="fas fa-sign-in-alt"></i> Login</button>
+            <button class="btn" routerLinkActive="router-link-active" [routerLink]="['/client/admin/']" routerLinkActive="router-link-active" > 
+                <svg width="280px" height="60px" viewBox="0 0 280 60" class="border">
+                    <polyline points="279,1 279,59 1,59 1,1 279,1" class="bg-line" />
+                    <polyline points="279,1 279,59 1,59 1,1 279,1" class="hl-line" />
+                </svg>
+                Login
+            </button>
         </div>
         <br>
         <hr>
