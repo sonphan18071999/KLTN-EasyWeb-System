@@ -1,7 +1,7 @@
 .header{
     display: flex;
-    height: 300px;
-    width: 100%;
+    width: 1024px;
+    height: 768px;
     background-color: #1E2B32;
 }
 .logo{
@@ -16,7 +16,7 @@
     margin-top: 50px;
     background-color: rgb(44,56,68);
     height: 55px;
-    width: 1180px;
+    width: 700px;
     margin-right: 20px;
 
 }
@@ -33,7 +33,7 @@
     color: rgb(54,159,217);
     background-color: transparent;
     border-color: transparent;
-    width: 1100px;
+    width: 700px;
     height: 60px;
     font-size: 18px;
 }
@@ -71,7 +71,7 @@ i{
     position: absolute;
     color: rgb(183,80,171);
     top: 165px;
-    left: 290px;
+    left: 374px;
 }
 .title h2{
     font-size: 20px;
@@ -83,14 +83,17 @@ i{
     .header{
         display: flex;
         height: 300px;
-        width: 1440px;
+        width: 1365px;
         background-color: #1E2B32;
+        overflow: hidden;
+
+
     }
     .search-bar{
     margin-top: 50px;
     background-color: rgb(44,56,68);
     height: 55px;
-    width: 900px;
+    width: 800px;
     margin-right: 20px;
     }
 
@@ -107,7 +110,7 @@ i{
         color: rgb(54,159,217);
         background-color: transparent;
         border-color: transparent;
-        width: 840px;
+        width: 760px;
         height: 60px;
         font-size: 18px;
     }

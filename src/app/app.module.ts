@@ -30,6 +30,7 @@ import { ClientAdminDashboardIndexComponent } from './client/client-admin-dashbo
 import { ClientAdminDashboardIndexSquaresComponent } from './client/client-admin-dashboard-index-squares/client-admin-dashboard-index-squares.component';
 import { ChartsModule } from 'ng2-charts';
 import { ClientAdminDashboardIndexChartVerticalComponent } from './client/client-admin-dashboard-index-chart-vertical/client-admin-dashboard-index-chart-vertical.component';
+import { ClientAdminDashboardIndexDoughnutChartComponent } from './client/client-admin-dashboard-index-doughnut-chart/client-admin-dashboard-index-doughnut-chart.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ClientAdminDashboardIndexChartVerticalComponent } from './client/client
     ClientAdminDashboardIndexComponent,
     ClientAdminDashboardIndexSquaresComponent,
     ClientAdminDashboardIndexChartVerticalComponent,
+    ClientAdminDashboardIndexDoughnutChartComponent,
   ],
   imports: [
     BrowserModule,

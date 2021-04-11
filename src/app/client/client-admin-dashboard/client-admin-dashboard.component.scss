@@ -1,31 +1,35 @@
+.asjdhaksjhasjkd{
+    width: 1400px;
+    height: 720px;
+    overflow: hidden;
+}
 .admin-navigation{
     position: absolute;
     top: 210px;
-    height:610px;
-    
+    height: 460px;
 }
 .admin-container{
     margin-left: 290px;
     overflow-y: scroll;
     position: absolute;
     top: 210px;
-    height: 610px;
+    height: 440px;
     background-color: rgb(44,56,68);
-    width: 1417px;
+    width: 917px;
 }
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1430px){
     .admin-navigation{
         position: absolute;
         top: 210px;
-        height:610px;
+        height: 460px;
     }
     .admin-container{
         margin-left: 290px;
         overflow-y: scroll;
         position: absolute;
         top: 210px;
-        height: 610px;
+        height: 430px;
         background-color: rgb(44,56,68);
-        width: 1150px;
+        width: 1080px;
     }
 }

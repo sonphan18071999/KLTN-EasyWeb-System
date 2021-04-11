@@ -2,11 +2,15 @@
 @media only screen and (max-width: 1440px) {
     .dashboard-index-container{
         padding: 20px;
-        width: 1150px;
+        width: 990px;
+        height: 650px;       
+
     }
     .dashboard-card-upper{
-        width: 1150px;
-        background: rgb(36,48,60);
-        height: 200px;
+        width: 990px;
+        height: 180px;
+    }
+    .graph{
+        display: flex;
     }
 }

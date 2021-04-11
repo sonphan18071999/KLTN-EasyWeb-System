@@ -2,7 +2,8 @@
 .navigation-container{
     width: 290px;
     background-color: #24303C;
-    height: 100%;
+    height: 430px;
+    overflow-x: hidden;
 }
 ul{
     list-style: none;
@@ -40,7 +41,8 @@ ul li:hover{
 
 
 .button-exit{
-    position: absolute;
+    position: relative;
     bottom: 0px;
+    
 }
 
