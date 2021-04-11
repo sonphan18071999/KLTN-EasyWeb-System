@@ -4,20 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule} from './material.module'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClientHomepageComponent } from './client/client-homepage/client-homepage.component';
-import { ClientHeaderComponent } from './client/client-header/client-header.component';
-import { ClientFooterComponent } from './client/client-footer/client-footer.component';
-import { ClientLoginComponent } from './client/client-login/client-login.component';
+import { ClientHomepageComponent } from './client/guess/client-homepage/client-homepage.component';
+import { ClientHeaderComponent } from './client/guess/client-header/client-header.component';
+import { ClientFooterComponent } from './client/guess/client-footer/client-footer.component';
+import { ClientLoginComponent } from './client/guess/client-login/client-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ClientIndexComponent } from './client/client-index/client-index.component';
-import { ClientAdminComponent } from './client/client-admin/client-admin.component';
+import { ClientIndexComponent } from './client/guess/client-index/client-index.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ClientDashboardComponent } from './client/client-dashboard/client-dashboard.component';
 import { ClientAdminPart01Component } from './client/client-admin-part01/client-admin-part01.component';
 import { ClientAdminPart02Component } from './client/client-admin-part02/client-admin-part02.component';
 import { ClientAdminPart03Component } from './client/client-admin-part03/client-admin-part03.component';
@@ -28,7 +26,10 @@ import { ClientHeaderAfterLoginComponent } from './client/client-header-after-lo
 import { ClientAdminDashboardComponent } from './client/client-admin-dashboard/client-admin-dashboard.component';
 import { ClientAdminDashboardHeaderComponent } from './client/client-admin-dashboard-header/client-admin-dashboard-header.component';
 import { ClientAdminDashboardNavigationComponent } from './client/client-admin-dashboard-navigation/client-admin-dashboard-navigation.component';
-
+import { ClientAdminDashboardIndexComponent } from './client/client-admin-dashboard-index/client-admin-dashboard-index.component';
+import { ClientAdminDashboardIndexSquaresComponent } from './client/client-admin-dashboard-index-squares/client-admin-dashboard-index-squares.component';
+import { ChartsModule } from 'ng2-charts';
+import { ClientAdminDashboardIndexChartVerticalComponent } from './client/client-admin-dashboard-index-chart-vertical/client-admin-dashboard-index-chart-vertical.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +39,6 @@ import { ClientAdminDashboardNavigationComponent } from './client/client-admin-d
     ClientFooterComponent,
     ClientLoginComponent,
     ClientIndexComponent,
-    ClientAdminComponent,
-    ClientDashboardComponent,
     ClientAdminPart01Component,
     ClientAdminPart02Component,
     ClientAdminPart03Component,
@@ -50,6 +49,9 @@ import { ClientAdminDashboardNavigationComponent } from './client/client-admin-d
     ClientAdminDashboardComponent,
     ClientAdminDashboardHeaderComponent,
     ClientAdminDashboardNavigationComponent,
+    ClientAdminDashboardIndexComponent,
+    ClientAdminDashboardIndexSquaresComponent,
+    ClientAdminDashboardIndexChartVerticalComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { ClientAdminDashboardNavigationComponent } from './client/client-admin-d
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

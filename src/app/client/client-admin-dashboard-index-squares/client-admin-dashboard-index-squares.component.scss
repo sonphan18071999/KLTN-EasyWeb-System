@@ -1,0 +1,40 @@
+.square-container{
+    width: 1350px;
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    color: rgb(82,181,235);
+}
+.container{
+    margin-left: 30px;
+}
+.card-item{
+    margin-top: 20px;
+    padding: 20px;
+    width: 340px;
+    height: 160px;
+    background-color: rgb(36,48,60);
+    font-size: 18px;
+}
+.card-item:hover{
+    background-color: rgb(183,80,171);
+    cursor: pointer;
+    color: white;
+}
+.item-behind{
+}
+.title-item-right{
+    float: right;
+}
+.up{
+    color: #2ecc71;
+}
+.down{
+    color: red;
+}
+.card-item i{
+    position: relative;
+    left: 0px;
+    font-size: 50px;
+    margin-top: 40px;
+}

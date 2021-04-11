@@ -1,0 +1,15 @@
+//Linh to UI Admin Inspriration
+https://creativemarket.com/bootstrapsale/1127318-Material-Admin-Extended-Dark?utm_source=Link&utm_medium=CM+Social+Share&utm_campaign=Product+Social+Share&utm_content=Material+Admin+Extended+Dark+%7E+Website+Templates+%7E+Creative+Market
+
+//Link to Button Css
+https://webdeasy.de/en/top-css-buttons-en/
+
+
+//Link to UI Index Dashboard
+https://www.pinterest.com/pin/1055599901356173/
+
+
+
+//Generate Chart.js with schematics
+Step1: npm install --save-dev ng2-charts-schematics
+Step2: ng generate ng2-charts-schematics:line my-line-chart
