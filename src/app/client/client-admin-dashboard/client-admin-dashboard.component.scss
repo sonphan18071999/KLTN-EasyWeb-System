@@ -1,35 +1,31 @@
-.asjdhaksjhasjkd{
-    width: 1400px;
-    height: 720px;
-    overflow: hidden;
-}
-.admin-navigation{
-    position: absolute;
-    top: 210px;
-    height: 460px;
-}
+
 .admin-container{
     margin-left: 290px;
     overflow-y: scroll;
     position: absolute;
     top: 210px;
-    height: 440px;
+    height: 460px;
     background-color: rgb(44,56,68);
-    width: 917px;
+    max-width: 1077px;
+    min-height: 0
+}
+.admin-header{
+    width: 1200px;
 }
 @media only screen and (max-width: 1430px){
+
     .admin-navigation{
         position: absolute;
         top: 210px;
-        height: 460px;
+        max-height: 447px;
+        overflow: hidden;
     }
     .admin-container{
         margin-left: 290px;
-        overflow-y: scroll;
-        position: absolute;
         top: 210px;
-        height: 430px;
+        max-height: 447px;
         background-color: rgb(44,56,68);
         width: 1080px;
+        min-height: 0
     }
 }

@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RootApiService {
+  public URL:string;
   constructor() { 
-  
+    this.URL ='http://vuonghuynhsolutions.tech/api/'
   }
+
 }

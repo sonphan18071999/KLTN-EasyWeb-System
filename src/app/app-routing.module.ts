@@ -16,7 +16,8 @@ const routes: Routes = [
     {path:'index',component:ClientAdminDashboardIndexComponent},
     {path:'preview',component:ClientPreviewWebsiteComponent},
     {path:'part-01',component:ClientAdminPart01Component},
-    {path:'part-02',component:ClientAdminPart02Component}]
+    {path:'part-02',component:ClientAdminPart02Component},
+    {path:'**',component:ClientAdminDashboardIndexComponent}]
 },
   {path:'**',component:ClientIndexComponent}
 ];

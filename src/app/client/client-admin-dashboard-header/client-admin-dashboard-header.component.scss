@@ -1,7 +1,7 @@
 .header{
     display: flex;
-    width: 1024px;
-    height: 768px;
+    width: 1030px;
+    height: 440px;
     background-color: #1E2B32;
 }
 .logo{
@@ -67,18 +67,6 @@ i{
     margin-top: 50px;
 }
 
-.title{
-    position: absolute;
-    color: rgb(183,80,171);
-    top: 165px;
-    left: 374px;
-}
-.title h2{
-    font-size: 20px;
-}
-.title p{
-    font-size: 13px;
-}
 @media only screen and (max-width: 1440px)   {
     .header{
         display: flex;
@@ -86,8 +74,6 @@ i{
         width: 1365px;
         background-color: #1E2B32;
         overflow: hidden;
-
-
     }
     .search-bar{
     margin-top: 50px;
