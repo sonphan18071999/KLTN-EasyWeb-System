@@ -1,6 +1,8 @@
 import {AfterViewInit, Component, ElementRef , OnInit } from '@angular/core';
 import { Login } from 'src/app/models/Login';
-import { LoginService} from '../../../api/login.service'
+import { LoginService} from '../../../api/login.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 @Component({
   selector: 'app-client-login',
   templateUrl: './client-login.component.html',
@@ -10,7 +12,9 @@ export class ClientLoginComponent implements OnInit {
 
   constructor(
     private login: LoginService,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private route: Router,
+
   ) { }
 
   ngOnInit(): void {
@@ -25,7 +29,6 @@ export class ClientLoginComponent implements OnInit {
         // code for enter
         // [routerLink]="['/client/admin/']" routerLinkActive="router-link-active"
         this.checkUser()
-        console.log("Nguoi dung da nhan Enter")
       }
     });
   }
@@ -34,9 +37,9 @@ export class ClientLoginComponent implements OnInit {
     user.email="hoangvuong19991964@gmail.com",
     user.password="hoangvuong"
     this.login.login(user).subscribe(success=>{
-      alert("hello world")
+      this.route.navigate(['/client/admin/'])
     },error=>{
-      alert("No hello world")
+
     })
   }
 }

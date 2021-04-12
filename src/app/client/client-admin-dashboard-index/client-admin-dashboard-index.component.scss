@@ -12,3 +12,13 @@
         display: flex;
     }
 }
+
+@media only screen and (max-width: 2560px) {
+  
+    .graph{
+        display: flex;
+        margin-top: 50px;
+        max-width: 1560px;
+        overflow: hidden;
+    }
+}

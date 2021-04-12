@@ -24,9 +24,11 @@ export class LoginService   {
   login = (login:Login) =>{
     var rootApiService = new RootApiService();
     var header = this.GetHeader()
-    var formData: any = new FormData();
-    formData.append("email", login.email);
-    formData.append("password", login.password);
-    return this.httpClient.post<any>(rootApiService.URL+'ServiceWebAppAuth/Login',formData,{headers:header})
+    var obj = new Object();
+    obj={
+      email:login.email,
+      password:login.password
+    }
+    return this.httpClient.post<any>(rootApiService.URL+'ServiceWebAppAuth/Login',obj,{headers:header})
   }
 }
