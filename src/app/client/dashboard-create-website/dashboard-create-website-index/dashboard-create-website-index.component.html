@@ -1,0 +1,16 @@
+<div class="create-website-container">
+    <app-client-preview-website></app-client-preview-website>
+    <div class="create-website-step-container">
+        <h2>
+            Start your bussiness
+        </h2>
+        <div class="Client-Admin-Part01">
+            <app-progress-bar (currentPart)="switchPart($event)"  ></app-progress-bar>
+        </div>
+        <app-client-admin-part01 *ngIf="currentPart==1" ></app-client-admin-part01>
+        <app-client-admin-part02 *ngIf="currentPart==2"></app-client-admin-part02>
+        <app-client-admin-part03 *ngIf="currentPart==3"></app-client-admin-part03>
+        <app-client-admin-part04 *ngIf="currentPart==4"></app-client-admin-part04>
+
+    </div>
+</div>

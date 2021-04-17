@@ -16,21 +16,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ClientAdminPart01Component } from './client/client-admin-part01/client-admin-part01.component';
-import { ClientAdminPart02Component } from './client/client-admin-part02/client-admin-part02.component';
-import { ClientAdminPart03Component } from './client/client-admin-part03/client-admin-part03.component';
-import { ClientAdminPart04Component } from './client/client-admin-part04/client-admin-part04.component';
-import { ClientPreviewWebsiteComponent } from './client/client-preview-website/client-preview-website.component';
-import { ClientProgressBarPartsComponent } from './client/client-progress-bar-parts/client-progress-bar-parts.component';
+import { ClientAdminPart01Component } from './client/dashboard-create-website/client-admin-part01/client-admin-part01.component';
+import { ClientAdminPart02Component } from './client/dashboard-create-website/client-admin-part02/client-admin-part02.component';
+import { ClientAdminPart03Component } from './client/dashboard-create-website/client-admin-part03/client-admin-part03.component';
+import { ClientAdminPart04Component } from './client/dashboard-create-website/client-admin-part04/client-admin-part04.component';
+import { ClientPreviewWebsiteComponent } from './client/dashboard-create-website/client-preview-website/client-preview-website.component';
 import { ClientHeaderAfterLoginComponent } from './client/client-header-after-login/client-header-after-login.component';
 import { ClientAdminDashboardComponent } from './client/client-admin-dashboard/client-admin-dashboard.component';
 import { ClientAdminDashboardHeaderComponent } from './client/client-admin-dashboard-header/client-admin-dashboard-header.component';
 import { ClientAdminDashboardNavigationComponent } from './client/client-admin-dashboard-navigation/client-admin-dashboard-navigation.component';
-import { ClientAdminDashboardIndexComponent } from './client/client-admin-dashboard-index/client-admin-dashboard-index.component';
-import { ClientAdminDashboardIndexSquaresComponent } from './client/client-admin-dashboard-index-squares/client-admin-dashboard-index-squares.component';
+import { ClientAdminDashboardIndexComponent } from './client/dashboard-dashboard/client-admin-dashboard-index/client-admin-dashboard-index.component';
+import { ClientAdminDashboardIndexSquaresComponent } from './client/dashboard-dashboard/client-admin-dashboard-index-squares/client-admin-dashboard-index-squares.component';
 import { ChartsModule } from 'ng2-charts';
-import { ClientAdminDashboardIndexChartVerticalComponent } from './client/client-admin-dashboard-index-chart-vertical/client-admin-dashboard-index-chart-vertical.component';
-import { ClientAdminDashboardIndexDoughnutChartComponent } from './client/client-admin-dashboard-index-doughnut-chart/client-admin-dashboard-index-doughnut-chart.component';
+import { ClientAdminDashboardIndexChartVerticalComponent } from './client/dashboard-dashboard/client-admin-dashboard-index-chart-vertical/client-admin-dashboard-index-chart-vertical.component';
+import { ClientAdminDashboardIndexDoughnutChartComponent } from './client/dashboard-dashboard/client-admin-dashboard-index-doughnut-chart/client-admin-dashboard-index-doughnut-chart.component';
+import { DashboardCreateWebsiteIndexComponent } from './client/dashboard-create-website/dashboard-create-website-index/dashboard-create-website-index.component';
+import { ProgressBarComponent } from './client/dashboard-create-website/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,6 @@ import { ClientAdminDashboardIndexDoughnutChartComponent } from './client/client
     ClientAdminPart03Component,
     ClientAdminPart04Component,
     ClientPreviewWebsiteComponent,
-    ClientProgressBarPartsComponent,
     ClientHeaderAfterLoginComponent,
     ClientAdminDashboardComponent,
     ClientAdminDashboardHeaderComponent,
@@ -54,6 +54,8 @@ import { ClientAdminDashboardIndexDoughnutChartComponent } from './client/client
     ClientAdminDashboardIndexSquaresComponent,
     ClientAdminDashboardIndexChartVerticalComponent,
     ClientAdminDashboardIndexDoughnutChartComponent,
+    DashboardCreateWebsiteIndexComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,

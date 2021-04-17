@@ -1,0 +1,43 @@
+<div class="Client-Admin-Part01-Container">
+
+    <div class="Client-Admin-Part01-Container">
+        <div class="Client-Admin-Part01">
+            <div class="part01-group-input">
+                <h3><b>Give us access right to your Database</b></h3>
+                <p><i>With your permission that allow us to use your Database</i></p>
+                <div class="set-connection-string">
+                    <div class="part01-input">
+                        <p>Database's Url</p>
+                        <input class="part01-input-child" type="text" placeholder="Ex: https://database.com...">
+                    </div>
+                    <div class="part01-input set-connection-string-01">
+                        <p>User name</p>
+                        <input  type="text" autocomplete="off" placeholder="Admin">
+                        <p>Role</p>
+                        <mat-form-field class="input-mat-form-field" appearance="fill">
+                            <mat-label>Entity</mat-label>
+                            <mat-select [formControl]="toppings" multiple>
+                              <mat-select-trigger>
+                                {{toppings.value ? toppings.value[0] : ''}}
+                                <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+                                  (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                                </span>
+                              </mat-select-trigger>
+                              <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        <p>Password</p>
+                        <input type="password" autocomplete="off" placeholder="Your password alway be safe">
+                        <div></div>
+                        <div></div>
+                        <p>Group Actions</p>
+                        <div class="group-button">
+                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-secondary">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
