@@ -32,6 +32,16 @@ import { ClientAdminDashboardIndexChartVerticalComponent } from './client/dashbo
 import { ClientAdminDashboardIndexDoughnutChartComponent } from './client/dashboard-dashboard/client-admin-dashboard-index-doughnut-chart/client-admin-dashboard-index-doughnut-chart.component';
 import { DashboardCreateWebsiteIndexComponent } from './client/dashboard-create-website/dashboard-create-website-index/dashboard-create-website-index.component';
 import { ProgressBarComponent } from './client/dashboard-create-website/progress-bar/progress-bar.component';
+import { ClientAdminPart02PopupComponent } from './client/dashboard-create-website/client-admin-part02-popup/client-admin-part02-popup.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { ClientCMSGeneratedComponent } from './client/client-preview-cms/client-cms-generated/client-cms-generated.component';
+import { ClientCMSGenerateTableComponent } from './client/client-preview-cms/client-cms-generate-table/client-cms-generate-table.component';
+import { ClientCMSGenerateCreateUIComponent } from './client/client-preview-cms/client-cms-generate-create-ui/client-cms-generate-create-ui.component';
+import { ClientCMSGenerateUpdateUIComponent } from './client/client-preview-cms/client-cms-generate-update-ui/client-cms-generate-update-ui.component';
+import { ClientCMSGenerateDeleteUIComponent } from './client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
+import { ClientCMSGenerateReadUIComponent } from './client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +66,13 @@ import { ProgressBarComponent } from './client/dashboard-create-website/progress
     ClientAdminDashboardIndexDoughnutChartComponent,
     DashboardCreateWebsiteIndexComponent,
     ProgressBarComponent,
+    ClientAdminPart02PopupComponent,
+    ClientCMSGeneratedComponent,
+    ClientCMSGenerateTableComponent,
+    ClientCMSGenerateCreateUIComponent,
+    ClientCMSGenerateUpdateUIComponent,
+    ClientCMSGenerateDeleteUIComponent,
+    ClientCMSGenerateReadUIComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +85,10 @@ import { ProgressBarComponent } from './client/dashboard-create-website/progress
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    ChartsModule
+    ChartsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

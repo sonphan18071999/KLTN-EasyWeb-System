@@ -10,7 +10,7 @@ export class DashboardCreateWebsiteIndexComponent implements OnInit {
   constructor() { }
   currentPart:any;
   ngOnInit(): void {
-    this.currentPart=1;
+    this.currentPart=4;
   }
 
   ngDoCheck()	{

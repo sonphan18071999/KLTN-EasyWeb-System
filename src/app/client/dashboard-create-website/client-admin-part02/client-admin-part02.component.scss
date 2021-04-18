@@ -13,59 +13,157 @@
         font-size: 20px;
         padding-top: 30px;
     }
-    .group-input{
-        display: grid;
-        grid-template-columns: 150px 400px 150px 400px;
-        grid-gap: 40px 0px;
-        margin-top: 40px;
+    // .group-input{
+    //     display: grid;
+    //     grid-template-columns: 150px 400px 150px 400px;
+    //     grid-gap: 40px 0px;
+    //     margin-top: 40px;
+    //     text-align: left;
+    // }
+    // .group-input p{
+    //     margin-left: 20px;
+    // }
+    // .part02-actions{
+    //     text-align: left;
+    //     display: grid;
+    //     grid-template-columns: 280px 100px;
+    //     grid-gap: 0px 20px;
+    // }
+    // input{
+    //     padding: 10px 5px 10px 5px;
+    //     font-size: 15px;
+    //     max-height: 50px;
+    // }
+      
+    // button{
+    //     // border-width: 1px;
+    //     // border-color: rgb(54,159,217);
+    //     // background-color: transparent;
+    //     // color: white;
+    //     // padding: 10px 5px 5px 10px;
+    //     border-color: rgb(53,159,217);
+    //     border-style: solid;
+    //     border-width: 1px;
+    //     background-color:transparent;
+    //     color: white;
+    //     font-size: 13px;
+    //     padding:10px 20px 10px 20px;
+    //     border-radius: 0px;
+    //     max-height: 50px;
+    // }
+    // .input-mat-form-field{
+    //     background-color: white;
+    //     max-height: 50px;       
+    // }
+    // .group-button{
+    //     text-align: left;
+    //     display: grid;
+    //     grid-template-columns: 100px 100px;
+    //     grid-gap: 0px 20px;
+    //     height: 50px;
+    // }
+    // .button-primary:hover{
+    //     background-color: rgb(54,159,217);
+    // }
+    // .button-secondary:hover{
+    //     background-color: rgb(170, 96, 159);
+    // }
+    table {
+        width: 100%;
         text-align: left;
-    }
-    .group-input p{
-        margin-left: 20px;
-    }
-    .part02-actions{
-        text-align: left;
-        display: grid;
-        grid-template-columns: 280px 100px;
-        grid-gap: 0px 20px;
-    }
-    input{
-        padding: 10px 5px 10px 5px;
-        font-size: 15px;
-        max-height: 50px;
     }
       
-    button{
-        // border-width: 1px;
-        // border-color: rgb(54,159,217);
-        // background-color: transparent;
-        // color: white;
-        // padding: 10px 5px 5px 10px;
-        border-color: rgb(53,159,217);
-        border-style: solid;
-        border-width: 1px;
-        background-color:transparent;
-        color: white;
-        font-size: 13px;
-        padding:10px 20px 10px 20px;
-        border-radius: 0px;
-        max-height: 50px;
-    }
-    .input-mat-form-field{
+      .mat-form-field {
+        font-size: 14px;
+        width: 100%;
         background-color: white;
-        max-height: 50px;       
+        margin-bottom: 5px;
+    }
+  
+    .mat-form-field-filter{
+        font-size: 14px;
+        width: 100%;
+        background-color: rgb(36,48,60);
+        color: white;
+        margin-bottom: 5px;
+    }
+    ::ng-deep .mat-focused .mat-form-field-label {
+        /*change color of label*/
+        color: rgb(54,159,217);
+    }
+    ::ng-deep.mat-form-field-underline {
+        /*change color of underline*/
+        background-color: rgb(54,159,217) !important;
+      } 
+    ::ng-deep.mat-form-field-ripple {
+        /*change color of underline when focused*/
+        background-color: rgb(54,159,217) !important;;
+    }
+    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+        opacity: 0.03 !important;
+        background-color: rgb(54,159,217)!important;
+      }
+   
+    .mat-label{
+        color: rgb(54,159,217);
+    }
+    .search-mat-input{
+        color: white;
+    }
+    .table-entities{
+        padding-top: 20px;
+        max-width: 1050px;
+        margin: 0 auto !important;
+    }
+    .header-table{
+        color: rgb(54,159,217);
+    }
+    .table-data{
+        color: rgb(54,159,217);
     }
     .group-button{
         text-align: left;
+        margin-top:19px ;
+        margin-bottom:20px ;
         display: grid;
-        grid-template-columns: 100px 100px;
-        grid-gap: 0px 20px;
-        height: 50px;
+        grid-template-columns: 120px 120px 120px 570px 120px;
+    }
+    .button{
+        border-color: rgb(54,159,217);
+        height: 40px;
+        background-color: transparent;
+        color: rgb(54,159,217);
+    }
+    .button i{
+        padding-right: 15px;
     }
     .button-primary:hover{
-        background-color: rgb(54,159,217);
+        background-color: rgb(40,167,69);
+        color: white;
     }
     .button-secondary:hover{
-        background-color: rgb(170, 96, 159);
+        background-color: rgb(54,159,217);
+        color: white;
     }
+    .button-third:hover{
+        background-color: rgb(211,87,193);
+        color: white;
+    }
+    .mat-elevation-z1 tr,td:hover{
+        cursor: pointer;
+        background-color: rgb(36,48,60);
+        color: white;
+    }
+    .table-view{
+        padding: 10px 30px 10px 30px;
+    }
+    .table-view:hover{
+        background-color: rgb(54,159,217);
+        color: white;
+        -webkit-transition: background-color 0.5s ease-in;
+        -moz-transition: background-color 0.5s ease-out;
+        -o-transition: background-color 0.5s ease-in;
+        transition: background-color 0.5s ease-out;
+    }
+
 }

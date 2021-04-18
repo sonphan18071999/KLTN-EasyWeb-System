@@ -67,5 +67,81 @@
 
 <div class="Client-Admin-Part02-Container">
     <div class="Client-Admin-Part02">
+        <h3><b>Chooose which entity will be use in your system.</b></h3>
+        <p><i>Base on your selection, system will generate actions for its entity</i></p>
+        <div class="table-entities">
+          <mat-form-field class="mat-form-field-filter">
+            <mat-label class="mat-label">Filter...</mat-label>
+            <input class="search-mat-input" matInput (keyup)="applyFilter($event)" #input>
+          </mat-form-field>
+          <div class="group-button">
+              <button class="button button-primary"> <i class="fas fa-plus"></i> Insert</button>
+              <button class="button button-secondary"> <i class="far fa-edit"></i>Edit</button>
+              <button class="button button-third"><i class="fas fa-minus"></i>Remove</button>
+              <div></div>
+              <button class="button button-secondary"><i class="fas fa-upload"></i> Submit</button>
+          </div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+          
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>
+                <mat-checkbox (change)="$event ? masterToggle() : null"
+                              [checked]="selection.hasValue() && isAllSelected()"
+                              [indeterminate]="selection.hasValue() && !isAllSelected()"
+                              [aria-label]="checkboxLabel()">
+                </mat-checkbox>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <mat-checkbox class="mat-checkbox" (click)="$event.stopPropagation()"
+                              (change)="$event ? selection.toggle(row) : null"
+                              [checked]="selection.isSelected(row)"
+                              [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+              </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> <span class="header-table"><b>No.</b></span> </th>
+              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.position}}</span> </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef><span class="header-table"> <b>Entity Name</b> </span></th>
+              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.name}} </span></td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef><span class="header-table"> <b>Display Name</b></span> </th>
+              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.weight}}</span> </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef><span class="header-table"> <b>Fields Number</b> </span></th>
+              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.symbol}} </span></td>
+            </ng-container>
+
+            <ng-container matColumnDef="detail">
+              <th mat-header-cell *matHeaderCellDef> <span class="header-table"><b>View detail</b></span> </th>
+              <td mat-cell *matCellDef="let element">
+                <button class="button table-view" (click)="popupEntities(element)">
+                  <i class="far fa-eye"></i>  View                  
+                </button> </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row 
+            *matRowDef="let row; columns: displayedColumns;" 
+            (click)="selection.toggle(row)" >
+            </tr>
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="6"><span>No data matching the filter "{{input.value}}"</span></td>
+            </tr>
+          </table>
+        </div>
     </div>
 </div>
