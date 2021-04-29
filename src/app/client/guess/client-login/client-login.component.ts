@@ -1,7 +1,7 @@
-import {AfterViewInit, Component, ElementRef , OnInit } from '@angular/core';
+import { Component, ElementRef , OnInit } from '@angular/core';
 import { Login } from 'src/app/models/Login';
 import { LoginService} from '../../../api/login.service';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-client-login',
@@ -27,19 +27,19 @@ export class ClientLoginComponent implements OnInit {
     document.querySelector<any>('.login-form-container').addEventListener('keypress',  (e: any) => {
       if (e.key === 'Enter') {
         // code for enter
-        // [routerLink]="['/client/admin/']" routerLinkActive="router-link-active"
         this.checkUser()
       }
     });
   }
   checkUser=()=>{
     var user = new Login();
-    user.email="hoangvuong19991964@gmail.com",
+    user.email="hoangvuong1999@gmail.com",
     user.password="hoangvuong"
     this.login.login(user).subscribe(success=>{
       this.route.navigate(['/client/admin/'])
+      localStorage.setItem("token", success.accessToken)
     },error=>{
-
+      
     })
   }
 }

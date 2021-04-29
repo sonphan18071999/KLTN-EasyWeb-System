@@ -8,5 +8,4 @@ export class RootApiService {
   constructor() { 
     this.URL ='http://vuonghuynhsolutions.tech/api/'
   }
-
 }

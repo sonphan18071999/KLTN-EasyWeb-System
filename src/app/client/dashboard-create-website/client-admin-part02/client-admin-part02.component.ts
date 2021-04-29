@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {MatTableDataSource} from '@angular/material/table';
-import {SelectionModel} from '@angular/cdk/collections';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { ClientAdminPart02PopupComponent} from '../client-admin-part02-popup/client-admin-part02-popup.component'
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatTableDataSource} from '@angular/material/table';
+import { SelectionModel} from '@angular/cdk/collections';
+import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ClientAdminPart02PopupComponent} from '../client-admin-part02-popup/client-admin-part02-popup.component';
+import { DatabaseTableConfigService } from '../../../api/Client/database-table-config.service';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -35,14 +36,18 @@ export class ClientAdminPart02Component implements OnInit {
   displayedColumns: string[] = ['select','position', 'name', 'weight', 'symbol','detail'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
+  @Output() isActive = new EventEmitter<Number>();
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+            private databaseTableConfigService : DatabaseTableConfigService  ) { }
 
   ngOnInit(): void {
+    this.scrollToTop();
+    this.getAllTableConfigure();
   }
   masterToggle() {
     this.isAllSelected() ?
@@ -61,10 +66,19 @@ export class ClientAdminPart02Component implements OnInit {
     return numSelected === numRows;
   }
   popupEntities(item:any){
-    // alert("yo - "+item)
     this.dialog.open(ClientAdminPart02PopupComponent,{
       width: 'auto',
       data:{ name:item.name,position:item.position }})
-
+  }
+  scrollToTop(){
+    document.getElementsByClassName('dashboard-h3')[0].scrollTo(0, 0);
+  }
+  SubmitEntities(){
+    this.isActive.emit(3)
+  }
+  getAllTableConfigure(){
+    // this.databaseTableConfigService.getTableConfig().subscribe((ok)=>{
+    //   alert(ok)
+    // })
   }
 }

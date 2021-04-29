@@ -24,20 +24,35 @@
         padding-top: 10px;
     }
     .group-input-part03-top-left{
-        height: 100px;
-        max-height: 240px;
-        max-width: 240px;
-        overflow: hidden;
+        height: 200px;
+        width: auto;
+        display: block;
+        .get-logo-customer{
+            border-color: black;
+            background-color: transparent;
+            height: 200px;
+            width: 200px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        img{
+            position: absolute;
+            top: 800px;
+            left: 100px;
+            width: 200px;
+            height: auto;
+            border-width: 1px;
+            z-index: 10;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+        .get-logo-customer:hover{
+            background-color: transparent;
+        }
     }
-    .group-input-part03-top-left img{
-        margin: 0 auto !important;
-        border-style: solid;
-        border-width: 1px;
-        border-color: white;
-    }
-    .group-input-part03-top-left img:hover{
-        cursor: pointer;
-    }
+
+    
     .group-input-part03-top-right{
         display: grid;
         grid-template-columns:120px 260px 120px 260px ;

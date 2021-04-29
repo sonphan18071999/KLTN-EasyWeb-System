@@ -1,73 +1,6 @@
-<!-- <div class="Client-Admin-Part02-Container">
-    <div class="Client-Admin-Part02">
-        <h3><b>Chooose which entity will be use in your system.</b></h3>
-        <p><i>Base on your selection, system will generate actions for its entity</i></p>
-        <div class="group-input">
-            <p>Entity's name</p>
-            <input type="text" placeholder="Entity's name">
-            <p>Group Actions</p>
-           
-            <mat-form-field class="input-mat-form-field" appearance="fill">
-                <mat-label>Actions</mat-label>
-                <mat-select [formControl]="toppings" multiple>
-                  <mat-select-trigger>
-                    {{toppings.value ? toppings.value[0] : ''}}
-                    <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
-                      (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
-                    </span>
-                  </mat-select-trigger>
-                  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                </mat-select>
-              </mat-form-field>
-
-            <p>Entity's name</p>
-            <input type="text" placeholder="Entity's name">
-            <p>Group Actions</p>
-            <mat-form-field class="input-mat-form-field" appearance="fill">
-                <mat-label>Actions</mat-label>
-                <mat-select [formControl]="toppings" multiple>
-                  <mat-select-trigger>
-                    {{toppings.value ? toppings.value[0] : ''}}
-                    <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
-                      (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
-                    </span>
-                  </mat-select-trigger>
-                  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                </mat-select>
-              </mat-form-field>        </div>
-        <div class="group-input">
-            <p>Insert entity</p>
-            <div class="part02-actions">
-                <mat-form-field class="input-mat-form-field" appearance="fill">
-                    <mat-label>Entity</mat-label>
-                    <mat-select [formControl]="toppings" multiple>
-                      <mat-select-trigger>
-                        {{toppings.value ? toppings.value[0] : ''}}
-                        <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
-                          (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
-                        </span>
-                      </mat-select-trigger>
-                      <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-                <button class="button button-primary">Insert</button>
-            </div>            
-        </div>
-        <div class="group-input">
-            <p>Actions</p>
-            <div class="group-button">
-                <button class="button button-primary">Submit</button>
-                <button class="button button-secondary">Reset</button>
-            </div>
-        </div>
-        <div></div>
-    </div>
-   
-</div> -->
-
 <div class="Client-Admin-Part02-Container">
     <div class="Client-Admin-Part02">
-        <h3><b>Chooose which entity will be use in your system.</b></h3>
+        <h3 class="dashboard-h3"><b>Chooose which entity will be use in your system.</b></h3>
         <p><i>Base on your selection, system will generate actions for its entity</i></p>
         <div class="table-entities">
           <mat-form-field class="mat-form-field-filter">
@@ -75,11 +8,11 @@
             <input class="search-mat-input" matInput (keyup)="applyFilter($event)" #input>
           </mat-form-field>
           <div class="group-button">
-              <button class="button button-primary"> <i class="fas fa-plus"></i> Insert</button>
+              <button class="button button-primary"> <i class="fas fa-plus"></i> Insert...</button>
               <button class="button button-secondary"> <i class="far fa-edit"></i>Edit</button>
               <button class="button button-third"><i class="fas fa-minus"></i>Remove</button>
               <div></div>
-              <button class="button button-secondary"><i class="fas fa-upload"></i> Submit</button>
+              <button class="button button-secondary" (click)="SubmitEntities()"><i class="fas fa-upload"></i> Submit</button>
           </div>
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
           

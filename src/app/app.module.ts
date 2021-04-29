@@ -42,6 +42,7 @@ import { ClientCMSGenerateCreateUIComponent } from './client/client-preview-cms/
 import { ClientCMSGenerateUpdateUIComponent } from './client/client-preview-cms/client-cms-generate-update-ui/client-cms-generate-update-ui.component';
 import { ClientCMSGenerateDeleteUIComponent } from './client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
 import { ClientCMSGenerateReadUIComponent } from './client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
+import { ClientCmsGeneratedNavigationComponent } from './client/client-preview-cms/client-cms-generated-navigation/client-cms-generated-navigation.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { ClientCMSGenerateReadUIComponent } from './client/client-preview-cms/cl
     ClientCMSGenerateUpdateUIComponent,
     ClientCMSGenerateDeleteUIComponent,
     ClientCMSGenerateReadUIComponent,
+    ClientCmsGeneratedNavigationComponent,
   ],
   imports: [
     BrowserModule,

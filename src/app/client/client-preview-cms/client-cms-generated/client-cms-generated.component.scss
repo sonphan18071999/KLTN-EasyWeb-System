@@ -1,0 +1,25 @@
+@media only screen and (max-width: 2560px) {
+    .client-cms-generated-container{
+        width: 100%;
+        height: 720px;
+        display: flex;
+        overflow-y: hidden;
+        position: fixed;
+        .client-cms-generated-navigation{
+            width: 15%;
+            margin-left: 0px;
+            padding-left: 0px;
+            overflow: hidden;
+            overflow-y: hidden;
+
+        }
+        .client-cms-generated-crud-container{
+            background-color: yellow;
+            width: 80%;
+            height: auto;
+            overflow-y: hidden;
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+    }
+}
