@@ -27,5 +27,4 @@ export class DatabaseTableConfigService {
     var header = this.GetHeader();
     return this.httpClient.get<any>(this.rootApiService.URL + `TableSchemaConfig/GetAllTableConfig?dbGuid=${guid}`, {headers:header})
   }
-
 }

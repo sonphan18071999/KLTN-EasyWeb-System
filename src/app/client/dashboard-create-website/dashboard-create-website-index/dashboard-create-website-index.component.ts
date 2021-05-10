@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-create-website-index',
@@ -10,6 +9,7 @@ export class DashboardCreateWebsiteIndexComponent implements OnInit {
 
   constructor() { }
   currentPart:any;
+  currentIdDbRegistered:any;
   ngOnInit(): void {
     this.currentPart=1;
   }
@@ -20,6 +20,6 @@ export class DashboardCreateWebsiteIndexComponent implements OnInit {
     this.currentPart=data
   }
   screenActive(event:any){
-     this.currentPart=event;
+     this.currentPart=event.screen;
   }
 }

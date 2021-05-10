@@ -21,7 +21,7 @@ export class ClientAdminPart01Component implements OnInit {
   txtSchemaName:any;
   objRegisterDatabase = new RegisterDatabase();
 
-  @Output() isActive = new EventEmitter<Number>();
+  @Output() isActive = new EventEmitter<Object>();
   constructor(private databaseSerivce : DatabaseService,
     private route: ActivatedRoute) { }
 
@@ -31,7 +31,8 @@ export class ClientAdminPart01Component implements OnInit {
     this.objRegisterDatabase.username = this.txtUserName;
     this.objRegisterDatabase.password = this.txtPassword;
     this.objRegisterDatabase.server = this.txtDBUrl;
-    this.objRegisterDatabase.dbType = this.txtDBType;
+    this.objRegisterDatabase.dbType = Number.parseInt(this.txtDBType);
+    this.objRegisterDatabase.initialCatalog=this.txtSchemaName;
     if(this.txtDBUrl ==null){
       alert("URL can't not be empty!")
     }else if(this.txtUserName ==null){
@@ -40,7 +41,8 @@ export class ClientAdminPart01Component implements OnInit {
       alert("Password can't be empty!")
     }else{
       this.databaseSerivce.registerClientDatabase(this.objRegisterDatabase).subscribe(res=>{
-          this.isActive.emit(2)    //Go to next slide
+          this.isActive.emit({screen:2,idUserDatabase:res.guid})    
+          localStorage.setItem("idDbRegistered",res.guid)
       })
     }
   }

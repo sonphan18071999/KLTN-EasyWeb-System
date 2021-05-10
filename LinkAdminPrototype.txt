@@ -13,3 +13,8 @@ https://www.pinterest.com/pin/1055599901356173/
 //Generate Chart.js with schematics
 Step1: npm install --save-dev ng2-charts-schematics
 Step2: ng generate ng2-charts-schematics:line my-line-chart
+
+
+
+///Install Data table ngx-databale
+https://swimlane.gitbook.io/ngx-datatable/getting-started
