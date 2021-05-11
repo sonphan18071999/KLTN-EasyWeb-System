@@ -9,7 +9,7 @@
         </div>
         <app-client-admin-part01 (isActive)="screenActive($event)" *ngIf="currentPart==1" ></app-client-admin-part01>
         <app-client-admin-part02 (isActive)="screenActive($event)" *ngIf="currentPart==2"></app-client-admin-part02>
-        <app-client-admin-part03 *ngIf="currentPart==3"></app-client-admin-part03>
+        <app-client-admin-part03 (isActive)="screenActive($event)" *ngIf="currentPart==3"></app-client-admin-part03>
         <app-client-admin-part04 *ngIf="currentPart==4"></app-client-admin-part04>
 
     </div>

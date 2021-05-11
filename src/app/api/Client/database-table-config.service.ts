@@ -10,6 +10,7 @@ export class DatabaseTableConfigService {
   token:any;
   headers: HttpHeaders = new HttpHeaders();
   rootApiService = new RootApiService();
+  tableInDatabase=[]
 
   constructor(private httpClient:HttpClient) { 
 
@@ -23,8 +24,19 @@ export class DatabaseTableConfigService {
     return headers;
   }
 
-  getTableConfig(guid:any){
+  fetchTableConfig(guid:any){
     var header = this.GetHeader();
-    return this.httpClient.get<any>(this.rootApiService.URL + `TableSchemaConfig/GetAllTableConfig?dbGuid=${guid}`, {headers:header})
+    return this.httpClient.get<any>(this.rootApiService.URL + `TableSchemaConfig/GetAllTableConfig?dbGuid=${guid}`, {headers:header});
+  }
+
+  setTableConfig(data:any){
+    return this.tableInDatabase=data;
+  }
+  getTableConfig(){
+    return this.tableInDatabase;
+  }
+  getColumnInTableById(guid:any, tableId:any){
+    var header = this.GetHeader();
+    return this.httpClient.get<any>(this.rootApiService.URL+`TableColumnSchema/GetColumnConfigByTableId?dbGuid=${guid}`+`&tableId=${tableId}`,{headers:header})
   }
 }

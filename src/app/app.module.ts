@@ -43,6 +43,8 @@ import { ClientCMSGenerateUpdateUIComponent } from './client/client-preview-cms/
 import { ClientCMSGenerateDeleteUIComponent } from './client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
 import { ClientCMSGenerateReadUIComponent } from './client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
 import { ClientCmsGeneratedNavigationComponent } from './client/client-preview-cms/client-cms-generated-navigation/client-cms-generated-navigation.component';
+import { DialogEditTableItemComponent } from './client/dashboard-create-website/dialog-edit-table-item/dialog-edit-table-item.component';
+import { DialogEditColumnItemComponent } from './client/dashboard-create-website/dialog-edit-column-item/dialog-edit-column-item.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { ClientCmsGeneratedNavigationComponent } from './client/client-preview-c
     ClientCMSGenerateDeleteUIComponent,
     ClientCMSGenerateReadUIComponent,
     ClientCmsGeneratedNavigationComponent,
+    DialogEditTableItemComponent,
+    DialogEditColumnItemComponent,
   ],
   imports: [
     BrowserModule,

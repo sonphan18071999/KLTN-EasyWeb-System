@@ -8,71 +8,32 @@
             <input class="search-mat-input" matInput (keyup)="applyFilter($event)" #input>
           </mat-form-field>
           <div class="group-button">
-              <button class="button button-primary"> <i class="fas fa-plus"></i> Insert...</button>
-              <button class="button button-secondary"> <i class="far fa-edit"></i>Edit</button>
+              <button class="button button-secondary" (click)="openDialogEdit()"> <i class="far fa-edit"></i>Edit</button>
               <button class="button button-third"><i class="fas fa-minus"></i>Remove</button>
               <div></div>
               <button class="button button-secondary" (click)="SubmitEntities()"><i class="fas fa-upload"></i> Submit</button>
           </div>
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
-            <ng-container matColumnDef="Select">
-              <th mat-header-cell *matHeaderCellDef>
-                <mat-checkbox (change)="$event ? masterToggle() : null"
-                              [checked]="selection.hasValue() && isAllSelected()"
-                              [indeterminate]="selection.hasValue() && !isAllSelected()"
-                              [aria-label]="checkboxLabel()">
-                </mat-checkbox>
-              </th>
-              <td mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation()"
-                              (change)="$event ? selection.toggle(row) : null"
-                              [checked]="selection.isSelected(row)"
-                              [aria-label]="checkboxLabel(row)">
-                </mat-checkbox>
-              </td>
-            </ng-container>
-
-            <!-- Position Column -->
-            <ng-container matColumnDef="Name">
-              <th mat-header-cell *matHeaderCellDef> <span class="header-table"><b>Name</b></span> </th>
-              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.name}}</span> </td>
-            </ng-container>
-          
-            <!-- Name Column -->
-            <ng-container matColumnDef="Explicit Name">
-              <th mat-header-cell *matHeaderCellDef><span class="header-table"> <b>Explicit Name</b> </span></th>
-              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.explicitName}} </span></td>
-            </ng-container>
-          
-            <!-- Weight Column -->
-            <ng-container matColumnDef="Columns">
-              <th mat-header-cell *matHeaderCellDef><span class="header-table"> <b>Is Deleted</b></span> </th>
-              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.isDeleted}}</span> </td>
-            </ng-container>
-          
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="Action Group">
-              <th mat-header-cell *matHeaderCellDef><span class="header-table"> <b>Action Group</b> </span></th>
-              <td mat-cell *matCellDef="let element"> <span class="table-data">{{element.actionGroup}} </span></td>
-            </ng-container>
-
-            <ng-container matColumnDef="actionGroup">
-              <th mat-header-cell *matHeaderCellDef> <span class="header-table"><b>View detail</b></span> </th>
-              <td mat-cell *matCellDef="let element">
-                <button class="button table-view" (click)="popupEntities(element.id)">
-                  <i class="far fa-eye"></i>  View                  
-                </button> </td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row 
-            *matRowDef="let row; columns: displayedColumns;" 
-            (click)="selection.toggle(row)" >
-            </tr>
-            <!-- Row shown when there is no matching data. -->
-            <tr class="mat-row" *matNoDataRow>
-              <td class="mat-cell" colspan="6"><span>No data matching the filter "{{input.value}}"</span></td>
-            </tr>
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col" >#</th>
+                <th scope="col" class="th__item " >Name</th>
+                <th scope="col" data-editable="true"  class="th__item th--custom--name" >Explicit Name</th>
+                <th scope="col" class="th__item">Actions In Database </th>
+                <th scope="col" class="th__item">Actions </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of allEntityDbRegister">
+                <td><input class="btn__checkbox" type="checkbox" (click)="chooseItem(item)"></td>
+                <td>{{item.name}}</td>
+                <td>{{item.explicitName}}</td>
+                <td>{{item.actionGroup}}</td>
+                <td>
+                  <button class="button button-primary" (click)="viewColumns(item)">View Detail</button>
+                </td>
+              </tr>
+            </tbody>
           </table>
           <mat-paginator class="table__paging" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
         </div>

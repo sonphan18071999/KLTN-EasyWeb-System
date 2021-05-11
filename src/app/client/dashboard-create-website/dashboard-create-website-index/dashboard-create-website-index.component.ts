@@ -20,6 +20,6 @@ export class DashboardCreateWebsiteIndexComponent implements OnInit {
     this.currentPart=data
   }
   screenActive(event:any){
-     this.currentPart=event.screen;
+     this.currentPart=event;
   }
 }

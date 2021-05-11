@@ -98,7 +98,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     HttpClientModule,
     MatStepperModule,
     ReactiveFormsModule,
-    NgxDatatableModule
+    NgxDatatableModule,
   ],
   imports: [
     A11yModule,

@@ -41,7 +41,7 @@ export class ClientAdminPart01Component implements OnInit {
       alert("Password can't be empty!")
     }else{
       this.databaseSerivce.registerClientDatabase(this.objRegisterDatabase).subscribe(res=>{
-          this.isActive.emit({screen:2,idUserDatabase:res.guid})    
+          this.isActive.emit(2)    
           localStorage.setItem("idDbRegistered",res.guid)
       })
     }

@@ -1,0 +1,32 @@
+$blueColor:rgb(54,159,217);
+$blueDarkColor:rgb(36,48,60);
+.dialog{
+    background-color: rgb(36,48,60);
+    margin: 0;
+    color:$blueColor;
+    padding: 20px;
+}
+button{
+    border-color: $blueColor;
+    border-style: solid;
+    border-width: 1px;
+    height: 40px;
+    padding: 0px 20px 0px 20px;
+    color: $blueColor;
+    background-color: transparent;
+    margin-right: 5px;
+}
+
+::ng-deep .mat-dialog-container{
+    width: 500px;
+    background-color: $blueDarkColor;
+    padding: 1em;
+}
+::ng-deep .mat-checkbox {
+    .mat-checkbox-frame {
+        border-color: $blueColor !important;
+    }
+}
+::ng-deep .mat-select-value{
+    color: $blueColor;
+}

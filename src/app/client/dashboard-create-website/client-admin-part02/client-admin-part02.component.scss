@@ -16,11 +16,19 @@
     table {
         width: 100%;
         text-align: left;
+        background-color: rgb(36,48,60);
+        color: rgb(54,159,217);
         th{
             font-size: 18px;
         }
+        .th__item{
+            width: 20%;
+        }
+        .th--custom--name{
+            width: 30%;
+        }
     }
-      
+    
       .mat-form-field {
         font-size: 14px;
         width: 100%;
@@ -84,7 +92,7 @@
         margin-top:19px ;
         margin-bottom:20px ;
         display: grid;
-        grid-template-columns: 120px 120px 120px 570px 120px;
+        grid-template-columns:  120px 120px 690px 120px;
     }
     .button{
         border-color: rgb(54,159,217);
@@ -95,8 +103,11 @@
     .button i{
         padding-right: 15px;
     }
+    .button-primary{
+        padding:0px 20px 0px 20px ;
+    }
     .button-primary:hover{
-        background-color: rgb(40,167,69);
+        background-color: rgb(54,159,217);
         color: white;
     }
     .button-secondary:hover{
@@ -104,14 +115,10 @@
         color: white;
     }
     .button-third:hover{
-        background-color: rgb(211,87,193);
+        background-color: rgb(54,159,217);
         color: white;
     }
-    .mat-elevation-z1 tr,td:hover{
-        cursor: pointer;
-        background-color: rgb(36,48,60);
-        color: white;
-    }
+
     .table-view{
         padding: 10px 30px 10px 30px;
     }
@@ -123,5 +130,8 @@
         -o-transition: background-color 0.5s ease-in;
         transition: background-color 0.5s ease-out;
     }
-
+    .btn__checkbox{
+        border-radius:rgb(54,159,217) ;
+    }
+    
 }

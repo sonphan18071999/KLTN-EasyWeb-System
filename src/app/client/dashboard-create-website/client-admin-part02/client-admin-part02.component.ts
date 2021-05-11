@@ -5,22 +5,8 @@ import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ClientAdminPart02PopupComponent} from '../client-admin-part02-popup/client-admin-part02-popup.component';
 import { DatabaseTableConfigService } from '../../../api/Client/database-table-config.service';
 import { TableConfigure } from 'src/app/models/TableConfigure';
+import {DialogEditTableItemComponent} from '../dialog-edit-table-item/dialog-edit-table-item.component';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: string;
-  symbol: string;
-  detail:string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Students', weight: 'Students management', symbol: '6',detail:''},
-  {position: 2, name: 'Grades', weight: 'Grades management', symbol: '10',detail:''},
-  {position: 3, name: 'Teachers', weight: 'Teacher management', symbol: '12',detail:''},
-  {position: 4, name: 'Courses', weight: 'Courses management', symbol: '15',detail:''},
-  {position: 5, name: 'Exam', weight: 'Exam management', symbol: '5',detail:''},
-
-];
 export interface DialogData {
   name: string;
   position: number;
@@ -38,6 +24,8 @@ export class ClientAdminPart02Component implements OnInit {
   dataSource = new MatTableDataSource([]);
   selection = new SelectionModel<TableConfigure>(true, []);
   allEntityDbRegister : TableConfigure[]=[];
+  itemChoosed:any;
+  showActionDropDown:boolean=false;
   @Output() isActive = new EventEmitter<Number>();
 
   applyFilter(event: Event) {
@@ -46,9 +34,7 @@ export class ClientAdminPart02Component implements OnInit {
   }
 
   constructor(public dialog: MatDialog,
-            private databaseTableConfigService : DatabaseTableConfigService  ) { 
-
-            }
+            private databaseTableConfigService : DatabaseTableConfigService) { }
 
   ngOnInit(): void {
     this.scrollToTop();
@@ -84,14 +70,33 @@ export class ClientAdminPart02Component implements OnInit {
   }
 
   SubmitEntities(){
-    this.isActive.emit(3)
+    this.isActive.emit(3);
   }
 
   getAllTableConfigure(){
     var idDbRegistered = localStorage.getItem("idDbRegistered");
-    this.databaseTableConfigService.getTableConfig(idDbRegistered).subscribe((ok)=>{
+    this.databaseTableConfigService.fetchTableConfig(idDbRegistered).subscribe(ok=>{
+      this.databaseTableConfigService.setTableConfig(ok);
       this.allEntityDbRegister=ok;
-      this.dataSource=ok;
-    })
+    });
+  }
+
+  chooseItem(item:any){
+   this.itemChoosed=item;
+  }
+  openDialogEdit(){
+    const dialogRef = this.dialog.open(DialogEditTableItemComponent,{
+      data:{name:this.itemChoosed.name,key:this.itemChoosed.id}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  viewColumns(item:TableConfigure){
+    var idDbRegistered = localStorage.getItem("idDbRegistered");
+      this.databaseTableConfigService.getColumnInTableById(idDbRegistered, item.id).subscribe((ok)=>{
+        
+      })
   }
 }
+
