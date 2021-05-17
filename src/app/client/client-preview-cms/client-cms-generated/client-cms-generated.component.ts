@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ThemeService} from '../ModeUI/theme.service';
 
 @Component({
   selector: 'app-client-cms-generated',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientCMSGeneratedComponent implements OnInit {
 
-  constructor() { }
+  isDarkMode:boolean=true;
+  constructor(private themService:ThemeService) {
+
+   }
 
   ngOnInit(): void {
   }
-
+  switchMode(){
+    this.isDarkMode = !this.isDarkMode;
+    this.themService.setDarkTheme(this.isDarkMode);
+  }
 }

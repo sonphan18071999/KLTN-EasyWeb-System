@@ -26,13 +26,11 @@ const routes: Routes = [
 
 },
   {path:'website/generated/index',component:ClientCMSGeneratedComponent,
-children:[
-  {path:'entity/create',component:ClientCMSGenerateCreateUIComponent},
-  {path:'entity/read',component:ClientCMSGenerateReadUIComponent},
-  {path:'entity/update',component:ClientCMSGenerateUpdateUIComponent},
-  {path:'entity/delete',component:ClientCMSGenerateDeleteUIComponent},
-
-  
+    children:[
+      {path:'entity/create',component:ClientCMSGenerateCreateUIComponent},
+      {path:'entity/read',component:ClientCMSGenerateReadUIComponent},
+      {path:'entity/update',component:ClientCMSGenerateUpdateUIComponent},
+      {path:'entity/delete',component:ClientCMSGenerateDeleteUIComponent},
 ]},
   {path:'**',component:ClientIndexComponent}
 ];

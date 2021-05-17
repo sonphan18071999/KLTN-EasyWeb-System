@@ -1,5 +1,5 @@
 <div class="dialog">
-    <h2 mat-dialog-title>Edit Table <u><i>DATA table</i></u></h2>
+    <h2 mat-dialog-title>Edit column <u><i>{{data.name}}</i></u></h2>
 <div mat-dialog-content class="dialog__container">
     <div class="dialog__container__first_row">
         <div>
@@ -11,7 +11,7 @@
     </div>
     <div>
         <mat-form-field appearance="fill">
-            <mat-label>Favorite food</mat-label>
+            <mat-label class="label__display__component">Display Component</mat-label>
             <mat-select>
               <mat-option *ngFor="let item of listColumns;let i = index" value="i">
                 {{i}}

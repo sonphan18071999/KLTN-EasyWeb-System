@@ -1,3 +1,4 @@
+@import "../global-mode.scss";
 @media only screen and (max-width: 2560px) {
     .client-cms-generated-container{
         width: 100%;
@@ -14,16 +15,27 @@
 
         }
         .client-cms-generated-crud-container{
-            background-color: rgb(240, 240, 212);
+            background-color: $lightColorBackground;
             width: 100%;
             height: auto;
             overflow-y: hidden;
             padding-top: 0px;
             margin-top: 0px;
             .client-cms-generated-crud-container--content{
-                padding-top: 210px;
                 padding-left: 40px;
+                background-color: $lightColorBackground;
+                display: block;
             }
         }
+    }
+    ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
+        background-color:$lightColorBackground_Dark;
+    }
+    ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+        background-color:aliceblue ;
+    }
+    ::ng-deep .mat-slide-toggle-label{
+        position: absolute;
+        right: 0px;
     }
 }

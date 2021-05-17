@@ -1,0 +1,15 @@
+.search__bar__container{
+    width: 100%;
+}
+.search__bar{
+    width: 100%;
+    display: flex;
+}
+.search__bar__input{
+    width: 80%;
+    border-radius: 20px 20px 20px 20px;
+    height: 40px;
+}
+.search__bar__input:focus{
+    outline: none;
+}

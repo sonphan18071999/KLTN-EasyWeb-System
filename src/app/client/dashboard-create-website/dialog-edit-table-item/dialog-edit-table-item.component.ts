@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { DialogData } from '../client-admin-part02/client-admin-part02.component';
-
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import{DialogData} from "../client-admin-part02/client-admin-part02.component";
 @Component({
   selector: 'app-dialog-edit-table-item',
   templateUrl: './dialog-edit-table-item.component.html',

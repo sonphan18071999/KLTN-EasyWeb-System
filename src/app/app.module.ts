@@ -45,6 +45,7 @@ import { ClientCMSGenerateReadUIComponent } from './client/client-preview-cms/cl
 import { ClientCmsGeneratedNavigationComponent } from './client/client-preview-cms/client-cms-generated-navigation/client-cms-generated-navigation.component';
 import { DialogEditTableItemComponent } from './client/dashboard-create-website/dialog-edit-table-item/dialog-edit-table-item.component';
 import { DialogEditColumnItemComponent } from './client/dashboard-create-website/dialog-edit-column-item/dialog-edit-column-item.component';
+import { ClientCMSHomepageSearchComponent } from './client/client-preview-cms/client-cmshomepage-search/client-cmshomepage-search.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { DialogEditColumnItemComponent } from './client/dashboard-create-website
     ClientCmsGeneratedNavigationComponent,
     DialogEditTableItemComponent,
     DialogEditColumnItemComponent,
+    ClientCMSHomepageSearchComponent,
   ],
   imports: [
     BrowserModule,

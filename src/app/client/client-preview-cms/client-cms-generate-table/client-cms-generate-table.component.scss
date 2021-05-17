@@ -1,0 +1,9 @@
+@import "../global-mode.scss";
+
+.material{
+    background-color: $lightColorBackground;
+}
+.material--dark{
+    background-color: $lightColorBackground_Dark;
+    transition: all 1 ease-out;
+}

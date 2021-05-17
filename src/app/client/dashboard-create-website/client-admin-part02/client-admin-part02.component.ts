@@ -7,13 +7,7 @@ import { DatabaseTableConfigService } from '../../../api/Client/database-table-c
 import { TableConfigure } from 'src/app/models/TableConfigure';
 import {DialogEditTableItemComponent} from '../dialog-edit-table-item/dialog-edit-table-item.component';
 
-export interface DialogData {
-  name: string;
-  position: number;
-  weight: string;
-  symbol: string;
-  detail:string;
-}
+
 @Component({
   selector: 'app-client-admin-part02',
   templateUrl: './client-admin-part02.component.html',
@@ -59,11 +53,11 @@ export class ClientAdminPart02Component implements OnInit {
     return numSelected === numRows;
   }
 
-  popupEntities(item:any){
-    this.dialog.open(ClientAdminPart02PopupComponent,{
-      width: 'auto',
-      data:{ name:item.name,position:item.position }})
-  }
+  // popupEntities(item:any){
+  //   this.dialog.open(ClientAdminPart02PopupComponent,{
+  //     width: 'auto',
+  //     data:{ name:item.name,position:item.position, explicitName:item.explicitName }})
+  // }
 
   scrollToTop(){
     document.getElementsByClassName('dashboard-h3')[0].scrollTo(0, 0);
@@ -86,7 +80,7 @@ export class ClientAdminPart02Component implements OnInit {
   }
   openDialogEdit(){
     const dialogRef = this.dialog.open(DialogEditTableItemComponent,{
-      data:{name:this.itemChoosed.name,key:this.itemChoosed.id}
+      data:{name:this.itemChoosed.name,key:this.itemChoosed.id, explicitName:this.itemChoosed.explicitName}
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
@@ -95,8 +89,12 @@ export class ClientAdminPart02Component implements OnInit {
   viewColumns(item:TableConfigure){
     var idDbRegistered = localStorage.getItem("idDbRegistered");
       this.databaseTableConfigService.getColumnInTableById(idDbRegistered, item.id).subscribe((ok)=>{
-        
       })
   }
 }
 
+export interface DialogData {
+  id: number;
+  name: string;
+  explicitName:string;
+}

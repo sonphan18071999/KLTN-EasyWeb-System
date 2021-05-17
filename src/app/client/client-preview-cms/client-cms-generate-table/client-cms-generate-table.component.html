@@ -1,10 +1,10 @@
-<ngx-datatable class="material datatable-body-row"
+ <ngx-datatable class="material datatable-body-row" [ngClass]="{'material--dark': isDarkThemeSubscription==true}"
 [rows]="rows"
 [columns]="columns"
 [headerHeight]="50"
 [scrollbarV]="true"
 [rowHeight]="50"
-
 >
+</ngx-datatable> 
 
-</ngx-datatable>
+

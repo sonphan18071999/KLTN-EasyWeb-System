@@ -38,7 +38,7 @@
         </thead>
         <tbody *ngFor="let item of listComlumnsInTable">
           <tr>
-            <td><input class="btn__checkbox" type="checkbox" ></td>
+            <td><input class="btn__checkbox" type="checkbox" (click)="chooseItem(item)" ></td>
             <td>{{item.tableId}}</td>
             <td>{{item.explicitName}}</td>
             <td>{{item.dataType}}</td>
