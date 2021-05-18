@@ -1,3 +1,5 @@
+@import "../global-mode.scss";
+
 .search__bar__container{
     width: 100%;
 }
@@ -7,8 +9,10 @@
 }
 .search__bar__input{
     width: 80%;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 15px 15px 15px 15px;
     height: 40px;
+    border-color: $lightColorBackground_Dark;
+    border-width: 1px;
 }
 .search__bar__input:focus{
     outline: none;

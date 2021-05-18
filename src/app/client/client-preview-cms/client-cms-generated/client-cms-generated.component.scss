@@ -38,4 +38,28 @@
         position: absolute;
         right: 0px;
     }
+    .group__buttons{
+     padding-top: 70px;
+    }
+    .button{
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        border-width: 1px;
+        border-color: $lightColorBackground_Dark;
+        background-color: $lightColorBackground_Dark;
+        color: white;
+        transition: background-color 0.5s ease;
+
+    }
+    .fas{
+        margin-right: 5px;
+    }
+    .button:hover{
+        background-color: $lightColorBackground;
+        color: $lightColorBackground_Dark;
+        border-width: 1px;
+        border-color: $lightColorBackground_Dark;
+    }
 }

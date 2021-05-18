@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {ThemeService} from '../ModeUI/theme.service';
 
 @Component({
@@ -7,8 +7,8 @@ import {ThemeService} from '../ModeUI/theme.service';
   styleUrls: ['./client-cms-generated.component.scss']
 })
 export class ClientCMSGeneratedComponent implements OnInit {
-
   isDarkMode:boolean=true;
+  actionNameTriggered:string='';
   constructor(private themService:ThemeService) {
 
    }
@@ -16,7 +16,15 @@ export class ClientCMSGeneratedComponent implements OnInit {
   ngOnInit(): void {
   }
   switchMode(){
-    this.isDarkMode = !this.isDarkMode;
     this.themService.setDarkTheme(this.isDarkMode);
+    this.isDarkMode = !this.isDarkMode;
+  }
+  
+  getActionTrigger($event:any){
+    this.actionNameTriggered=$event;
+    console.log($event)
+  }
+  onTriggerAction(item:string){
+    this.actionNameTriggered=item;
   }
 }

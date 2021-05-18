@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {ThemeService} from "../ModeUI/theme.service";
 import { Observable} from 'rxjs';
 
@@ -8,13 +8,8 @@ import { Observable} from 'rxjs';
   styleUrls: ['./client-cms-generate-table.component.scss']
 })
 export class ClientCMSGenerateTableComponent implements OnInit {
+  @Output() nameActionTrigger = new EventEmitter<string>();
   isDarkThemeSubscription:boolean=false;
-  rows = [
-    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
-    { name: 'Dany', gender: 'Male', company: 'KFC' },
-    { name: 'Molly', gender: 'Female', company: 'Burger King' }
-  ];
-  columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
 
   constructor(
     private themeService: ThemeService
@@ -28,6 +23,9 @@ export class ClientCMSGenerateTableComponent implements OnInit {
   }  
   
   ngOnInit(): void {
+  }
+  onClickEdit(){
+    this.nameActionTrigger.emit("edit")
   }
   
 }
