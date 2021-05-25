@@ -94,7 +94,7 @@ import { ClientCMSHomepageSearchComponent } from './client/client-preview-cms/cl
     MatIconModule,
     MatListModule,
     ChartsModule,
-    MatGridListModule,
+    MatGridListModule ,
     MatCardModule,
     MatMenuModule
   ],

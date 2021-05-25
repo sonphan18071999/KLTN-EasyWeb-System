@@ -1,4 +1,4 @@
-@media only screen and (max-width: 2560px) {
+
     *{
         color: rgb(54,159,217);
     }
@@ -44,7 +44,12 @@
     }
     .Preview-Website-Name{
         margin-left: 20px;
-        display: flex;
+        display: block;
+    }
+    .Preview-Website-Name hr{
+        margin-top: 7em;
+        border-width: 1px;
+        border-color: rgb(54,159,217);
     }
     .btn-site-action{
         height: 55px;
@@ -63,13 +68,7 @@
         
     }
     
-    .Preview-Website-Name hr{
-        width: 978px;
-        background-color: rgb(54,159,217);
-        position: absolute;
-        margin-top: 180px;
-    
-    }
+
     .Preview-Website-Below{
         margin-top: 10px;
         display: flex;
@@ -91,6 +90,10 @@
     .col-sm{
         font-size: 15px;
     }
+    .hr__preview{
+        width: 200px;
+        color: white;
+        height: 2em;
+    }
     
     
-}

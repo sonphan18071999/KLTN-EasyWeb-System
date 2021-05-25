@@ -1,202 +1,245 @@
 
 
-@media only screen and (max-width: 1024px)   {
-    .header{
-        display: flex;
-        width: 1030px;
-        height: 440px;
-        background-color: #1E2B32;
-    }
-    .logo{
-        margin-top: 40px;
-        width: 200px;
-        height: 90px;
-        margin-right: 50px;
-        margin-left: 40px;
-        background-color: #1E2B32;
-    }
-    .search-bar{
-        margin-top: 50px;
-        background-color: rgb(44,56,68);
-        height: 55px;
-        width: 700px;
-        margin-right: 20px;
-    
-    }
-    .search-bar button{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-    }
-    .search-bar button:hover{
-        color: rgb(160,83,160);
+// @media only screen and (max-width: 1024px)   {
+//     .header{
+//         display: flex;
+//         width: 100%;
+//         height: 440px;
+//         background-color: #1E2B32;
+//     }
+//     .logo{
+//         margin-top: 40px;
+//         width: 200px;
+//         height: 90px;
+//         margin-right: 50px;
+//         margin-left: 40px;
+//         background-color: #1E2B32;
+//     }
+//     .search-bar{
+//         display: flex;
+//         margin-top: 50px;
+//         background-color: rgb(44,56,68);
+//         height: 55px;
+//         width: 700px;
+//         margin-right: 20px;
+//     }
+//     .search-bar button{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//     }
+//     .search-bar button:hover{
+//         color: rgb(160,83,160);
         
-    }
-    .search-bar input{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-        width: 700px;
-        height: 60px;
-        font-size: 18px;
-    }
+//     }
+//     .search-bar input{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//         width: 700px;
+//         height: 60px;
+//         font-size: 18px;
+//     }
     
-    i{
-        font-size: 20px;
-    }
-    *:focus {
-        outline: none;
-    }
-    .button{
-        width: 60px;
-        height: 40px;
-        background-color: transparent;
-        border-color: transparent;
-        color: rgb(54,159,217);
-        margin-top: 60px;
-        float:right;
-    }
-    .button:hover{
-        color: white;
-    }
-    .img-profile{
-        height: 60px;
-        width: 60px;
-        border-radius: 30px;
-        background-color: transparent;
-        border-color: rgb(54,159,217);
-        border-width: 1px;
-        border-style: solid;
-        margin-top: 50px;
-    }
-    .header{
-        display: flex;
-        height: 300px;
-        width: 1365px;
-        background-color: #1E2B32;
-        overflow: hidden;
-    }
-    .search-bar{
-    margin-top: 50px;
-    background-color: rgb(44,56,68);
-    height: 55px;
-    width: 800px;
-    margin-right: 20px;
-    }
+//     i{
+//         font-size: 20px;
+//     }
+//     *:focus {
+//         outline: none;
+//     }
+//     .button{
+//         width: 60px;
+//         height: 40px;
+//         background-color: transparent;
+//         border-color: transparent;
+//         color: rgb(54,159,217);
+//         margin-top: 60px;
+//         float:right;
+//     }
+//     .button:hover{
+//         color: white;
+//     }
+//     .img-profile{
+//         height: 60px;
+//         width: 60px;
+//         border-radius: 30px;
+//         background-color: transparent;
+//         border-color: rgb(54,159,217);
+//         border-width: 1px;
+//         border-style: solid;
+//         margin-top: 50px;
+//     }
+   
+//     .search-bar{
+//     margin-top: 50px;
+//     background-color: rgb(44,56,68);
+//     height: 55px;
+//     width: 800px;
+//     margin-right: 20px;
+//     display: flex;
+//     }
 
-    .search-bar button{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-    }
-    .search-bar button:hover{
-        color: rgb(160,83,160);
+//     .search-bar button{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//     }
+//     .search-bar button:hover{
+//         color: rgb(160,83,160);
         
-    }
-    .search-bar input{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-        width: 760px;
-        height: 60px;
-        font-size: 18px;
-    }
-}
+//     }
+//     .search-bar input{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//         width: 760px;
+//         height: 60px;
+//         font-size: 18px;
+//     }
+// }
 
-@media only screen and (max-width: 2560px)   {
+// @media only screen and (max-width: 2560px)   {
  
-    .logo{
-        margin-top: 40px;
-        width: 200px;
-        height: 90px;
-        margin-right: 50px;
-        margin-left: 40px;
-        background-color: #1E2B32;
-    }
-    .search-bar{
-        margin-top: 50px;
-        background-color: rgb(44,56,68);
-        height: 55px;
-        width: 700px;
-        margin-right: 20px;
+//     .logo{
+//         margin-top: 40px;
+//         width: 200px;
+//         height: 90px;
+//         margin-right: 50px;
+//         margin-left: 40px;
+//         background-color: #1E2B32;
+//     }
+//     .search-bar{
+//         margin-top: 50px;
+//         background-color: rgb(44,56,68);
+//         height: 55px;
+//         width: 700px;
+//         margin-right: 20px;
     
-    }
-    .search-bar button{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-    }
-    .search-bar button:hover{
-        color: rgb(160,83,160);
+//     }
+//     .search-bar button{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//     }
+//     .search-bar button:hover{
+//         color: rgb(160,83,160);
         
-    }
-    .search-bar input{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-        width: 700px;
-        height: 60px;
-        font-size: 18px;
-    }
+//     }
+//     .search-bar input{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//         width: 700px;
+//         height: 60px;
+//         font-size: 18px;
+//     }
     
-    i{
-        font-size: 20px;
-    }
-    *:focus {
-        outline: none;
-    }
-    .button{
-        width: 60px;
-        height: 40px;
-        background-color: transparent;
-        border-color: transparent;
-        color: rgb(54,159,217);
-        margin-top: 60px;
-        float:right;
-    }
-    .button:hover{
-        color: white;
-    }
-    .img-profile{
-        height: 40px;
-        width: 40px;
-        border-radius: 30px;
-        background-color: transparent;
-        border-color: rgb(54,159,217);
-        border-width: 1px;
-        border-style: solid;
-        margin-top: 60px;
-    }
-    .header{
-        display: flex;
-        height: 300px;
-        width: 1560px;
-        background-color: #1E2B32;
-        overflow: hidden;
-    }
-    .search-bar{
-        margin-top: 50px;
-        background-color: rgb(44,56,68);
-        height: 55px;
-        width: 1050px;
-        margin-right: 20px;
-    }
+//     i{
+//         font-size: 20px;
+//     }
+//     *:focus {
+//         outline: none;
+//     }
+//     .button{
+//         width: 60px;
+//         height: 40px;
+//         background-color: transparent;
+//         border-color: transparent;
+//         color: rgb(54,159,217);
+//         margin-top: 60px;
+//         float:right;
+//     }
+//     .button:hover{
+//         color: white;
+//     }
+//     .img-profile{
+//         height: 40px;
+//         width: 40px;
+//         border-radius: 30px;
+//         background-color: transparent;
+//         border-color: rgb(54,159,217);
+//         border-width: 1px;
+//         border-style: solid;
+//         margin-top: 60px;
+//     }
+//     .header{
+//         display: flex;
+//         background-color: #1E2B32;
+//     }
+//     .search-bar{
+//         margin-top: 50px;
+//         background-color: rgb(44,56,68);
+//         height: 55px;
+//         width: 1050px;
+//         margin-right: 20px;
+//     }
 
-    .search-bar button{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-    }
-    .search-bar button:hover{
-        color: rgb(160,83,160);
+//     .search-bar button{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//     }
+//     .search-bar button:hover{
+//         color: rgb(160,83,160);
         
-    }
-    .search-bar input{
-        color: rgb(54,159,217);
-        background-color: transparent;
-        border-color: transparent;
-        width: 1010px;
-        height: 60px;
-        font-size: 15px;
-    }
+//     }
+//     .search-bar input{
+//         color: rgb(54,159,217);
+//         background-color: transparent;
+//         border-color: transparent;
+//         width: 1010px;
+//         height: 60px;
+//         font-size: 15px;
+//     }
+// }
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 5em;
+    background-color: #1E2B32;
+}
+.logo{
+    height: 100%;
+    width: auto;
+}
+.search-bar{
+    width: 55em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 5% 90%;
+    height: 4em;
+    padding-top: 1em;
+}
+.ui-button-icon-only{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(54,159,217);
+    color: rgb(54,159,217);
+    background-color: transparent;
+}
+.input__search{
+    border-color: rgb(54,159,217);
+}
+.input__search:focus{
+    outline: none;
+}
+.button{
+    margin-top: 1em;
+    height: 3em;
+    width: 3em;
+    border-width: 1px;
+    margin-right: 1em;
+    color: rgb(54,159,217);
+    border-color: rgb(54,159,217);
+    background-color: transparent;
+}
+.img-profile{
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin-top: 1em;
+    border-color: rgb(54,159,217);
+    border-width: 1px;
+    margin-right: 1em;
 }

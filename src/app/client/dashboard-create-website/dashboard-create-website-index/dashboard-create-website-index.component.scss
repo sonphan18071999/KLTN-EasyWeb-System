@@ -2,7 +2,9 @@
     .create-website-container{
         width: 1270px;
         margin: 0px;
-        overflow: hidden;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: #323d4d;
     }
     .create-website-step-container{
         width: 1200px;
@@ -36,7 +38,6 @@
         height: auto;
         border-color: rgb(54,159,217);
         border-style: solid;
-        padding-bottom: 30px;
         margin-top: 20px;
     }
 }

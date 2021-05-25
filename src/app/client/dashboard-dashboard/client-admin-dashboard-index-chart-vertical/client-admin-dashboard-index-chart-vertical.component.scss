@@ -1,17 +1,7 @@
-
-@media only screen and (max-width: 1024px) {
-    .line-chart{
-        width: 430px;
-        margin-left: 65px;
-        background-color: rgb(36,48,60);
-        margin-bottom: 50px;
-    }
-}
-@media only screen and (max-width: 2560px) {
-    .line-chart{
-        width: 600px;
-        margin-left: 65px;
-        background-color: rgb(36,48,60);
-        margin-bottom: 50px;
-    }
+.line-chart{
+    width: 100%;
+    background-color: rgb(36,48,60);
+    margin-bottom: 50px;
+    margin-left: 2em;
+    height: auto;
 }

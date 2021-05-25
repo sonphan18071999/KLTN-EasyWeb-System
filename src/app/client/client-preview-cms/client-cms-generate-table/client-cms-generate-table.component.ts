@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {ThemeService} from "../ModeUI/theme.service";
-import { Observable} from 'rxjs';
 
 @Component({
   selector: 'app-client-cms-generate-table',
