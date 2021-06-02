@@ -24,8 +24,17 @@ export class DatabaseService {
   }
 
   registerClientDatabase(obj:any){
-    var header = this.GetHeader()
-     return this.httpClient.post<any>(this.rootApiService.URL+'DbConnection/RegisterNewDatabase',obj,{headers:header})
+    let header = this.GetHeader();
+     return this.httpClient.post<any>(this.rootApiService.URL+'DbConnection/RegisterNewDatabase',obj,{headers:header});
   }
   
+  getListDatabaseRegistered(){
+    let header = this.GetHeader();
+    return this.httpClient.get<any>(this.rootApiService.URL+'CustomerDbStatistics/GetStatistics',{headers:header});
+  }
+
+  saveBussinessInformation(idDatabaseRegister:any, obj:any){
+    let header = this.GetHeader()
+    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/CreateMasterConfig?'+idDatabaseRegister,obj,{headers:header});
+  }
 }

@@ -12,7 +12,7 @@ import {ClientCMSGenerateCreateUIComponent} from '../app/client/client-preview-c
 import {ClientCMSGenerateUpdateUIComponent} from '../app/client/client-preview-cms/client-cms-generate-update-ui/client-cms-generate-update-ui.component';
 import {ClientCMSGenerateDeleteUIComponent} from '../app/client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
 import {ClientCMSGenerateReadUIComponent} from '../app/client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
-
+import { StatisticComponent } from './client/statistic/statistic.component';
 const routes: Routes = [
   { path: '', component: ClientIndexComponent },
   { path: 'login', component: ClientLoginComponent },
@@ -22,6 +22,7 @@ const routes: Routes = [
     {path:'part-01',component:ClientAdminPart01Component},
     {path:'part-02',component:ClientAdminPart02Component},
     {path:'website/create',component:DashboardCreateWebsiteIndexComponent},
+    {path:'website/statistic/:id',component:StatisticComponent},
     {path:'**',component:ClientAdminDashboardIndexComponent}]
 
 },

@@ -1,0 +1,31 @@
+<div class="statistic__container">
+    <div class="statistic">
+        <h2>Statistic</h2>
+        <p><i>All of your database processed and processing</i></p>
+        <table class="table table-hover">
+            <thead>
+                <th class="table__th" scope="col">N.o</th>
+                <th class="table__th" scope="col">Type</th>
+                <th class="table__th" scope="col">Database Name</th>
+                <th class="table__th" scope="col">Bussiness Name</th>
+                <th class="table__th" scope="col">URL Source Download</th>
+                <th class="table__th" scope="col">Status</th>
+            </thead>
+            <tbody *ngFor="let item of listDBRegistered;let i = index">
+                <tr class="tr--hover">
+                    <td>{{i}}</td>
+                    <td>{{item.dbType}}</td>   
+                    <td>{{item.databaseName}}</td>
+                    <td *ngIf="item.bussinessName">{{item.bussinessName}}</td>
+                    <td *ngIf="!item.bussinessName">---</td>
+                    <td *ngIf="item.apiDownloadLink">
+                        <a href={{item.apiDownloadLink}}><p>{{item.apiDownloadLink}}</p></a>
+                    </td>
+                    <td *ngIf="!item.apiDownloadLink">---</td>
+                    <td *ngIf="item.apiDownloadLink">Finished</td>
+                    <td *ngIf="!item.apiDownloadLink">Processing</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

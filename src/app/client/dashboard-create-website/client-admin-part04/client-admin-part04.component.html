@@ -1,43 +1,37 @@
-<div class="Client-Admin-Part03">
+<div class="Client-Admin-Part04">
     <h3><b>Fill out information</b></h3>
     <p><i>With this information, we'll display it on your website homepage.</i></p>
-    <div class="group-input-part03">
-            <div class="group-input-part03-top">
-                <div class="group-input-part03-top-left">
+    <div class="group-input-Part04">
+            <div class="group-input-Part04-top">
+                <div class="group-input-Part04-top-left">
                     <div class="get-logo-customer">
                         <br>
                         <br>
                         <p>Drop file here!</p>
                     </div>
-                    <img src="../../../../assets/images/LogoEasyWeb_02.png" >
                 </div>
-                <div class="group-input-part03-top-right">
+                <div class="group-input-Part04-top-right">
                     <p>Bussiness Name</p>
-                    <input type="text" placeholder="Ex: Facebook, Google ...">
+                    <input type="text" placeholder="Ex: Facebook, Google ..." [(ngModel)]="bussinessName">
                     <p>Location</p>
-                    <input type="text" placeholder="Entity's name">
+                    <input type="text" placeholder="Entity's name" [(ngModel)]="location">
                     <p>Email</p>
-                    <input type="text" placeholder="Ex: facebook@facebook.com">
+                    <input type="email" placeholder="Ex: facebook@facebook.com" [(ngModel)]="email">
                     <p>Contact</p>
-                    <input type="text" placeholder="Ex: 08 123 456">
+                    <input type="text" placeholder="Ex: 08 123 456" [(ngModel)]="contact">
                 </div>
             </div>
-            <div class="group-input-part03-under">
+            <div class="group-input-Part04-under">
                <div></div>
-                <div class="group-input-part03-under-input">
+                <div class="group-input-Part04-under-input">
                     <p>Brief Description</p>
-                    <textarea rows="4"></textarea>
+                    <textarea rows="4" [(ngModel)]="briefDescription"></textarea>
                     <p>Actions</p>
-                    <div class="group-button-part03">
-                        <button class="button button-primary">Submit</button>
-                        <button class="button button-secondary">Reset</button>
+                    <div class="group-button-Part04">
+                        <button class="button button-primary" (click)="onSubmitUserInfo()">Submit</button>
+                        <button class="button button-secondary" (click)="onResetUserInfo()">Reset</button>
                     </div>
                </div>
             </div>
     </div>
 </div>
-
-<!-- <div class="Client-Admin-Part04">
-    <h3><b>Preview</b></h3>
-    <p><i>You can now preview <a [routerLink]="['/website/generated/index']" target="_blank" routerLinkActive="router-link-active" ><u>your website</u></a>. After click at "Generate Code" you can officially use our Open-Source project as yours.</i></p>
-</div> -->
