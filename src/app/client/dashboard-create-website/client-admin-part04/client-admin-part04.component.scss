@@ -43,6 +43,13 @@
         height: 200px;
         width: auto;
         display: block;
+        margin-right: 2em;
+        .img__container{
+            height: 15em;
+            border-width: 1px;
+            border-style: solid;
+            overflow: hidden;
+        }
         .get-logo-customer{
             border-color: black;
             background-color: transparent;
@@ -50,18 +57,6 @@
             width: 200px;
             border-style: solid;
             border-width: 1px;
-        }
-        img{
-            position: absolute;
-            top: 800px;
-            left: 100px;
-            width: 200px;
-            height: auto;
-            border-width: 1px;
-            z-index: 10;
-        }
-        img:hover{
-            cursor: pointer;
         }
         .get-logo-customer:hover{
             background-color: transparent;
@@ -125,5 +120,21 @@
     .button-secondary:hover{
         background-color: rgb(211,87,193);
         color: white;
+    }
+    .choose::-webkit-file-upload-button{
+        margin-top: 1em;
+        color: white;
+        display: inline-block;
+        background: transparent;
+        border-color:rgb(54,159,217);
+        border-width: 1px;
+        padding: 7px 15px ;
+        font-weight: 700;
+        border-radius: 3px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 10pt;
+        border-radius: 15px;
+        height: 3em;
     }
 }

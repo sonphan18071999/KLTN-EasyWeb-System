@@ -1,0 +1,27 @@
+.user__last{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    margin-bottom: 1em;
+}
+
+.register__title{
+    text-align: center;
+    padding-top: 7em;
+}
+
+.form__input{
+    margin-bottom: 2em;
+}
+
+.register__page{
+    height: 100vh;
+    background-color: #010b2e;
+    color: white;
+}
+
+.register__form{
+    width: 50%;
+    padding-top: 2em;
+    margin: 0 auto;
+}

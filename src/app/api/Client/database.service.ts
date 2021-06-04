@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RootApiService } from '../root-api.service';
+import { User } from 'src/app/models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +36,14 @@ export class DatabaseService {
 
   saveBussinessInformation(idDatabaseRegister:any, obj:any){
     let header = this.GetHeader()
-    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/CreateMasterConfig?'+idDatabaseRegister,obj,{headers:header});
+    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/CreateMasterConfig?dbGuid='+idDatabaseRegister,obj,{headers:header});
+  }
+
+  registerNewUser(user:User){
+    return this.httpClient.post<User>(this.rootApiService.URL+"EasyWebAuth/Register",user);
+  }
+  uploadLogoBusiness(idDatabaseRegister:any,img:any){
+    let header = this.GetHeader()
+    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/UploadImage?dbGuid='+idDatabaseRegister,img,{headers:header});
   }
 }

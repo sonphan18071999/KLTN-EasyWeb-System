@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { DatabaseService } from "../../../api/Client/database.service";
 @Component({
   selector: 'app-client-admin-part04',
@@ -13,11 +14,14 @@ export class ClientAdminPart04Component implements OnInit {
   contact:any;
   briefDescription:any;
   arrObj:Item[]=[];
-  idUserLogged:any;
-  constructor(private databaseService:DatabaseService) { }
+  idDbRegistered:any;
+  imageSrc: string | undefined;
+
+  constructor(private databaseService:DatabaseService,
+    private toast:ToastrService) { }
 
   ngOnInit(): void {
-    this.idUserLogged = localStorage.getItem("userIdLogged");
+    this.idDbRegistered = localStorage.getItem('idDbRegistered');
   }
   async onSubmitUserInfo(){
     this.pushItemToArr('bussinessName',this.bussinessName)
@@ -25,9 +29,14 @@ export class ClientAdminPart04Component implements OnInit {
     this.pushItemToArr('email', this.email)
     this.pushItemToArr('contact', this.contact)
     this.pushItemToArr('briefDescription', this.briefDescription)
-    // return await this.databaseService.saveBussinessInformation(this.idUserLogged,this.arrObj).subscribe(info=>{
-    //      window.location.href="website/generated/index";
-    // })
+    console.log(JSON.stringify( this.arrObj))
+    // this.pushItemToArr('imageSrc',this.imageSrc);
+    return await this.databaseService.saveBussinessInformation(this.idDbRegistered, this.arrObj).subscribe(info=>{
+      this.toast.success("Filled up bussiness information","Easy Web: Information");
+    },er=>{
+        this.toast.warning("Something went wrong","Easy Web: Warning")
+    })
+
   }
   pushItemToArr(name:any, value:any){
     return this.arrObj.push({
@@ -41,6 +50,15 @@ export class ClientAdminPart04Component implements OnInit {
     this.email="";
     this.contact="";
     this.briefDescription="";
+  }
+  readURL(event: any): void {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+      reader.onload = (event: any) => {
+          this.imageSrc=event.target.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
   }
 }
 

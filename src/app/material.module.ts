@@ -46,8 +46,8 @@ import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatStepperModule} from '@angular/material/stepper';
-import { ToastrModule } from 'ngx-toastr';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 @NgModule({
   exports: [
@@ -98,6 +98,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     MatStepperModule,
     ReactiveFormsModule,
     NgxDatatableModule,
+    NgxDropzoneModule,
+    BrowserAnimationsModule
   ],
   imports: [
     A11yModule,
@@ -149,10 +151,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     MatStepperModule,
     ReactiveFormsModule,
     NgxDatatableModule,
-    ToastrModule.forRoot({timeOut: 2000,
-      positionClass: 'toast-bottom-right'
-    },
-    )
+    NgxDropzoneModule
   ]
 })
 export class MaterialModule { }

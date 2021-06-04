@@ -47,6 +47,8 @@ import { DialogEditTableItemComponent } from './client/dashboard-create-website/
 import { DialogEditColumnItemComponent } from './client/dashboard-create-website/dialog-edit-column-item/dialog-edit-column-item.component';
 import { ClientCMSHomepageSearchComponent } from './client/client-preview-cms/client-cmshomepage-search/client-cmshomepage-search.component';
 import { StatisticComponent } from './client/statistic/statistic.component';
+import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,7 @@ import { StatisticComponent } from './client/statistic/statistic.component';
     DialogEditColumnItemComponent,
     ClientCMSHomepageSearchComponent,
     StatisticComponent,
+    ClientRegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +101,11 @@ import { StatisticComponent } from './client/statistic/statistic.component';
     ChartsModule,
     MatGridListModule ,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    ToastrModule.forRoot({ timeOut: 2000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

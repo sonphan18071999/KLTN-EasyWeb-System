@@ -13,9 +13,11 @@ import {ClientCMSGenerateUpdateUIComponent} from '../app/client/client-preview-c
 import {ClientCMSGenerateDeleteUIComponent} from '../app/client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
 import {ClientCMSGenerateReadUIComponent} from '../app/client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
 import { StatisticComponent } from './client/statistic/statistic.component';
+import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
 const routes: Routes = [
   { path: '', component: ClientIndexComponent },
   { path: 'login', component: ClientLoginComponent },
+  { path: 'register-account', component: ClientRegisterComponent },
   { path: 'client/admin', component:ClientAdminDashboardComponent,
     children:[
     {path:'index',component:ClientAdminDashboardIndexComponent},
