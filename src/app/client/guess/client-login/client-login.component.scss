@@ -1,5 +1,136 @@
 @media screen and (max-width: 2560px) {
-.login-form-container{
+  .login-form-container{
+    background-image: url("../../../../assets/images/2635178.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+  }
+  
+  .container-form{
+    margin-top: 80px;
+    margin-left: 100px;
+    width: 25%;
+    height: 83%;
+    background-color: white;
+  }
+  .container-form h3{
+  padding:30px 30px 0px 30px;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(56,154,214);
+  }
+  
+  .container-form .group-buttons{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .login-form {
+    padding-top: 30px;
+    padding-right:30px ;
+    padding-left: 30px;
+  }
+  
+.social-login {
+    display: block;
+    text-align: left;
+}
+  .input-field {
+    width: 100%;
+    margin: auto;
+    color: rgb(56,154,214);
+    z-index: 100;
+  }
+  .mat-form-field-wrapper {
+    margin-left: 30%;
+  }
+  .register-account a{
+    margin-bottom: 20px;
+  }
+  .basic-login{
+    margin-top: 10px;
+  }
+
+  .check-is-admin{
+    padding-left: 26px;
+  }
+.social-login .login-fb{
+    width: 100%;
+    background-color: rgb(59,89,152); 
+    color: white; 
+    text-align: left;
+    border-width:0px ;
+    margin-bottom: 3px;   
+    display: flex;
+}
+.social-login .login-fb p{
+    text-align: center;
+    width: 85%;
+    padding-top: 15px;
+}
+.social-login .login-fb i{
+    font-size: 45px;
+}
+.social-login .login-google{
+    width: 100%; 
+    background-color: rgb(238,68,51); 
+    color: white;
+    text-align: left;
+    border-width:0px ;
+    display: flex;
+}
+.social-login .login-google i{
+    font-size: 45px;
+}
+.social-login .login-google p{
+    text-align: center;
+    width: 85%;
+    padding-top: 15px;
+}
+
+.btn {
+  width: 411px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  color: rgb(56,154,214);
+}
+svg {
+  position: absolute;
+  left: 130px;
+  top: 385px;
+  fill: none;
+  stroke: rgb(158,84,161);
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+  
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  color: rgb(158,84,161);
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+.logo{
+  margin-left: 20px;
+  margin-top: 20px; 
+}
+.border{
+  width: 410px;
+  height: 60px;
+}
+}
+@media only screen and (max-width: 1440px) {
+  .login-form-container{
     background-image: url("../../../../assets/images/2635178.jpg");
     background-size: cover;
     height: 722px;
@@ -91,7 +222,7 @@
 }
 
 .btn {
-  width: 330px;
+  width: 300px;
   height: 60px;
   cursor: pointer;
   background: transparent;
@@ -123,22 +254,14 @@ svg {
 .logo{
   margin-left: 20px;
   margin-top: 20px;
-  
+}
+.border{
+  width: 300px;
+  height: 60px;
 }
 }
-// @media only screen and (max-width: 1440px) {
-  
-//   .login-form-container{
-//     top: 0px;
-//     position: absolute;
-//     background-image: url("../../../../assets/images/2635178.jpg");
-//     background-position: absolute;
-//     background-size: cover;
-//     height: 1440px;
-//     width: 1440px;
-//   }
-//   .input-field{
-//     width: 130px;
-//   }
-  
-// }
+@media only screen and (max-width: 1024px) {
+  .container-form{
+    width: 35%;
+  }
+}

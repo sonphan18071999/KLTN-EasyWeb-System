@@ -4,4 +4,5 @@ export class RegisterDatabase{
     username: string | undefined;
     password: string | undefined;
     initialCatalog: string | undefined;
+    serverPort: Number | undefined;
 }

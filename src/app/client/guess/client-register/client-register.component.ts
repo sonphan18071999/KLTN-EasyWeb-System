@@ -10,7 +10,8 @@ import { User } from 'src/app/models/user';
 })
 export class ClientRegisterComponent implements OnInit {
 
-  constructor(private databaseService:DatabaseService, private toast:ToastrService) { }
+  constructor(private databaseService:DatabaseService, 
+    private toast:ToastrService) { }
   lName:any;
   fName:any;
   password:any;
@@ -19,13 +20,17 @@ export class ClientRegisterComponent implements OnInit {
   userSubmit:any;
   ngOnInit(): void {
   }
-  onSubmitUser(){
-    this.userSubmit=new User(this.fName,this.lName,this.userName,this.email,this.password);
-    this.databaseService.registerNewUser(this.userSubmit).subscribe(successfull=>{
-      this.toast.success("Create new user successfully","Toast information")
-      window.location.href="/Home"
-    },er=>{
-      this.toast.warning("Something wrong","Toast warning")
+  onSubmitUser() {
+    this.userSubmit = new User(this.fName, this.lName, this.userName, this.email, this.password);
+    this.databaseService.registerNewUser(this.userSubmit).subscribe(res => {
+      console.log(res.succeeded)
+      if (!res.succeeded) {
+          this.toast.warning(res.errors[0].description, "EasyWeb: Warning")
+      }
+      else {
+        this.toast.success("Create new user succesfully", "EasyWeb: Information")
+        window.location.href = "/Home";
+      }
     })
   }
 }

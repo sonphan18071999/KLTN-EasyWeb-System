@@ -1,9 +1,11 @@
-@media only screen and (max-width: 2560px) {
+$colorText_Border:rgb(54,159,217);
+$backgroundColor:rgb(36,48,60);
+@media only screen and (min-width: 1023px) {
    .Client-Admin-Part02{
         margin-left: 20px;
-        width: 1165px;
+        width: 53em;
         height: auto;
-        border-color: rgb(54,159,217);
+        border-color: $colorText_Border;
         border-style: solid;
         padding-bottom: 30px;
         margin-top: 20px;
@@ -14,10 +16,11 @@
         padding-top: 30px;
     }
     table {
-        width: 100%;
+        width: 92%;
         text-align: left;
-        background-color: rgb(36,48,60);
-        color: rgb(54,159,217);
+        background-color: $backgroundColor;
+        color: $colorText_Border;
+        margin-left: 2.1em;
         th{
             font-size: 18px;
         }
@@ -43,62 +46,62 @@
         color: white;
         margin-bottom: 5px;
     }
-    ::ng-deep .mat-focused .mat-form-field-label {
-        /*change color of label*/
-        color: rgb(54,159,217);
-    }
+ 
     ::ng-deep.mat-form-field-underline {
         /*change color of underline*/
-        background-color: rgb(54,159,217) !important;
+        background-color: $colorText_Border !important;
       } 
     ::ng-deep.mat-form-field-ripple {
         /*change color of underline when focused*/
-        background-color: rgb(54,159,217) !important;;
+        background-color: $colorText_Border !important;;
     }
     ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
         opacity: 0.03 !important;
-        background-color: rgb(54,159,217)!important;
+        background-color: $colorText_Border!important;
       }
     .mat-paginator-container{
-        background-color:rgb(54,159,217) ;
+        background-color:$colorText_Border ;
     }
       ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
-        background-color: rgb(54,159,217)!important;
+        background-color: $colorText_Border!important;
     }
     .table__paging{
         background-color: rgb(36,48,60);
-        color: rgb(54,159,217);
+        color: $colorText_Border;
+        width: 92%;
+        margin-left: 2.4em;
     }
     
     .mat-labvel{
-        color: rgb(54,159,217);
+        color: $colorText_Border;
     }
     .search-mat-input{
-        color: white;
+        color: $colorText_Border;
     }
     .table-entities{
         padding-top: 20px;
-        max-width: 1050px;
         margin: 0 auto !important;
+        width: 100%;
     }
     .header-table{
-        color: rgb(54,159,217);
+        color: $colorText_Border;
     }
     .table-data{
-        color: rgb(54,159,217);
+        color: $colorText_Border;
     }
     .group-button{
         text-align: left;
         margin-top:19px ;
         margin-bottom:20px ;
         display: grid;
-        grid-template-columns:  120px 120px 690px 120px;
+        grid-template-columns:  9em 9em 21.2em 9em;
+        margin-left: 2.2em;
     }
     .button{
-        border-color: rgb(54,159,217);
+        border-color: $colorText_Border;
         height: 40px;
         background-color: transparent;
-        color: rgb(54,159,217);
+        color: $colorText_Border;
     }
     .button i{
         padding-right: 15px;
@@ -107,15 +110,15 @@
         padding:0px 20px 0px 20px ;
     }
     .button-primary:hover{
-        background-color: rgb(54,159,217);
+        background-color: $colorText_Border;
         color: white;
     }
     .button-secondary:hover{
-        background-color: rgb(54,159,217);
+        background-color: $colorText_Border;
         color: white;
     }
     .button-third:hover{
-        background-color: rgb(54,159,217);
+        background-color: $colorText_Border;
         color: white;
     }
 
@@ -123,7 +126,7 @@
         padding: 10px 30px 10px 30px;
     }
     .table-view:hover{
-        background-color: rgb(54,159,217);
+        background-color: $colorText_Border;
         color: white;
         -webkit-transition: background-color 0.5s ease-in;
         -moz-transition: background-color 0.5s ease-out;
@@ -131,7 +134,22 @@
         transition: background-color 0.5s ease-out;
     }
     .btn__checkbox{
-        border-radius:rgb(54,159,217) ;
+        border-radius:$colorText_Border ;
+    }
+    ::ng-deep .mat-focused .mat-form-field-label {
+        color: $colorText_Border !important;
+    }
+    ::ng-deep.mat-form-field-ripple {
+        background-color: $backgroundColor !important;;
+    }
+    .filter__input{
+        width: 48em;
+        background-color: $backgroundColor;
     }
     
+}
+@media only screen and (min-width: 1439px) {
+    .filter__input{
+        width: 20em;
+    }
 }

@@ -1,18 +1,19 @@
-@media only screen and (max-width: 2560px) {
+@media screen and (min-width:1023px) {
     .create-website-container{
-        width: 1270px;
+        width: 100%;
+        background-color: #323d4d;
         margin: 0px;
         height: 100%;
         overflow-y: scroll;
-        background-color: #323d4d;
     }
+  
     .create-website-step-container{
-        width: 1200px;
+        width: 95%;
         height: auto;
         border-color: rgb(54,159,217);
         border-style: solid;
         border-width: 2px;
-        margin-left: 20px;
+        margin-left: 2em;
         margin-top: 10px;
         display: block;
         margin-bottom: 20px;
@@ -24,7 +25,9 @@
         margin-left: 70px;
         font-size: 28px;
     }
-    
+    .h2__title{
+        margin-left: 0.7em;
+    }
     *{
         color: rgb(54,159,217);
     }
@@ -34,10 +37,44 @@
     }
     .Client-Admin-Part01{
         margin-left: 20px;
-        width: 1165px;
+        width: 53em;
         height: auto;
         border-color: rgb(54,159,217);
         border-style: solid;
         margin-top: 20px;
     }
+}
+
+@media screen and (min-width:1439px) {
+    .Client-Admin-Part01{
+        width: 77em;
+    }
+    .create-website-step-container{
+        width: 97%;
+    }
+   
+}
+
+@media only screen and (min-width: 1879px) {
+    .create-website-step-container{
+        width: 98%;
+    }
+    .Client-Admin-Part01{
+        width: 103em;
+    }
+    .create-website-container{
+        width: 100%;
+        background-color: #323d4d;
+        height: auto;
+    }
+    .Preview-Website-Container{
+        margin-top: 0px;
+    }
+    .h2__title{
+        margin-top: 20px;
+        margin-left: 0.7em;
+        font-size: 28px;
+        color: rgb(54,159,217);
+    }
+    
 }

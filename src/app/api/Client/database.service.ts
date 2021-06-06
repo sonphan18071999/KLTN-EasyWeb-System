@@ -40,7 +40,7 @@ export class DatabaseService {
   }
 
   registerNewUser(user:User){
-    return this.httpClient.post<User>(this.rootApiService.URL+"EasyWebAuth/Register",user);
+    return this.httpClient.post<any>(this.rootApiService.URL+"EasyWebAuth/Register",user);
   }
   uploadLogoBusiness(idDatabaseRegister:any,img:any){
     let header = this.GetHeader()

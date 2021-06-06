@@ -15,7 +15,6 @@ export class ClientLoginComponent implements OnInit {
   password:any;
   constructor(
     private login: LoginService,
-    private elementRef: ElementRef,
     private route: Router,
     private toast:ToastrService
   ) { }
