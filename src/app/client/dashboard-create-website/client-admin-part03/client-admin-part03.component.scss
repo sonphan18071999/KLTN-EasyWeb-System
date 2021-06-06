@@ -1,76 +1,103 @@
 $blueColor:rgb(54,159,217);
-@media only screen and (max-width: 2560px) {
+@media screen and (min-width:1023px) {
     .Client-Admin-Part03{
-         margin-left: 20px;
-         width: 1165px;
-         height: auto;
-         border-color: $blueColor;
-         border-style: solid;
-         padding-bottom: 30px;
-         margin-top: 20px;
-         text-align: center;
-     }   
-     .Client-Admin-Part03 h3{
-        font-size: 20px;
-        padding-top: 30px;
+        margin-left: 20px;
+        width: 53em;
+        height: auto;
+        border-color: $blueColor;
+        border-style: solid;
+        padding-bottom: 30px;
+        margin-top: 20px;
+        text-align: center;
+    }   
+    .Client-Admin-Part03 h3{
+       font-size: 20px;
+       padding-top: 30px;
+   }
+   .part03__content
+   {
+       color: $blueColor;
+       text-align: left;
+       width: 100%;
+   }
+   .part03__content__item{
+       margin-left: 55px;
+   }
+   table{
+       width: 86%;
+       text-align: left;
+       background-color: rgb(36,48,60);
+       color: rgb(54,159,217);
+       font-size: 13px;
+       margin:0 auto;
+       th{
+           font-size: 15px;
+       }
+       .th__id{
+           width: 5%;
+       }
+       .th__item{
+           width: 11%;
+       }
+      
+   }
+   ::ng-deep .input-mat-form-field{
+       width: 45em;
+       color: $blueColor;
+   }
+   ::ng-deep .mat-label{
+       color: $blueColor;
+   }
+   .button{
+       border-color: rgb(54,159,217);
+       height: 40px;
+       background-color: transparent;
+       color: rgb(54,159,217);
+   }
+   .button-primary{
+       padding:0px 20px 0px 20px ;
+   }
+   .button-primary:hover{
+       background-color: rgb(54,159,217);
+       color: white;
+   }
+   .group-button{
+       margin-left: 55px;
+       text-align: left;
+       margin-top:19px ;
+       margin-bottom:20px ;
+       display: grid;
+       grid-template-columns:  9em 9em 18em 9em;
     }
-    .part03__content
-    {
-        color: $blueColor;
-        text-align: left;
-        width: 100%;
-    }
-    .part03__content__item{
-        margin-left: 55px;
-    }
-    table{
-        max-width: 1050px;
-        margin: 0 auto !important;
-        width: 100%;
-        text-align: left;
-        background-color: rgb(36,48,60);
-        color: rgb(54,159,217);
-        th{
-            font-size: 15px;
-        }
-        .th__id{
-            width: 5%;
-        }
-        .th__item{
-            width: 11%;
-        }
-       
-    }
-    ::ng-deep .input-mat-form-field{
-        width: 100%;
-        max-width: 1050px;
-        color: $blueColor;
-    }
-    ::ng-deep .mat-label{
-        color: $blueColor;
-    }
-    .button{
-        border-color: rgb(54,159,217);
-        height: 40px;
-        background-color: transparent;
-        color: rgb(54,159,217);
-    }
-    .button-primary{
-        padding:0px 20px 0px 20px ;
-    }
-    .button-primary:hover{
-        background-color: rgb(54,159,217);
-        color: white;
+   i{
+       margin-right: 1em;
+   }
+}
+@media only screen and (min-width: 1439px) {
+  .Client-Admin-Part03{
+      width: 77em;
+  }
+  ::ng-deep .input-mat-form-field{
+    width: 69em;
     }
     .group-button{
-        margin-left: 55px;
-        text-align: left;
-        margin-top:19px ;
-        margin-bottom:20px ;
-        display: grid;
-        grid-template-columns:  120px 120px 690px 120px;
+        grid-template-columns:  9em 9em 42em 9em;
     }
-    i{
-        margin-right: 1em;
+    .table{
+        width: 90.3%;
     }
 }
+@media only screen and (min-width: 1779px) {
+    .Client-Admin-Part03{
+        width: 103em;
+    }
+    ::ng-deep .input-mat-form-field{
+      width: 94em;
+      }
+      .group-button{
+          grid-template-columns:  9em 9em 67em 9em;
+      }
+      .table{
+          width: 92.1%;
+      }
+  }

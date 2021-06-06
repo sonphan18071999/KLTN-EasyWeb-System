@@ -150,6 +150,35 @@ $backgroundColor:rgb(36,48,60);
 }
 @media only screen and (min-width: 1439px) {
     .filter__input{
-        width: 20em;
+        width: 72em;
+    }
+    .Client-Admin-Part02{
+        width: 77em;
+    }
+    .group-button{
+        grid-template-columns: 9em 9em 45em 9em;
+    }
+    .table{
+    width: 94.2%;
+    }
+    .table__paging{
+        width: 94%;
+    }
+}
+@media only screen and (min-width: 1779px) {
+    .filter__input{
+        width: 98em;
+    }
+    .Client-Admin-Part02{
+        width: 103em;
+    }
+    .group-button{
+        grid-template-columns: 9em 9em 71em 9em;
+    }
+    .table{
+    width: 95.7%;
+    }
+    .table__paging{
+        width: 95.8%;
     }
 }
