@@ -1,41 +1,42 @@
 <div class="Preview-Website-Container">
-    <!-- contain image preview, name of database website, url, button 'site action' -->
-    <div class="Preivew-Website-Upper">
-        <div class="Preview-Square">
-            <h2 class="iamge__preview__title">Preview website</h2>
-            <div class="Preview-Square-Below">
-                <label>Status: Not publish yet</label>
+  <!-- contain image preview, name of database website, url, button 'site action' -->
+  <div class="Preivew-Website-Upper">
+      <div class="Preview-Square">
+          <h2 class="iamge__preview__title">Preview website</h2>
+          <div class="Preview-Square-Below">
+              <label>Status: Not publish yet</label>
+          </div>
+      </div>
+      <div class="Preview-Website-Name">
+         <div class="title__action__buttons">
+            <div class="title">
+              <h2>Your Bussiness Name</h2>
+              <span>https://username.easyweb.com/sites/</span>
             </div>
-        </div>
-        <div class="Preview-Website-Name">
-           <div class="title__action__buttons">
-              <div class="title">
-                <h2>Your Bussiness Name</h2>
-                <span>https://username.easyweb.com/sites/</span>
-              </div>
-              <button class="btn-site-action"> Actions <i class="fas fa-sort-down"></i></button>
-           </div>
-           <hr>
-           <div class="Preview-Website-Below">
-            <div class="container">
-                <div class="row">
-                  <div class="col-sm">
-                    <p>Site role: Unknow</p>
-                    <p><s>Invite Collaborators</s></p>
-                  </div>
-                  <div class="col-sm">
-                    <p>Schema: Unknow</p>
-                    <p><s>Adjust Entity</s></p>
-                  </div>
-                  <div class="col-sm">
-                    <p>Type: Unknow</p>
-                    <p><s>Change Connection String</s></p>
-                  </div>
+            <button class="btn-site-action"> Actions <i class="fas fa-sort-down"></i></button>
+         </div>
+         <hr>
+         <div class="Preview-Website-Below">
+          <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <h3 *ngIf="!previewData.dataPreview.schema">Schema name: <b>Unkown</b></h3>
+                  <h3 *ngIf="previewData.dataPreview.schema">Schema name: <b>{{previewData.dataPreview.schema}}</b></h3>
+                </div>
+                <div class="col-sm">
+                  <h3>Port: <b>{{previewData.dataPreview.port}}</b></h3>
+                </div>
+                <div class="col-sm">
+                  <h3 *ngIf="previewData.dataPreview.type==-1">Type: <b>Unknow</b></h3>
+                  <h3 *ngIf="previewData.dataPreview.type==0">Type:<b> Microsoft SQL Server</b></h3>
+                  <h3 *ngIf="previewData.dataPreview.type==1">Type:<b> MySQL</b></h3>
+                  <h3 *ngIf="previewData.dataPreview.type==2">Type:<b> PostgreSQL</b></h3>
                 </div>
               </div>
-        </div>
-        </div>
-    </div>
-    <!-- contain image preview, name of database website, url, button 'site action' -->
-    
+            </div>
+      </div>
+      </div>
+  </div>
+  <!-- contain image preview, name of database website, url, button 'site action' -->
+  
 </div>

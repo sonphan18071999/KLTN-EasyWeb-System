@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormControl} from '@angular/forms';
@@ -5,6 +6,7 @@ import { RegisterDatabase } from '../../../models/RegisterDatabase';
 import { DatabaseService } from '../../../api/Client/database.service';
 import { ThisReceiver } from '@angular/compiler';
 import { ToastrService } from 'ngx-toastr';
+import { PreviewService } from '../../../services/preview/preview.service';
 
 @Component({
   selector: 'app-client-admin-part01',
@@ -25,11 +27,16 @@ export class ClientAdminPart01Component implements OnInit {
   @Output() isActive = new EventEmitter<Object>();
   constructor(private databaseSerivce : DatabaseService,
     private route: ActivatedRoute,
-    private toast:ToastrService) { }
+    private toast: ToastrService,
+    private previewService: PreviewService) { }
 
   ngOnInit(): void {
   }
   SubmitDBSchema() {
+    this.previewService.dataPreview.type = this.databaseType;
+    this.previewService.dataPreview.port = this.portServer;
+    this.previewService.dataPreview.schema = this.txtSchemaName;
+
     this.objRegisterDatabase.username = this.txtUserName;
     this.objRegisterDatabase.password = this.txtPassword;
     this.objRegisterDatabase.server = this.txtDBUrl;
@@ -45,9 +52,10 @@ export class ClientAdminPart01Component implements OnInit {
       this.toast.warning("Password can't be empty!","EasyWeb: Warning")
     } else {
       this.databaseSerivce.registerClientDatabase(this.objRegisterDatabase).subscribe(res => {
-        console.log(res)
         this.isActive.emit(2)
         localStorage.setItem("idDbRegistered", res.guid)
+      }, er => {
+        this.toast.warning("Somefield might not correct","EasyWeb: Warning")
       })
     }
   }

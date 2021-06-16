@@ -49,6 +49,7 @@ import { ClientCMSHomepageSearchComponent } from './client/client-preview-cms/cl
 import { StatisticComponent } from './client/statistic/statistic.component';
 import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
 import { ToastrModule } from 'ngx-toastr';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -105,7 +106,8 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({ timeOut: 2000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true
-    })
+    }),
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

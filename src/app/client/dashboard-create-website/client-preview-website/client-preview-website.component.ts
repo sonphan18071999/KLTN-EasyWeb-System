@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PreviewService } from '../../../services/preview/preview.service';
 
 @Component({
   selector: 'app-client-preview-website',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientPreviewWebsiteComponent implements OnInit {
 
-  constructor() { }
+  previewData = new PreviewService();
+  constructor(private previewService: PreviewService) {
+    this.previewData = previewService;
+  }
 
   ngOnInit(): void {
   }
