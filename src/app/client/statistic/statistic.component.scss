@@ -12,7 +12,21 @@ $textColor:rgb(54,159,217);
 }
 .table{
     color: $textColor;
+    max-height: 20em;
 }
 .tr--hover:hover{
+    color: $textColor;
+}
+.card__statistic{
+    background-color: rgb(36,48,60);
+}
+.h1__title{
+    color: $textColor;
+}
+.sub_title{
+    color: $textColor;
+}
+.paginator{
+    background:rgb(36,48,60);
     color: $textColor;
 }

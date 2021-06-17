@@ -12,7 +12,7 @@ export class ClientAdminPart03Component implements OnInit {
 
   listTables:any;
   selectedTable:any;
-  listComlumnsInTable:any;
+  listComlumnsInTable:any=[];
   selectedItem:any;
   @Output() isActive = new EventEmitter<Number>();
   constructor(public dialog: MatDialog, private databaseTableConfigService : DatabaseTableConfigService) { }

@@ -1,41 +1,87 @@
 <div class="Client-Admin-Part02-Container">
-    <div class="Client-Admin-Part02">
-        <h3 class="dashboard-h3"><b>Chooose which entity will be use in your system.</b></h3>
-        <p><i>Base on your selection, system will generate actions for its entity</i></p>
-        <div class="table-entities">
-          <mat-form-field class="mat-form-field-filter filter__input" >
-            <mat-label class="mat-label">Filter...</mat-label>
-            <input class="search-mat-input" matInput (keyup)="applyFilter($event)" #input>
-          </mat-form-field>
-          <div class="group-button">
-              <button class="button button-secondary" (click)="openDialogEdit()"> <i class="far fa-edit"></i>Edit</button>
-              <button class="button button-third"><i class="fas fa-minus"></i>Remove</button>
-              <div></div>
-              <button class="button button-secondary" (click)="SubmitEntities()"><i class="fas fa-upload"></i> Submit</button>
-          </div>
-          <table class="table table-striped table-dark">
-            <thead>
-              <tr>
-                <th scope="col" >#</th>
-                <th scope="col" class="th__item " >Name</th>
-                <th scope="col" data-editable="true"  class="th__item th--custom--name" >Explicit Name</th>
-                <th scope="col" class="th__item">Actions In Database </th>
-                <th scope="col" class="th__item">Actions </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of allEntityDbRegister">
-                <td><input class="btn__checkbox" type="checkbox" (click)="chooseItem(item)"></td>
-                <td>{{item.name}}</td>
-                <td>{{item.explicitName}}</td>
-                <td>{{item.actionGroup}}</td>
-                <td>
-                  <button class="button button-primary" (click)="viewColumns(item)">View Detail</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <mat-paginator class="table__paging" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  <div class="Client-Admin-Part02">
+    <h3 class="dashboard-h3">
+      <b>Chooose which entity will be use in your system.</b>
+    </h3>
+    <p>
+      <i>Base on your selection, system will generate actions for its entity</i>
+    </p>
+    <div class="table-entities">
+      <mat-form-field class="mat-form-field-filter filter__input">
+        <mat-label class="mat-label">Filter...</mat-label>
+        <input
+          class="search-mat-input"
+          matInput
+          (keyup)="applyFilter($event)"
+          #input
+        />
+      </mat-form-field>
+      <div *ngIf="allEntityDbRegister.length <= 0" class="mat-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+      <div *ngIf="allEntityDbRegister.length > 0">
+        <div class="group-button">
+          <button class="button button-secondary" (click)="openDialogEdit()">
+            <i class="far fa-edit"></i>Edit
+          </button>
+          <button class="button button-third">
+            <i class="fas fa-minus"></i>Remove
+          </button>
+          <div></div>
+          <button class="button button-secondary" (click)="SubmitEntities()">
+            <i class="fas fa-upload"></i> Submit
+          </button>
         </div>
+
+        <table
+          *ngIf="allEntityDbRegister.length > 0"
+          class="table table-striped table-dark"
+        >
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col" class="th__item">Name</th>
+              <th
+                scope="col"
+                data-editable="true"
+                class="th__item th--custom--name"
+              >
+                Explicit Name
+              </th>
+              <th scope="col" class="th__item">Actions In Database</th>
+              <th scope="col" class="th__item">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of allEntityDbRegister">
+              <td>
+                <input
+                  class="btn__checkbox"
+                  type="checkbox"
+                  (click)="chooseItem(item)"
+                />
+              </td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.explicitName }}</td>
+              <td>{{ item.actionGroup }}</td>
+              <td>
+                <button
+                  class="button button-primary"
+                  (click)="viewColumns(item)"
+                >
+                  View Detail
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <mat-paginator
+        *ngIf="allEntityDbRegister.length > 0"
+        class="table__paging"
+        [pageSizeOptions]="[10]"
+        [length]="100"
+      ></mat-paginator>
     </div>
+  </div>
 </div>

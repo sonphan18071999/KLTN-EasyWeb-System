@@ -1,4 +1,6 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from 'src/app/api/Client/database.service';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -7,8 +9,12 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./user-information.component.scss']
 })
 export class UserInformationComponent implements OnInit {
-  user = new User('','','','','');
-  constructor() { }
+  user = new User('', '', '', '', '');
+  mode: boolean = false;
+  constructor(private databaseService: DatabaseService) { }
   ngOnInit(): void {
+    this.databaseService.getUserInformation().subscribe(ok => {
+      this.user=ok
+    })
   }
 }

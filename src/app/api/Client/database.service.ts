@@ -53,5 +53,7 @@ export class DatabaseService {
     this.httpClient.post<any>(this.rootApiService.URL+'create-api'+idDatabaseRegister,{headers:header})
   }
 
-
-}
+  getUserInformation() {
+    let header = this.GetHeader()
+    return this.httpClient.get<any>(this.rootApiService.URL+'User',{headers:header})
+  }}

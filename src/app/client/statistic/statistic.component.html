@@ -1,19 +1,18 @@
 <div class="statistic__container">
     <div class="statistic">
-        <h1>Statistic</h1>
-        <p><i>All of your database processed and processing</i></p>
+       <mat-card class="card__statistic">
+        <h1 class="h1__title">Statistic</h1>
+        <p class="sub_title"><i>All of your database processed and processing</i></p>
         <table class="table table-hover">
             <thead>
-                <th class="table__th" scope="col"><h2>N.o</h2></th>
                 <th class="table__th" scope="col"><h2>Type</h2></th>
                 <th class="table__th" scope="col"><h2>Database Name</h2></th>
                 <th class="table__th" scope="col"><h2>Bussiness Name</h2></th>
                 <th class="table__th" scope="col"><h2>URL Source Download</h2></th>
                 <th class="table__th" scope="col"><h2>Status</h2></th>
             </thead>
-            <tbody *ngFor="let item of listDBRegistered;let i = index">
+            <tbody *ngFor="let item of paginationListDBRegistered">
                 <tr class="tr--hover">
-                    <td>{{i}}</td>
                     <td>{{item.dbType}}</td>   
                     <td>{{item.databaseName}}</td>
                     <td *ngIf="item.bussinessName">{{item.bussinessName}}</td>
@@ -27,5 +26,13 @@
                 </tr>
             </tbody>
         </table>
+        <mat-paginator
+        [length]="100"
+        [pageSize]="10"
+        (page)="getPaginationListDB($event)"
+        class="paginator"
+        >
+        </mat-paginator>
+       </mat-card>
     </div>
 </div>

@@ -93,6 +93,7 @@ $background_Color:rgb(36,48,60);
         border-color: $colorText_Border;
         border-width: 1px;
         color:$colorText_Border;
+        width: 17em;
         mat-label{
             color:$colorText_Border !important;
         }
@@ -140,6 +141,9 @@ $background_Color:rgb(36,48,60);
     }
     .schema__name{
         width: 63em;
+    }
+    .input-mat-form-field{
+        width: 27em;
     }
 }
 @media only screen and (min-width: 1879px) {
