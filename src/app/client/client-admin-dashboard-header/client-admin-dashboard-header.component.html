@@ -6,5 +6,21 @@
     </div>
     <button class="button"><i class="fas fa-th"></i></button>
     <button class="button"><i class="fas fa-ellipsis-v"></i></button>
-    <img class="img-profile" src="../../../assets/images/theme-ovation.jpg">
+    <img class="img-profile" src="../../../assets/images/theme-ovation.jpg" [matMenuTriggerFor]="menu">
+    <mat-menu #menu="matMenu">
+        <h2>Hello,</h2>
+        <button mat-menu-item [routerLink]="['website/user/', 2]"
+        routerLinkActive="router-link-active">
+            <mat-icon>person</mat-icon>
+            <span>Information</span>
+          </button>        
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Contribute Feedback</span>
+          </button>
+          <button mat-menu-item [routerLink]="['/login']" routerLinkActive="router-link-active" >
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+      </mat-menu>
 </div>

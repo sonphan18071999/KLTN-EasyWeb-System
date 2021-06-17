@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientAdminDashboardHeaderComponent implements OnInit {
 
+  userToken: any;
   constructor() { }
-
   ngOnInit(): void {
+    this.userToken = localStorage.getItem("token");
   }
 
 }

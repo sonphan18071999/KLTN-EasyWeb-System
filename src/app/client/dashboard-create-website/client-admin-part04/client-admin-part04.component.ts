@@ -1,6 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
+import { PreviewService } from 'src/app/services/preview/preview.service';
 import { DatabaseService } from "../../../api/Client/database.service";
+import { EmailDialogComponent } from "./email-dialog/email-dialog.component";
+
 @Component({
   selector: 'app-client-admin-part04',
   templateUrl: './client-admin-part04.component.html',
@@ -18,21 +22,29 @@ export class ClientAdminPart04Component implements OnInit {
   imageSrc: string | undefined;
 
   constructor(private databaseService:DatabaseService,
-    private toast:ToastrService) { }
+    private toast: ToastrService,
+    public dialog: MatDialog,
+  private previewService:PreviewService) { }
 
   ngOnInit(): void {
     this.idDbRegistered = localStorage.getItem('idDbRegistered');
   }
-  async onSubmitUserInfo(){
+  async onSubmitUserInfo() {
+    this.dialog.open(EmailDialogComponent);
+
+    this.previewService.dataPreview.bussinessName = this.bussinessName;
+    
+
     this.pushItemToArr('bussinessName',this.bussinessName)
     this.pushItemToArr('location', this.location)
     this.pushItemToArr('email', this.email)
     this.pushItemToArr('contact', this.contact)
     this.pushItemToArr('briefDescription', this.briefDescription)
-    console.log(JSON.stringify( this.arrObj))
     // this.pushItemToArr('imageSrc',this.imageSrc);
-    return await this.databaseService.saveBussinessInformation(this.idDbRegistered, this.arrObj).subscribe(info=>{
-      this.toast.success("Filled up bussiness information","Easy Web: Information");
+    await this.databaseService.saveBussinessInformation(this.idDbRegistered, this.arrObj).subscribe(info => {
+      if (info) {
+        this.databaseService.getGeneratorProject(this.idDbRegistered);
+      }
     },er=>{
         this.toast.warning("Something went wrong","Easy Web: Warning")
     })

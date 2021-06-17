@@ -53,11 +53,11 @@ export class ClientAdminPart02Component implements OnInit {
     return numSelected === numRows;
   }
 
-  // popupEntities(item:any){
-  //   this.dialog.open(ClientAdminPart02PopupComponent,{
-  //     width: 'auto',
-  //     data:{ name:item.name,position:item.position, explicitName:item.explicitName }})
-  // }
+  popupEntities(item:any){
+    this.dialog.open(ClientAdminPart02PopupComponent,{
+      width: 'auto',
+      data:{ name:item.name,position:item.position, explicitName:item.explicitName }})
+  }
 
   scrollToTop(){
     document.getElementsByClassName('dashboard-h3')[0].scrollTo(0, 0);

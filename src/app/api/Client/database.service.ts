@@ -42,8 +42,16 @@ export class DatabaseService {
   registerNewUser(user:User){
     return this.httpClient.post<any>(this.rootApiService.URL+"EasyWebAuth/Register",user);
   }
+
   uploadLogoBusiness(idDatabaseRegister:any,img:any){
     let header = this.GetHeader()
     return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/UploadImage?dbGuid='+idDatabaseRegister,img,{headers:header});
   }
+
+  getGeneratorProject(idDatabaseRegister:any):void {
+    let header = this.GetHeader()
+    this.httpClient.post<any>(this.rootApiService.URL+'create-api'+idDatabaseRegister,{headers:header})
+  }
+
+
 }

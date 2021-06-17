@@ -6,8 +6,7 @@
 }
 
 .register__title{
-    text-align: center;
-    padding-top: 7em;
+    text-align: left;
 }
 
 .form__input{
@@ -15,13 +14,28 @@
 }
 
 .register__page{
-    height: 100vh;
-    background-color: #010b2e;
+    height: 100%;
+    background-color: rgb(50,61,77);
     color: white;
+    padding-top: 10em;
 }
 
 .register__form{
-    width: 50%;
     padding-top: 2em;
     margin: 0 auto;
+}
+.register__container{
+    padding: 5em;
+    margin-top: 10em;
+    width: 60%;
+    margin-left: 20%;
+    background-blend-mode: screen;
+}
+
+.btn-primary{
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+.logo__img{
+    width: 20em;
 }

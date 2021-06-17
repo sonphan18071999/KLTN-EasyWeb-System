@@ -1,0 +1,73 @@
+<div class="user__information">
+  <mat-card class="card__information">
+    <h2 class="title">User Information</h2>
+    <p class="sub__title"><i>Your information will alway be safe with EasyWeb</i></p>
+    <div class="user__last">
+      <form class="input-group mb-3">
+        <mat-form-field class="form--ahalf" >
+            <mat-label class="mat__label">First name</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="user.firstName"
+            [ngModelOptions]="{ standalone: true }"
+            class="input"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="form--ahalf">
+          <mat-label class="mat__label">Last name</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="user.lastName"
+            [ngModelOptions]="{ standalone: true }"
+            class="input"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+    <mat-form-field class="input-group mb-3">
+        <mat-label class="mat__label">
+            User name
+        </mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="user.username"
+        [ngModelOptions]="{ standalone: true }"
+        class="input"
+      />
+    </mat-form-field>
+    <mat-form-field class="input-group mb-3">
+        <mat-label class="mat__label">
+            Email
+        </mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Email"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="user.email"
+        [ngModelOptions]="{ standalone: true }"
+        class="input"
+      />
+    </mat-form-field>
+    <mat-form-field class="input-group mb-3">
+        <mat-label class="mat__label">
+            Password
+        </mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="user.password"
+        [ngModelOptions]="{ standalone: true }"
+        class="input"
+      />
+    </mat-form-field>
+    <p>
+        <button mat-stroked-button class="btn__back">Back</button>
+    </p>
+  </mat-card>
+</div>

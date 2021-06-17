@@ -49,7 +49,8 @@ import { ClientCMSHomepageSearchComponent } from './client/client-preview-cms/cl
 import { StatisticComponent } from './client/statistic/statistic.component';
 import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
 import { ToastrModule } from 'ngx-toastr';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { EmailDialogComponent } from './client/dashboard-create-website/client-admin-part04/email-dialog/email-dialog.component';
+import { UserInformationComponent } from './client/user-information/user-information.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ClientCMSHomepageSearchComponent,
     StatisticComponent,
     ClientRegisterComponent,
+    EmailDialogComponent,
+    UserInformationComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,7 +110,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true
     }),
-    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

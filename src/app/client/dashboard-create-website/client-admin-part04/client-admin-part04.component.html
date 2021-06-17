@@ -4,11 +4,6 @@
     <div class="group-input-Part04">
             <div class="group-input-Part04-top">
                 <div class="group-input-Part04-top-left">
-                    <!-- <div class="get-logo-customer">
-                        <br>
-                        <br>
-                        <p>Logo: Drop file here!</p>
-                    </div> -->
                     <div class="img__container">
                         <img  [src]="imageSrc || 'http://placehold.it/180'" alt="Bussiness image">
                     </div>
@@ -22,7 +17,7 @@
                     <p>Email</p>
                     <input type="email" placeholder="Ex: facebook@facebook.com" [(ngModel)]="email">
                     <p>Contact</p>
-                    <input type="text" placeholder="Ex: 08 123 456" [(ngModel)]="contact">
+                    <input type="number" min="0" maxlength="12" placeholder="Ex: 08 123 456" [(ngModel)]="contact">
                 </div>
             </div>
             <div class="group-input-Part04-under">

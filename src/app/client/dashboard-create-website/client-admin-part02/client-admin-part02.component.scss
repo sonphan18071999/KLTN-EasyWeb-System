@@ -38,7 +38,9 @@ $backgroundColor:rgb(36,48,60);
         background-color: white;
         margin-bottom: 5px;
     }
-  
+    .mat-label{
+        color: $colorText_Border;
+    }
     .mat-form-field-filter{
         font-size: 14px;
         width: 100%;

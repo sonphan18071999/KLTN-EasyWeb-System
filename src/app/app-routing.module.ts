@@ -7,13 +7,9 @@ import { ClientAdminPart01Component } from '../app/client/dashboard-create-websi
 import { ClientAdminPart02Component} from '../app/client/dashboard-create-website/client-admin-part02/client-admin-part02.component';
 import { ClientAdminDashboardIndexComponent } from '../app/client/dashboard-dashboard/client-admin-dashboard-index/client-admin-dashboard-index.component';
 import { DashboardCreateWebsiteIndexComponent } from '../app/client/dashboard-create-website/dashboard-create-website-index/dashboard-create-website-index.component';
-import { ClientCMSGeneratedComponent } from '../app/client/client-preview-cms/client-cms-generated/client-cms-generated.component';
-import {ClientCMSGenerateCreateUIComponent} from '../app/client/client-preview-cms/client-cms-generate-create-ui/client-cms-generate-create-ui.component'
-import {ClientCMSGenerateUpdateUIComponent} from '../app/client/client-preview-cms/client-cms-generate-update-ui/client-cms-generate-update-ui.component';
-import {ClientCMSGenerateDeleteUIComponent} from '../app/client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
-import {ClientCMSGenerateReadUIComponent} from '../app/client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
 import { StatisticComponent } from './client/statistic/statistic.component';
 import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
+import { UserInformationComponent } from './client/user-information/user-information.component';
 const routes: Routes = [
   { path: '', component: ClientIndexComponent },
   { path: 'login', component: ClientLoginComponent },
@@ -24,17 +20,10 @@ const routes: Routes = [
     {path:'part-01',component:ClientAdminPart01Component},
     {path:'part-02',component:ClientAdminPart02Component},
     {path:'website/create',component:DashboardCreateWebsiteIndexComponent},
-    {path:'website/statistic/:id',component:StatisticComponent},
-    {path:'**',component:ClientAdminDashboardIndexComponent}]
-
-},
-  {path:'website/generated/index',component:ClientCMSGeneratedComponent,
-    children:[
-      {path:'entity/create',component:ClientCMSGenerateCreateUIComponent},
-      {path:'entity/read',component:ClientCMSGenerateReadUIComponent},
-      {path:'entity/update',component:ClientCMSGenerateUpdateUIComponent},
-      {path:'entity/delete',component:ClientCMSGenerateDeleteUIComponent},
-]},
+    {path:'website/statistic/:id', component: StatisticComponent },
+    {path:'website/user/:id',component:UserInformationComponent},
+      { path: '**', component: ClientAdminDashboardIndexComponent }]
+  },
   {path:'**',component:ClientIndexComponent}
 ];
 

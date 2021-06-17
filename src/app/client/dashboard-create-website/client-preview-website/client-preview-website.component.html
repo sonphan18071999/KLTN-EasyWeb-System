@@ -10,8 +10,12 @@
       <div class="Preview-Website-Name">
          <div class="title__action__buttons">
             <div class="title">
-              <h2>Your Bussiness Name</h2>
-              <span>https://username.easyweb.com/sites/</span>
+              <h2 *ngIf="previewData.dataPreview.bussinessName==''">Your Bussiness Name</h2>
+              <h2 *ngIf="previewData.dataPreview.bussinessName"><b>{{previewData.dataPreview.schema}}</b></h2>
+              
+              <span *ngIf="previewData.dataPreview.bussinessName">https://bussinessname.easyweb.com/sites/</span>
+              <span *ngIf="!previewData.dataPreview.bussinessName">https://bussinessname.easyweb.com/sites/</span>
+
             </div>
             <button class="btn-site-action"> Actions <i class="fas fa-sort-down"></i></button>
          </div>
