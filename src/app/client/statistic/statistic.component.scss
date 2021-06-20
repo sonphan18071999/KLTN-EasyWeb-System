@@ -29,4 +29,14 @@ $textColor:rgb(54,159,217);
 .paginator{
     background:rgb(36,48,60);
     color: $textColor;
+}   
+.mat-spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: $textColor;
+}
+.mat-spinner{
+    display: block;
+    width: 10em;
+    margin: 0 auto;
+    padding-top: 5em;
+    padding-bottom: 2em;
 }

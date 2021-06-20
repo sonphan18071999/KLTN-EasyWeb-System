@@ -30,22 +30,20 @@ export class ClientAdminPart04Component implements OnInit {
     this.idDbRegistered = localStorage.getItem('idDbRegistered');
   }
   async onSubmitUserInfo() {
-    this.dialog.open(EmailDialogComponent);
-
     this.previewService.dataPreview.bussinessName = this.bussinessName;
-    
 
     this.pushItemToArr('bussinessName',this.bussinessName)
     this.pushItemToArr('location', this.location)
     this.pushItemToArr('email', this.email)
-    this.pushItemToArr('contact', this.contact)
+    this.pushItemToArr('contact', this.contact.toString())
     this.pushItemToArr('briefDescription', this.briefDescription)
     // this.pushItemToArr('imageSrc',this.imageSrc);
     await this.databaseService.saveBussinessInformation(this.idDbRegistered, this.arrObj).subscribe(info => {
-      if (info) {
-        this.databaseService.getGeneratorProject(this.idDbRegistered);
-      }
-    },er=>{
+        this.databaseService.saveBussinessName(this.idDbRegistered,this.bussinessName);
+        this.databaseService.getGeneratorProject(this.idDbRegistered).subscribe(ok => {
+          this.dialog.open(EmailDialogComponent);
+        });
+    }, er => {
         this.toast.warning("Something went wrong","Easy Web: Warning")
     })
 

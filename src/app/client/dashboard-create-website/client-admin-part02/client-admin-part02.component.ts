@@ -6,6 +6,8 @@ import { ClientAdminPart02PopupComponent} from '../client-admin-part02-popup/cli
 import { DatabaseTableConfigService } from '../../../api/Client/database-table-config.service';
 import { TableConfigure } from 'src/app/models/TableConfigure';
 import {DialogEditTableItemComponent} from '../dialog-edit-table-item/dialog-edit-table-item.component';
+import { isNull } from '@angular/compiler/src/output/output_ast';
+import { isNullOrUndefined } from '@swimlane/ngx-datatable';
 
 
 @Component({
@@ -24,7 +26,10 @@ export class ClientAdminPart02Component implements OnInit {
 
   applyFilter(event: Event) {
     var filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (isNullOrUndefined(filterValue) || filterValue==='') {
+      this.getAllTableConfigure();
+    }
+    this.allEntityDbRegister = this.allEntityDbRegister.filter(item => item.explicitName?.toLocaleLowerCase().toString().includes(filterValue) || item.name?.toLocaleLowerCase().toString().includes(filterValue));
   }
 
   constructor(public dialog: MatDialog,

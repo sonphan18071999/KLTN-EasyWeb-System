@@ -19,15 +19,18 @@ export class StatisticComponent implements OnInit {
     this.getListDatabaseRegistered();
   }
   async getListDatabaseRegistered() {
-    await this.databaseService.getListDatabaseRegistered().subscribe(data => {
+     await this.databaseService.getListDatabaseRegistered().subscribe(data => {
       this.fetchedListDBRegister = data
-      let page ={previousPageIndex: 0, pageIndex: 1, pageSize: 10, length: 100}
-      this.getPaginationListDB(page)
+      console.log(data)
+       if (data) {
+        let page ={previousPageIndex: 1, pageIndex: 0, pageSize: 10, length: 100}
+        this.getPaginationListDB(page)
+      }
     });
   }
   getPaginationListDB(event: any) {
     console.log(event)
-      let startIndex = (event.pageIndex ) * event.pageSize;
+      let startIndex = (event.pageIndex) * event.pageSize;
       let endIndex = (event.pageIndex) * event.pageSize + event.pageSize;
       this.paginationListDBRegistered = this.fetchedListDBRegister.slice(startIndex, endIndex);
   }

@@ -3,7 +3,11 @@
        <mat-card class="card__statistic">
         <h1 class="h1__title">Statistic</h1>
         <p class="sub_title"><i>All of your database processed and processing</i></p>
-        <table class="table table-hover">
+        <hr>
+        <div *ngIf="paginationListDBRegistered.length<=0" >
+            <p class="sub_title">There is no records to shown...</p>
+        </div>
+        <table class="table table-hover"  *ngIf="paginationListDBRegistered.length>0">
             <thead>
                 <th class="table__th" scope="col"><h2>Type</h2></th>
                 <th class="table__th" scope="col"><h2>Database Name</h2></th>
