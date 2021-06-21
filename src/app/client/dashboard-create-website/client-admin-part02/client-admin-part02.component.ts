@@ -21,7 +21,8 @@ export class ClientAdminPart02Component implements OnInit {
   selection = new SelectionModel<TableConfigure>(true, []);
   allEntityDbRegister : TableConfigure[]=[];
   itemChoosed:any;
-  showActionDropDown:boolean=false;
+  showActionDropDown: boolean = false;
+  allEntityDbRegisterPersistence: TableConfigure[] = [];
   @Output() isActive = new EventEmitter<Number>();
 
   applyFilter(event: Event) {
@@ -29,7 +30,7 @@ export class ClientAdminPart02Component implements OnInit {
     if (isNullOrUndefined(filterValue) || filterValue==='') {
       this.getAllTableConfigure();
     }
-    this.allEntityDbRegister = this.allEntityDbRegister.filter(item => item.explicitName?.toLocaleLowerCase().toString().includes(filterValue) || item.name?.toLocaleLowerCase().toString().includes(filterValue));
+    this.allEntityDbRegister = this.allEntityDbRegisterPersistence.filter(item => item.explicitName?.toLocaleLowerCase().toString().includes(filterValue) || item.name?.toLocaleLowerCase().toString().includes(filterValue));
   }
 
   constructor(public dialog: MatDialog,
