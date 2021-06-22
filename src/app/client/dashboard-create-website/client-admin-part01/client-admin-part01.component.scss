@@ -52,6 +52,7 @@ $background_Color:rgb(36,48,60);
         width: 100%;
         color: $colorText_Border;
         background-color: $background_Color;
+        border-color: $colorText_Border;
         max-height: 3em;
     }
     .set-connection-string-01{

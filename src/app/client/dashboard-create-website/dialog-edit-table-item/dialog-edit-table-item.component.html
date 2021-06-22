@@ -1,43 +1,53 @@
 <div class="dialog">
-    <h2 mat-dialog-title>Edit Table <u><i>{{data.name}}</i></u></h2>
-<div mat-dialog-content class="dialog__container">
-    <div class="dialog__container__first_row">
-        <div>
-            <mat-form-field>
-                <p><b>Change Explicit Name</b></p>
-                <input matInput defaultValue={{data.explicitName}}>    
-            </mat-form-field>
+    <mat-card class="edit__title mb-2">
+        <h2 mat-dialog-title>Edit table <u>{{data.name}}</u></h2>
+    </mat-card>
+    <hr class="devider" />
+    <mat-card class="edit__container mb-2">
+        <div mat-dialog-content class="dialog__container">
+            <div class="dialog__container__first_row">
+                <div>
+                    <mat-form-field>
+                        <p><b>Change Explicit Name</b></p>
+                        <input matInput value={{data.explicitName}} [(ngModel)]="data.explicitName">
+                    </mat-form-field>
+                </div>
+                <div class="show--hide--table">
+                    <p><b>Show/Hide table</b></p>
+                    <mat-checkbox class="table--hidden" [(ngModel)]="isInUse">
+                        In use
+                    </mat-checkbox>
+                </div>
+            </div>
+            <div class="list__actions">
+                <p><b>Set Actions</b></p>
+                <ul>
+                    <li>
+                        <mat-checkbox [(ngModel)]="actionRead">
+                            Read
+                        </mat-checkbox>
+                    </li>
+                    <li>
+                        <mat-checkbox [(ngModel)]="actionCreate">
+                            Create
+                        </mat-checkbox>
+                    </li>
+                    <li>
+                        <mat-checkbox [(ngModel)]="actionUpdate">
+                            Update
+                        </mat-checkbox>
+                    </li>
+                    <li>
+                        <mat-checkbox [(ngModel)]="actionDelete">
+                            Delete
+                        </mat-checkbox>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="show--hide--table">
-            <p><b>Show/Hide table</b></p>
-            <mat-checkbox class="table--hidden" >
-               In use
-            </mat-checkbox>
-        </div>
-    </div>
-    <div class="list__actions">
-        <p><b>Set Actions</b></p>
-        <ul>
-            <li>  
-            <mat-checkbox>
-                Read
-             </mat-checkbox></li>
-            <li>
-                <mat-checkbox >
-                    Create
-                 </mat-checkbox>
-            </li>
-            <li><mat-checkbox >
-                Update
-             </mat-checkbox></li>
-            <li><mat-checkbox >
-                Delete
-             </mat-checkbox></li>
-        </ul>
-    </div>
-    <div>
-        <button class="button" [mat-dialog-close]>Update</button>
+    </mat-card>
+    <mat-card class="edit__buttons ">
+        <button class="button" [mat-dialog-close] (click)="updateEntityConfigure()">Update</button>
         <button class="button" [mat-dialog-close]>Cancel</button>
-    </div>
-</div>
+    </mat-card>
 </div>

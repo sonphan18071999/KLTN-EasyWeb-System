@@ -86,10 +86,10 @@ export class ClientAdminPart02Component implements OnInit {
   }
   openDialogEdit(){
     const dialogRef = this.dialog.open(DialogEditTableItemComponent,{
-      data:{name:this.itemChoosed.name,key:this.itemChoosed.id, explicitName:this.itemChoosed.explicitName}
+      data:{name:this.itemChoosed.name,key:this.itemChoosed.id, explicitName:this.itemChoosed.explicitName, actions:this.itemChoosed.actionGroup,isHidden:this.itemChoosed.isHidden}
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      this.getAllTableConfigure()
     });
   }
   viewColumns(item:TableConfigure){
@@ -100,7 +100,9 @@ export class ClientAdminPart02Component implements OnInit {
 }
 
 export interface DialogData {
-  id: number;
+  key: number;
   name: string;
-  explicitName:string;
+  explicitName: string;
+  actions: string;
+  isHidden: string;
 }

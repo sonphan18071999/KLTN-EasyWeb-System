@@ -1,7 +1,6 @@
 $blueColor:rgb(54,159,217);
 $blueDarkColor:rgb(36,48,60);
 .dialog{
-    background-color: rgb(36,48,60);
     margin: 0;
     color:rgb(54,159,217);
     padding: 20px;
@@ -58,4 +57,11 @@ button:hover{
 }
 .list__actions{
     margin-top: 2em;
+}
+.devider{
+    border-color: $blueColor;
+}
+.edit__title, .edit__container, .edit__buttons{
+    background-color: $blueDarkColor;
+    color: $blueColor;
 }

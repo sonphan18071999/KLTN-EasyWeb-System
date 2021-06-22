@@ -75,7 +75,12 @@ $backgroundColor:rgb(36,48,60);
         background-color:$colorText_Border ;
     }
       ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
-        background-color: $colorText_Border!important;
+        background-color: $colorText_Border !important;
+    }
+    ::ng-deep .mat-checkbox {
+        .mat-checkbox-frame {
+            border-color: $colorText_Border !important;
+        }
     }
     .table__paging{
         background-color: rgb(36,48,60);
