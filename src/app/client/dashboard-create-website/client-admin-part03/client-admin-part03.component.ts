@@ -1,6 +1,9 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { MatDialog} from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
+import { ConfigureColumnService } from 'src/app/api/Client/configure-column.service';
 import { DatabaseTableConfigService } from 'src/app/api/Client/database-table-config.service';
+import { ColumnsTable } from 'src/app/models/ColumnsTable';
 import {DialogEditColumnItemComponent} from "../dialog-edit-column-item/dialog-edit-column-item.component";
 
 @Component({
@@ -14,29 +17,56 @@ export class ClientAdminPart03Component implements OnInit {
   selectedTable:any;
   listComlumnsInTable:any=[];
   selectedItem:any;
+  idDbRegistered:any;
   @Output() isActive = new EventEmitter<Number>();
-  constructor(public dialog: MatDialog, private databaseTableConfigService : DatabaseTableConfigService) { }
+  constructor(public dialog: MatDialog, private databaseTableConfigService : DatabaseTableConfigService,
+    private columnConfigure:ConfigureColumnService,
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.listTables=this.databaseTableConfigService.getTableConfig();
   }
+
+  chooseItem(item:any){
+    this.selectedItem=item;
+  }
+
   selectTable(){
-    var idDbRegistered = localStorage.getItem("idDbRegistered");
-    this.databaseTableConfigService.getColumnInTableById(idDbRegistered,this.selectedTable).subscribe(ok=>{
+    this.idDbRegistered = localStorage.getItem("idDbRegistered");
+    this.databaseTableConfigService.getColumnInTableById(this.idDbRegistered,this.selectedTable).subscribe(ok=>{
       this.listComlumnsInTable=ok
     });
   }
+
   SubmitColumns(){
     this.isActive.emit(4);
   }
+
   editColumn(){
     this.dialog.open(DialogEditColumnItemComponent,{
       width: 'auto',
       data:{ id:this.selectedItem.id,ordinalPosition:this.selectedItem.ordinalPosition,
         displayComponent:this.selectedItem.displayComponent,name:this.selectedItem.name }})
   }
-  chooseItem(item:any){
-    this.selectedItem=item;
+ 
+  async hideColumnConfigure(){
+    if(this.selectedItem.isNullable==="YES" ){
+      this.selectedItem.isHidden=!this.selectedItem.isHidden;
+      this.submitHiddenColumn();
+    }else if(this.selectedItem.isNullable==="NO"){
+      this.toastr.warning("This column can't be hiden because it's not nullable","EasyWeb: Warning");
+    }
+    else{
+      this.selectedItem.isHidden!=this.selectedItem.isHidden;
+      this.submitHiddenColumn()
+    }
+   
+  }
+  submitHiddenColumn(){
+     this.columnConfigure.updateColumnConfigure(this.idDbRegistered,this.selectedItem).subscribe(ok=>{
+      this.toastr.success(`Column `+this.selectedItem.name +` hidden`,"EasyWeb: Information")
+      this.listTables=this.databaseTableConfigService.getTableConfig();
+    })
   }
 }
 

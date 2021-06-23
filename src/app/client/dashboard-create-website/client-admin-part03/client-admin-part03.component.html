@@ -1,5 +1,5 @@
 <div class="Client-Admin-Part03">
-  <h3><b>Setting up your Columns's configuration</b></h3>
+  <h3><b>Setting up your columns's configuration</b></h3>
   <p>
     <i>In this step, you can customize type of data, how UI's form look like...
     </i>
@@ -26,8 +26,12 @@
           <button class="button button-secondary" (click)="editColumn()">
             <i class="far fa-edit"></i>Edit
           </button>
-          <button class="button button-third">
-            <i class="fas fa-minus"></i>Remove
+
+          <!-- <button class="button button-third" (click)="hideColumnConfigure()">
+            <i class="far fa-eye-slash"></i>Unhide
+          </button> -->
+          <button class="button button-third" (click)="hideColumnConfigure()">
+            <i class="far fa-eye-slash"></i>Hide
           </button>
           <div></div>
           <button class="button button-secondary" (click)="SubmitColumns()">
@@ -39,30 +43,29 @@
         <thead>
           <tr>
             <th scope="col" class="th__id">#</th>
-            <th scope="col" class="th__item">Table Id</th>
             <th scope="col" data-editable="true" class="th__item th--custom--name">
               Explicit Name
             </th>
             <th scope="col" class="th__item">Data Type</th>
-            <th scope="col" class="th__item">Explicit Data Type</th>
             <th scope="col" class="th__item">Ordinal Position</th>
-            <!-- <th scope="col" class="th__item">Column Default</th> -->
             <th scope="col" class="th__item">Display Component</th>
+            <th scope="col" class="th__item">Hidden</th>
+            <th scope="col" class="th__item">Nullable</th>
             <th scope="col" class="th__item">Actions</th>
           </tr>
         </thead>
         <tbody *ngFor="let item of listComlumnsInTable">
           <tr>
             <td>
-              <mat-checkbox class="btn__checkbox" type="checkbox" (click)="chooseItem(item)"></mat-checkbox>
+              <mat-checkbox class="btn__checkbox" type="checkbox" (click)="chooseItem(item)">
+              </mat-checkbox>
             </td>
-            <td>{{ item.tableId }}</td>
             <td>{{ item.explicitName }}</td>
             <td>{{ item.dataType }}</td>
-            <td>{{ item.explicitDataType }}</td>
             <td>{{ item.ordinalPosition }}</td>
-            <!-- <td>{{item.columnDefault}}</td> -->
             <td>{{ item.displayComponent }}</td>
+            <td>{{ item.isHidden }}</td>
+            <td>{{ item.isNullable }}</td>
             <td>
               <button class="button button-primary">View Detail</button>
             </td>
