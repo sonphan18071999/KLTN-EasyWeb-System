@@ -12,5 +12,4 @@ export class ClientAdminDashboardHeaderComponent implements OnInit {
   ngOnInit(): void {
     this.userToken = localStorage.getItem("token");
   }
-
 }

@@ -52,9 +52,7 @@ $textColor: rgb(54, 159, 217);
     background-color: transparent;
     color: rgb(54, 159, 217);
   }
-  .button-primary {
-    padding: 0px 20px 0px 20px;
-  }
+
   .button-primary:hover {
     background-color: rgb(54, 159, 217);
     color: white;
@@ -64,15 +62,13 @@ $textColor: rgb(54, 159, 217);
     text-align: left;
     margin-top: 19px;
     margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: 9em 9em 18em 9em;
   }
   i {
     margin-right: 1em;
   }
   .mat-spinner ::ng-deep .mat-progress-spinner circle,
   .mat-spinner circle {
-    stroke:rgb(54, 159, 217);
+    stroke: rgb(54, 159, 217);
   }
   .mat-spinner {
     display: block;
@@ -81,10 +77,13 @@ $textColor: rgb(54, 159, 217);
     padding-top: 5em;
     padding-bottom: 2em;
   }
-  .paginator{
+  .paginator {
     margin: 0 auto;
-    background:rgb(36,48,60);
+    background: rgb(36, 48, 60);
     color: $textColor;
+  }
+  .btn__submit {
+    margin-right: 4em;
   }
 }
 @media only screen and (min-width: 1439px) {
@@ -94,9 +93,7 @@ $textColor: rgb(54, 159, 217);
   ::ng-deep .input-mat-form-field {
     width: 69em;
   }
-  .group-button {
-    grid-template-columns: 9em 9em 42em 9em;
-  }
+
   .table {
     width: 90.3%;
   }
@@ -107,9 +104,6 @@ $textColor: rgb(54, 159, 217);
   }
   ::ng-deep .input-mat-form-field {
     width: 94em;
-  }
-  .group-button {
-    grid-template-columns: 9em 9em 67em 9em;
   }
   .table {
     width: 92.1%;

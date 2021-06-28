@@ -1,50 +1,49 @@
-$textColor:rgb(54,159,217);
-.user__information{
-    background-color: rgb(50,61,77);
-    height: 100%;
-    padding: 2em;
+$textColor: rgb(54, 159, 217);
+.user__information {
+  background-color: rgb(50, 61, 77);
+  height: 100%;
+  padding: 2em;
 }
-.title{
-    color: $textColor;
-    background-color: rgb(36,48,60);
-    border-radius: 5px;
-
+.title {
+  color: $textColor;
+  background-color: rgb(36, 48, 60);
+  border-radius: 5px;
 }
-.sub__title{
-    color: $textColor;
+.sub__title {
+  color: $textColor;
 }
-.card__information{
-    background-color: rgb(36,48,60);
-    height: auto;
-    padding-left: 4em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    width: 100%;
+.card__information {
+  background-color: rgb(36, 48, 60);
+  height: auto;
+  padding-left: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 100%;
 }
-.input-group{
-    width: 70%;
+.input-group {
+  width: 70%;
 }
 ::ng-deep .mat-focused {
-    color: $textColor !important;
+  color: $textColor !important;
 }
 ::ng-deep.mat-form-field-ripple {
-    background-color: $textColor !important;;
-   }
-::ng-deep.mat-form-field-underline {
-/*change color of underline*/
-background-color: $textColor !important;
-} 
-.input{
-    color:$textColor ;
+  background-color: $textColor !important;
 }
-.mat__label{
-    color:$textColor  ;
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: $textColor !important;
+}
+.input {
+  color: $textColor;
+}
+.mat__label {
+  color: $textColor;
 }
 
-.form--ahalf{
-    width: 50%;
+.form--ahalf {
+  width: 50%;
 }
-.btn__back{
-    color: $textColor;
-    border-color: $textColor;
+.btn__back {
+  color: $textColor;
+  border-color: $textColor;
 }

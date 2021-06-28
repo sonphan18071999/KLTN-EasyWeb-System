@@ -1,67 +1,68 @@
-$blueColor:rgb(54,159,217);
-$blueDarkColor:rgb(36,48,60);
-.dialog{
-    margin: 0;
-    color:rgb(54,159,217);
-    padding: 20px;
+$blueColor: rgb(54, 159, 217);
+$blueDarkColor: rgb(36, 48, 60);
+.dialog {
+  margin: 0;
+  color: rgb(54, 159, 217);
+  padding: 20px;
 }
-.mat-dialog-container{
-    padding: 0 !important;
+.mat-dialog-container {
+  padding: 0 !important;
 }
 
-.dialog__container{
-    display: block;
-  
+.dialog__container {
+  display: block;
 }
 ul {
-    padding: 0px;
-    li{
+  padding: 0px;
+  li {
     list-style-type: none;
-
-}}
-.checkbox__item{
-    margin-right: 10px;
-    width: 30px;
+  }
 }
-button{
-    border-color: $blueColor;
-    border-style: solid;
-    border-width: 1px;
-    height: 40px;
-    padding: 0px 20px 0px 20px;
-    color: $blueColor;
-    background-color: transparent;
-    margin-right: 5px;
+.checkbox__item {
+  margin-right: 10px;
+  width: 30px;
 }
-.dialog__container__first_row{
-    display: flex;
+button {
+  border-color: $blueColor;
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+  padding: 0px 20px 0px 20px;
+  color: $blueColor;
+  background-color: transparent;
+  margin-right: 5px;
 }
-button:hover{
-    background-color:$blueColor;
-    color: white;
+.dialog__container__first_row {
+  display: flex;
+}
+button:hover {
+  background-color: $blueColor;
+  color: white;
 }
 ::ng-deep .mat-checkbox {
-    .mat-checkbox-frame {
-        border-color: $blueColor !important;
-    }
+  .mat-checkbox-frame {
+    border-color: $blueColor !important;
+  }
 }
 
-::ng-deep .mat-dialog-container{
-    width: 500px;
-    background-color: $blueDarkColor;
-    padding: 1em;
+::ng-deep .mat-dialog-container {
+  width: 500px;
+  background-color: $blueDarkColor;
+  padding: 1em;
 }
-.show--hide--table{
-    margin-top: 19px;
-    margin-left: 2em;
+.show--hide--table {
+  margin-top: 19px;
+  margin-left: 2em;
 }
-.list__actions{
-    margin-top: 2em;
+.list__actions {
+  margin-top: 2em;
 }
-.devider{
-    border-color: $blueColor;
+.devider {
+  border-color: $blueColor;
 }
-.edit__title, .edit__container, .edit__buttons{
-    background-color: $blueDarkColor;
-    color: $blueColor;
+.edit__title,
+.edit__container,
+.edit__buttons {
+  background-color: $blueDarkColor;
+  color: $blueColor;
 }

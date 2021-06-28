@@ -1,18 +1,18 @@
 @import "../global-mode.scss";
 
-.table{
-    background-color: $lightColorBackground;
+.table {
+  background-color: $lightColorBackground;
 }
-.material--dark{
-    background-color: $lightColorBackground_Dark;
-    transition: all 1 ease-out;
+.material--dark {
+  background-color: $lightColorBackground_Dark;
+  transition: all 1 ease-out;
 }
-.datatable-header{
-    background-color: $lightColorBackground_Dark ;
+.datatable-header {
+  background-color: $lightColorBackground_Dark;
 }
-th{
-    font-size: 18px;
+th {
+  font-size: 18px;
 }
-.fas{
-    margin-right: 5px;
+.fas {
+  margin-right: 5px;
 }

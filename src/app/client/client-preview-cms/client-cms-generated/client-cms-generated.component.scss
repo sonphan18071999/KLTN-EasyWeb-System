@@ -1,65 +1,63 @@
 @import "../global-mode.scss";
 @media only screen and (max-width: 2560px) {
-    .client-cms-generated-container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        overflow-y: hidden;
-        position: fixed;
-        .client-cms-generated-navigation{
-            width: 15%;
-            margin-left: 0px;
-            padding-left: 0px;
-            overflow: hidden;
-            overflow-y: hidden;
-
-        }
-        .client-cms-generated-crud-container{
-            background-color: $lightColorBackground;
-            width: 100%;
-            height: auto;
-            overflow-y: hidden;
-            padding-top: 0px;
-            margin-top: 0px;
-            .client-cms-generated-crud-container--content{
-                padding-left: 40px;
-                background-color: $lightColorBackground;
-                display: block;
-            }
-        }
+  .client-cms-generated-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+    position: fixed;
+    .client-cms-generated-navigation {
+      width: 15%;
+      margin-left: 0px;
+      padding-left: 0px;
+      overflow: hidden;
+      overflow-y: hidden;
     }
-    ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
-        background-color:$lightColorBackground_Dark;
-    }
-    ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
-        background-color:aliceblue ;
-    }
-    ::ng-deep .mat-slide-toggle-label{
-        position: absolute;
-        right: 0px;
-    }
-    .group__buttons{
-     padding-top: 70px;
-    }
-    .button{
-        height: 40px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 10px;
-        border-width: 1px;
-        border-color: $lightColorBackground_Dark;
-        background-color: $lightColorBackground_Dark;
-        color: white;
-        transition: background-color 0.5s ease;
-
-    }
-    .fas{
-        margin-right: 5px;
-    }
-    .button:hover{
+    .client-cms-generated-crud-container {
+      background-color: $lightColorBackground;
+      width: 100%;
+      height: auto;
+      overflow-y: hidden;
+      padding-top: 0px;
+      margin-top: 0px;
+      .client-cms-generated-crud-container--content {
+        padding-left: 40px;
         background-color: $lightColorBackground;
-        color: $lightColorBackground_Dark;
-        border-width: 1px;
-        border-color: $lightColorBackground_Dark;
+        display: block;
+      }
     }
+  }
+  ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: $lightColorBackground_Dark;
+  }
+  ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: aliceblue;
+  }
+  ::ng-deep .mat-slide-toggle-label {
+    position: absolute;
+    right: 0px;
+  }
+  .group__buttons {
+    padding-top: 70px;
+  }
+  .button {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: $lightColorBackground_Dark;
+    background-color: $lightColorBackground_Dark;
+    color: white;
+    transition: background-color 0.5s ease;
+  }
+  .fas {
+    margin-right: 5px;
+  }
+  .button:hover {
+    background-color: $lightColorBackground;
+    color: $lightColorBackground_Dark;
+    border-width: 1px;
+    border-color: $lightColorBackground_Dark;
+  }
 }

@@ -68,4 +68,16 @@ export class ClientAdminPart01Component implements OnInit {
       this.portServer=5432;
     }
   }
+  resetForm() {
+    this.portServer = 0;
+    this.txtSchemaName = '';
+    this.txtUserName = '';
+    this.databaseType = 1;
+    this.txtPassword = '';
+    this.txtDBUrl = '';
+    
+    this.previewService.dataPreview.type = this.databaseType;
+    this.previewService.dataPreview.port = this.portServer;
+    this.previewService.dataPreview.schema = this.txtSchemaName;
+  }
 }

@@ -1,29 +1,27 @@
-.square-container{
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 5%;
+.square-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 5%;
 }
-.card-item{
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right:20px ;
-    width: 320px;
-    height: 130px;
-    background-color: rgb(36,48,60);
-    font-size: 15px;
-    color: rgb(82, 181, 235);
-    margin-left: 2em;
-    border-radius: 10px;
-
+.card-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 320px;
+  height: 130px;
+  background-color: rgb(36, 48, 60);
+  font-size: 15px;
+  color: rgb(82, 181, 235);
+  margin-left: 2em;
+  border-radius: 10px;
 }
 
-
-.card-item:hover{
-    background-color: rgb(183,80,171);
-    cursor: pointer;
+.card-item:hover {
+  background-color: rgb(183, 80, 171);
+  cursor: pointer;
 }
-.fas{
-    font-size: 2em;
-    color: rgb(82, 181, 235);
+.fas {
+  font-size: 2em;
+  color: rgb(82, 181, 235);
 }

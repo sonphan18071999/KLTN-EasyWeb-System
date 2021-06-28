@@ -1,43 +1,64 @@
 <div class="login-form-container">
-    <div class="container-form">
-     <div>
-        <img class="logo" src="../../../assets/images/LogoEasyWeb_02.png" width="100px" height="40px">
-        <h3><b>Login now</b></h3>
+  <div class="container-form">
+    <div>
+      <img
+        class="logo"
+        src="../../../assets/images/LogoEasyWeb_02.png"
+        width="100px"
+        height="40px"
+      />
+      <h3><b>Login now</b></h3>
 
-        <form class="login-form">
-            <mat-form-field class="input-field" >
-                <mat-label> Account</mat-label>
-                <input [(ngModel)]="userName" placeholder="Account" autocomplete="on" matInput [ngModelOptions]="{standalone: true}">
-            </mat-form-field>
-            <mat-form-field class="input-field"  >
-                <mat-label> Password</mat-label>
-                <input [(ngModel)]="password" placeholder="Password" type="password" autocomplete="on"  matInput [ngModelOptions]="{standalone: true}">
-            </mat-form-field>
-        </form>
-    
-    <div class="group-buttons">
+      <form class="login-form">
+        <mat-form-field class="input-field">
+          <mat-label> Account</mat-label>
+          <input
+            [(ngModel)]="userName"
+            placeholder="Account"
+            autocomplete="on"
+            matInput
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label> Password</mat-label>
+          <input
+            [(ngModel)]="password"
+            placeholder="Password"
+            type="password"
+            autocomplete="on"
+            matInput
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+      </form>
+
+      <div class="group-buttons">
         <div class="register-account">
-            <a href="register-account">Don't have an account? Click here!</a>
+          <a href="register-account">Don't have an account? Click here!</a>
         </div>
-        <div class="basic-login" (click)="checkUser()" >
-            <button class="btn"  > 
-                <svg viewBox="0 0 329 60" class="border">
-                    <polyline points="329,1 329,59 1,59 1,1 329,1" class="bg-line" />
-                    <polyline points="329,1 329,59 1,59 1,1 329,1" class="hl-line" />
-                </svg>
-                Login
-            </button>
+        <div class="basic-login" (click)="checkUser()">
+          <button class="btn">
+            <svg viewBox="0 0 329 60" class="border">
+              <polyline points="329,1 329,59 1,59 1,1 329,1" class="bg-line" />
+              <polyline points="329,1 329,59 1,59 1,1 329,1" class="hl-line" />
+            </svg>
+            Login
+          </button>
         </div>
-        <br>
-        <hr>
+        <br />
+        <hr />
         <div class="social-login">
-            <button  class="login-fb" >
-                <div><i class="fab fa-facebook-square"></i></div>
-                <p>Continue with Facebook</p></button>
-            <button class="login-google">
-                <i class="fab fa-google-plus-square"></i>
-                <p>Continue with Google</p></button>
+          <button class="login-fb">
+            <div><i class="fab fa-facebook-square"></i></div>
+            <p>Continue with Facebook</p>
+          </button>
+          <button class="login-google">
+            <i class="fab fa-google-plus-square"></i>
+            <p>Continue with Google</p>
+          </button>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
 </div>

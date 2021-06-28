@@ -1,19 +1,18 @@
-
-.dashboard-index-container{
-    width: 100%;
-    height: 100%;
-    background-color: #323d4d;
-    padding-top: 1em;
+.dashboard-index-container {
+  width: 100%;
+  height: 100%;
+  background-color: #323d4d;
+  padding-top: 1em;
 }
 
-.dashboard-card-upper{
-    width: 100%;
-    height: auto;
+.dashboard-card-upper {
+  width: 100%;
+  height: auto;
 }
-.graph{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 45% 42%;
-    margin-top: 2em;
-    column-gap: 10%;
+.graph {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 42%;
+  margin-top: 2em;
+  column-gap: 10%;
 }

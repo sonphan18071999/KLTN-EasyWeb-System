@@ -1,42 +1,49 @@
 <div class="statistic__container">
-    <div class="statistic">
-       <mat-card class="card__statistic">
-        <h1 class="h1__title">Statistic</h1>
-        <p class="sub_title"><i>All of your database processed and processing</i></p>
-        <hr>
-        <div *ngIf="paginationListDBRegistered.length<=0" >
-            <p class="sub_title">There is no records to shown...</p>
-        </div>
-        <table class="table table-hover"  *ngIf="paginationListDBRegistered.length>0">
-            <thead>
-                <th class="table__th" scope="col"><h2>Type</h2></th>
-                <th class="table__th" scope="col"><h2>Database Name</h2></th>
-                <th class="table__th" scope="col"><h2>Bussiness Name</h2></th>
-                <th class="table__th" scope="col"><h2>URL Source Download</h2></th>
-                <th class="table__th" scope="col"><h2>Status</h2></th>
-            </thead>
-            <tbody *ngFor="let item of paginationListDBRegistered">
-                <tr class="tr--hover">
-                    <td>{{item.dbType}}</td>   
-                    <td>{{item.databaseName}}</td>
-                    <td *ngIf="item.bussinessName">{{item.bussinessName}}</td>
-                    <td *ngIf="!item.bussinessName">---</td>
-                    <td *ngIf="item.apiDownloadLink">
-                        <a href={{item.apiDownloadLink}}><p>{{item.apiDownloadLink}}</p></a>
-                    </td>
-                    <td *ngIf="!item.apiDownloadLink">---</td>
-                    <td *ngIf="item.apiDownloadLink">Finished</td>
-                    <td *ngIf="!item.apiDownloadLink">Processing</td>
-                </tr>
-            </tbody>
-        </table>
-        <mat-paginator
+  <div class="statistic">
+    <mat-card class="card__statistic">
+      <h1 class="h1__title">Statistic</h1>
+      <p class="sub_title">
+        <i>All of your database processed and processing</i>
+      </p>
+      <hr />
+      <div *ngIf="paginationListDBRegistered.length <= 0">
+        <p class="sub_title">There is no records to shown...</p>
+      </div>
+      <table
+        class="table table-hover"
+        *ngIf="paginationListDBRegistered.length > 0"
+      >
+        <thead>
+          <th class="table__th" scope="col"><h2>Type</h2></th>
+          <th class="table__th" scope="col"><h2>Database Name</h2></th>
+          <th class="table__th" scope="col"><h2>Bussiness Name</h2></th>
+          <th class="table__th" scope="col"><h2>URL Source Download</h2></th>
+          <th class="table__th" scope="col"><h2>Status</h2></th>
+        </thead>
+        <tbody *ngFor="let item of paginationListDBRegistered">
+          <tr class="tr--hover">
+            <td>{{ item.dbType }}</td>
+            <td>{{ item.databaseName }}</td>
+            <td *ngIf="item.bussinessName">{{ item.bussinessName }}</td>
+            <td *ngIf="!item.bussinessName">---</td>
+            <td *ngIf="item.apiDownloadLink">
+              <a href="{{ item.apiDownloadLink }}"
+                ><p>{{ item.apiDownloadLink }}</p></a
+              >
+            </td>
+            <td *ngIf="!item.apiDownloadLink">---</td>
+            <td *ngIf="item.apiDownloadLink">Finished</td>
+            <td *ngIf="!item.apiDownloadLink">Processing</td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator
         [length]="100"
         [pageSize]="10"
         (page)="getPaginationListDB($event)"
         class="paginator"
-        >
-        </mat-paginator>
-       </mat-card>
-    </div>
+      >
+      </mat-paginator>
+    </mat-card>
+  </div>
 </div>

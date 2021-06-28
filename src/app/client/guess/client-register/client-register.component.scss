@@ -1,41 +1,41 @@
-.user__last{
-    display: grid;
-    grid-template-columns: 49% 49%;
-    column-gap: 2%;
-    margin-bottom: 1em;
+.user__last {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  column-gap: 2%;
+  margin-bottom: 1em;
 }
 
-.register__title{
-    text-align: left;
+.register__title {
+  text-align: left;
 }
 
-.form__input{
-    margin-bottom: 2em;
+.form__input {
+  margin-bottom: 2em;
 }
 
-.register__page{
-    height: 100%;
-    background-color: rgb(50,61,77);
-    color: white;
-    padding-top: 10em;
+.register__page {
+  height: 100%;
+  background-color: rgb(50, 61, 77);
+  color: white;
+  padding-top: 10em;
 }
 
-.register__form{
-    padding-top: 2em;
-    margin: 0 auto;
+.register__form {
+  padding-top: 2em;
+  margin: 0 auto;
 }
-.register__container{
-    padding: 5em;
-    margin-top: 10em;
-    width: 60%;
-    margin-left: 20%;
-    background-blend-mode: screen;
+.register__container {
+  padding: 5em;
+  margin-top: 10em;
+  width: 60%;
+  margin-left: 20%;
+  background-blend-mode: screen;
 }
 
-.btn-primary{
-    justify-content: flex-end;
-    margin-right: 1em;
+.btn-primary {
+  justify-content: flex-end;
+  margin-right: 1em;
 }
-.logo__img{
-    width: 20em;
+.logo__img {
+  width: 20em;
 }

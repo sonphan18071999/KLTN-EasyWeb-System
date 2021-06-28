@@ -1,48 +1,78 @@
 <div class="Client-Admin-Part01-Container">
-    <div class="Client-Admin-Part01-Container">
-        <div class="Client-Admin-Part01">
-            <div class="part01-group-input">
-                <h3><b>Give us access right to your Database</b></h3>
-                <p><i>With your permission that allow us to use your Database</i></p>
-                <div class="set-connection-string">
-                    <div class="part01-input">
-                        <p class="title__url">Database's Url</p>
-                        <input [(ngModel)]="txtDBUrl" class="batabase__serve" type="text" placeholder="Ex: https://database.com...">
-                    </div>
-                    <div class="part01-input set-connection-string-01">
-                        <p>User name</p>
-                        <input [(ngModel)]="txtUserName" type="text" autocomplete="off" placeholder="User Account" class="input__item">
-                        <p>Database</p>
-                        <mat-form-field class="input-mat-form-field" appearance="fill" >
-                            <mat-label>Select Database Type...</mat-label>
-                            <mat-select [formControl]="DatabaseSelect" [(ngModel)]="databaseType" class="mat-select" (selectionChange)="triggerPortNumber()" >
-                              <mat-option value="0">
-                                  <span class="name-database">SQL Server</span>
-                                </mat-option>
-                              <mat-option value="1">
-                                  <span class="name-database">MySQL</span>
-                                </mat-option>
-                              <mat-option value="2">
-                                  <span class="name-database">PostgreSQL</span>
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                        <p>Password</p>
-                        <input [(ngModel)]="txtPassword" type="password" autocomplete="off" placeholder="User Password" class="input__item">
-                        <p>Port Server</p>
-                        <input type="number" [(ngModel)]="portServer"  class="input__item">
-                        <p>Schema</p>
-                        <input [(ngModel)]="txtSchemaName" placeholder="Ex: CafeManagement, ClassroomManagement..."  class="schema__name">
-                        <div></div>
-                        <div></div>
-                        <p>Actions</p>
-                        <div class="group-button">
-                            <button class="btn btn-primary" (click)="SubmitDBSchema()">Submit</button>
-                            <button class="btn btn-secondary">Reset</button>
-                        </div>
-                    </div>
-                </div>
+  <div class="Client-Admin-Part01-Container">
+    <div class="Client-Admin-Part01">
+      <div class="part01-group-input">
+        <h3><b>Give us access right to your Database</b></h3>
+        <p><i>With your permission that allow us to use your Database</i></p>
+        <div class="set-connection-string">
+          <div class="part01-input">
+            <p class="title__url">Database's Url</p>
+            <input
+              [(ngModel)]="txtDBUrl"
+              class="batabase__serve"
+              type="text"
+              placeholder="Ex: https://database.com..."
+            />
+          </div>
+          <div class="part01-input set-connection-string-01">
+            <p>User name</p>
+            <input
+              [(ngModel)]="txtUserName"
+              type="text"
+              autocomplete="off"
+              placeholder="User Account"
+              class="input__item"
+            />
+            <p>Database</p>
+            <mat-form-field class="input-mat-form-field" appearance="fill">
+              <mat-label>Select Database Type...</mat-label>
+              <mat-select
+                [formControl]="DatabaseSelect"
+                [(ngModel)]="databaseType"
+                class="mat-select"
+                (selectionChange)="triggerPortNumber()"
+              >
+                <mat-option value="0">
+                  <span class="name-database">SQL Server</span>
+                </mat-option>
+                <mat-option value="1">
+                  <span class="name-database">MySQL</span>
+                </mat-option>
+                <mat-option value="2">
+                  <span class="name-database">PostgreSQL</span>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <p>Password</p>
+            <input
+              [(ngModel)]="txtPassword"
+              type="password"
+              autocomplete="off"
+              placeholder="User Password"
+              class="input__item"
+            />
+            <p>Port Server</p>
+            <input type="number" [(ngModel)]="portServer" class="input__item" />
+            <p>Schema</p>
+            <input
+              [(ngModel)]="txtSchemaName"
+              placeholder="Ex: CafeManagement, ClassroomManagement..."
+              class="schema__name"
+            />
+            <div></div>
+            <div></div>
+            <p>Actions</p>
+            <div class="group-button">
+              <button class="btn button btn-primary" (click)="SubmitDBSchema()">
+                Submit
+              </button>
+              <button class="btn button btn-secondary" (click)="resetForm()">
+                Reset
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

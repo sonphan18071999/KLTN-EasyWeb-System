@@ -3,8 +3,8 @@ import { MatDialog} from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
 import { ConfigureColumnService } from 'src/app/api/Client/configure-column.service';
 import { DatabaseTableConfigService } from 'src/app/api/Client/database-table-config.service';
-import { ColumnsTable } from 'src/app/models/ColumnsTable';
-import {DialogEditColumnItemComponent} from "../dialog-edit-column-item/dialog-edit-column-item.component";
+import { DialogConfigureForeignKeyComponent } from './dialog-configure-foreign-key/dialog-configure-foreign-key.component';
+import {DialogEditColumnItemComponent} from "./dialog-edit-column-item/dialog-edit-column-item.component";
 
 @Component({
   selector: 'app-client-admin-part03',
@@ -16,7 +16,7 @@ export class ClientAdminPart03Component implements OnInit {
   listTables:any;
   selectedTable:any;
   listComlumnsInTable:any=[];
-  selectedItem:any;
+  selectedItem:any=null;
   idDbRegistered:any;
   @Output() isActive = new EventEmitter<Number>();
   constructor(public dialog: MatDialog, private databaseTableConfigService : DatabaseTableConfigService,
@@ -42,14 +42,21 @@ export class ClientAdminPart03Component implements OnInit {
     this.isActive.emit(4);
   }
 
-  editColumn(){
-    this.dialog.open(DialogEditColumnItemComponent,{
-      width: 'auto',
-      data:{ id:this.selectedItem.id,ordinalPosition:this.selectedItem.ordinalPosition,
-        displayComponent:this.selectedItem.displayComponent,name:this.selectedItem.name }})
+  editColumn() {
+    if (this.selectedItem===null) {
+      this.toastr.warning("Please choose one column","EasyWeb: Warning")
+    } else {
+      this.dialog.open(DialogEditColumnItemComponent,{
+        width: 'auto',
+        data:{ id:this.selectedItem.id,ordinalPosition:this.selectedItem.ordinalPosition,
+          displayComponent:this.selectedItem.displayComponent,name:this.selectedItem.name }})
+    }
   }
  
-  async hideColumnConfigure(){
+  async hideColumnConfigure() {
+    if (this.selectedItem === null) {
+      this.toastr.warning("Please choose one column","EasyWeb: Warning")
+    } else {
     if(this.selectedItem.isNullable==="YES" ){
       this.selectedItem.isHidden=!this.selectedItem.isHidden;
       this.submitHiddenColumn();
@@ -60,8 +67,17 @@ export class ClientAdminPart03Component implements OnInit {
       this.selectedItem.isHidden!=this.selectedItem.isHidden;
       this.submitHiddenColumn()
     }
-   
   }
+  }
+
+  setForeignKey() {
+    if (this.selectedItem===null) {
+      this.toastr.warning("Please choose one column","EasyWeb: Warning")
+    } else {
+     console.log(this.listTables)
+    } 
+  }
+
   submitHiddenColumn(){
      this.columnConfigure.updateColumnConfigure(this.idDbRegistered,this.selectedItem).subscribe(ok=>{
       this.toastr.success(`Column `+this.selectedItem.name +` hidden`,"EasyWeb: Information")
