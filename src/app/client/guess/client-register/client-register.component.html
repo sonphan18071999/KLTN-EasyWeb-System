@@ -1,81 +1,129 @@
-<mat-card class="register__page">
-  <mat-card class="register__container">
-    <img src="../../../../assets/images/LogoEasyWeb_02.png" class="logo__img" />
-    <div class="register__title">
-      <h1>Register your account</h1>
-      <p>
-        <i>Using this account to experience many feature of EasyWeb</i>
-      </p>
-      <hr />
+<div class="register__container">
+  <div class="row h-100 mb-0 pb-0 ml-2">
+    <div class="col-4 mt-2">
+      <mat-card class="pb-4 pt-2">
+        <div class="row d-flex mb-3">
+          <div class="col-8">
+            <img
+              src="../../../../assets/images/LogoEasyWeb_02.png"
+              width="50%"
+            />
+          </div>
+          <div class="col-4 align-center">
+            <button
+              class="btn btn-outline-secondary float-right mt-2 px-5"
+              [routerLink]="['/login']"
+              routerLinkActive="router-link-active"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="row mb-2">
+              <div class="col-12">
+                <h4><b>Register</b></h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>First name</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    class="form-control"
+                    [(ngModel)]="fName"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>Last name</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    class="form-control"
+                    [(ngModel)]="lName"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="text-secondary title__input"><b>User name</b></p>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                placeholder="User name"
+                class="form-control"
+                [(ngModel)]="userName"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>Email</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Email"
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                    [(ngModel)]="email"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>Password</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="form-control"
+                    [(ngModel)]="password"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-2">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label
+                    class="form-check-label"
+                    (click)="openDialog()"
+                    for="exampleCheck1"
+                    >I agree with the terms and codition.</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary mr-2 mt-2" (click)="onSubmitUser()">
+              <i class="fas fa-check mr-2"></i>
+              <span>Submit</span>
+            </button>
+            <button
+              class="btn btn-secondary mt-2"
+              [routerLink]="['/Home']"
+              routerLinkActive="router-link-active"
+            >
+              <i class="fas fa-times mr-2"></i> <span>Cancel</span>
+            </button>
+          </div>
+        </div>
+      </mat-card>
     </div>
-    <form class="register__form">
-      <div class="user__last">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            placeholder="First name"
-            class="form-control"
-            [(ngModel)]="fName"
-            [ngModelOptions]="{ standalone: true }"
-          />
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            placeholder="Last name"
-            class="form-control"
-            [(ngModel)]="lName"
-            [ngModelOptions]="{ standalone: true }"
-          />
-        </div>
-      </div>
-      <div class="form__input">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            placeholder="User name"
-            class="form-control"
-            [(ngModel)]="userName"
-            [ngModelOptions]="{ standalone: true }"
-          />
-        </div>
-      </div>
-      <div class="form__input">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Email"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-            [(ngModel)]="email"
-            [ngModelOptions]="{ standalone: true }"
-          />
-        </div>
-      </div>
-      <div class="form__input">
-        <div class="input-group mb-3">
-          <input
-            type="password"
-            placeholder="Password"
-            class="form-control"
-            [(ngModel)]="password"
-            [ngModelOptions]="{ standalone: true }"
-          />
-        </div>
-      </div>
-      <button class="btn btn-primary" (click)="onSubmitUser()">
-        <mat-icon>check</mat-icon>
-        <span>Submit</span>
-      </button>
-      <button
-        class="btn btn-secondary"
-        [routerLink]="['/Home']"
-        routerLinkActive="router-link-active"
-      >
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Cancel</span>
-      </button>
-    </form>
-  </mat-card>
-</mat-card>
+    <div class="col-8 bg_right"></div>
+  </div>
+</div>

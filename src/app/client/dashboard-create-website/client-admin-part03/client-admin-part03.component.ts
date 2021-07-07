@@ -24,11 +24,15 @@ export class ClientAdminPart03Component implements OnInit {
     private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.listTables=this.databaseTableConfigService.getTableConfig();
+    this.listTables = this.databaseTableConfigService.getTableConfig();
   }
 
-  chooseItem(item:any){
-    this.selectedItem=item;
+  chooseItem(item: any) {
+    if (this.selectedItem===item) {
+      this.selectedItem=null
+    } else {
+      this.selectedItem=item;
+    }
   }
 
   selectTable(){
@@ -49,7 +53,11 @@ export class ClientAdminPart03Component implements OnInit {
       this.dialog.open(DialogEditColumnItemComponent,{
         width: 'auto',
         data:{ id:this.selectedItem.id,ordinalPosition:this.selectedItem.ordinalPosition,
-          displayComponent:this.selectedItem.displayComponent,name:this.selectedItem.name }})
+          displayComponent: this.selectedItem.displayComponent, name: this.selectedItem.name
+        }
+      }).afterClosed().subscribe(close => {
+            this.selectedItem=null
+      })
     }
   }
  

@@ -1,202 +1,166 @@
-$colorText_Border:rgb(54,159,217);
-$backgroundColor:rgb(36,48,60);
-@media only screen and (min-width: 1023px) {
-   .Client-Admin-Part02{
-        margin-left: 20px;
-        width: 53em;
-        height: auto;
-        border-color: $colorText_Border;
-        border-style: solid;
-        padding-bottom: 30px;
-        margin-top: 20px;
-        text-align: center;
-    }   
-    .Client-Admin-Part02 h3{
-        font-size: 20px;
-        padding-top: 30px;
+$colorText_Border: rgb(54, 159, 217);
+$backgroundColor: rgb(36, 48, 60);
+@media only screen and (min-width: 500px) {
+  .Client-Admin-Part02 {
+    margin-left: 20px;
+    width: 53em;
+    height: auto;
+    border-color: $colorText_Border;
+    border-style: solid;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .Client-Admin-Part02 h3 {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+  .mat-spinner ::ng-deep .mat-progress-spinner circle,
+  .mat-spinner circle {
+    stroke: $colorText_Border;
+  }
+  .mat-spinner {
+    display: block;
+    width: 10em;
+    margin: 0 auto;
+    padding-top: 5em;
+    padding-bottom: 2em;
+  }
+  table {
+    text-align: left;
+    background-color: $backgroundColor;
+    color: $colorText_Border;
+    th {
+      font-size: 18px;
     }
-    .mat-spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
-        stroke: $colorText_Border;
+    .th__item {
+      width: 20%;
     }
-    .mat-spinner{
-        display: block;
-        width: 10em;
-        margin: 0 auto;
-        padding-top: 5em;
-        padding-bottom: 2em;
+    .th--custom--name {
+      width: 30%;
     }
-    table {
-        width: 92%;
-        text-align: left;
-        background-color: $backgroundColor;
-        color: $colorText_Border;
-        margin-left: 2.1em;
-        th{
-            font-size: 18px;
-        }
-        .th__item{
-            width: 20%;
-        }
-        .th--custom--name{
-            width: 30%;
-        }
-    }
-    
-      .mat-form-field {
-        font-size: 14px;
-        width: 100%;
-        background-color: white;
-        margin-bottom: 5px;
-    }
-    .mat-label{
-        color: $colorText_Border;
-    }
-    .mat-form-field-filter{
-        font-size: 14px;
-        width: 100%;
-        background-color: rgb(36,48,60);
-        color: white;
-        margin-bottom: 5px;
-    }
- 
-    ::ng-deep.mat-form-field-underline {
-        /*change color of underline*/
-        background-color: $colorText_Border !important;
-      } 
-    ::ng-deep.mat-form-field-ripple {
-        /*change color of underline when focused*/
-        background-color: $colorText_Border !important;;
-    }
-    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
-        opacity: 0.03 !important;
-        background-color: $colorText_Border!important;
-      }
-    .mat-paginator-container{
-        background-color:$colorText_Border ;
-    }
-      ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
-        background-color: $colorText_Border !important;
-    }
-    ::ng-deep .mat-checkbox {
-        .mat-checkbox-frame {
-            border-color: $colorText_Border !important;
-        }
-    }
-    .table__paging{
-        background-color: rgb(36,48,60);
-        color: $colorText_Border;
-        width: 92%;
-        margin-left: 2.4em;
-    }
-    
-    .mat-labvel{
-        color: $colorText_Border;
-    }
-    .search-mat-input{
-        color: $colorText_Border;
-    }
-    .table-entities{
-        padding-top: 20px;
-        margin: 0 auto !important;
-        width: 100%;
-    }
-    .header-table{
-        color: $colorText_Border;
-    }
-    .table-data{
-        color: $colorText_Border;
-    }
-    .group-button{
-        text-align: left;
-        margin-top:19px ;
-        margin-bottom:20px ;
-        display: grid;
-        grid-template-columns:  9em 9em 21.2em 9em;
-        margin-left: 2.2em;
-    }
-    .button{
-        border-color: $colorText_Border;
-        height: 40px;
-        background-color: transparent;
-        color: $colorText_Border;
-    }
-    .button i{
-        padding-right: 15px;
-    }
-    .button-primary{
-        padding:0px 20px 0px 20px ;
-    }
-    .button-primary:hover{
-        background-color: $colorText_Border;
-        color: white;
-    }
-    .button-secondary:hover{
-        background-color: $colorText_Border;
-        color: white;
-    }
-    .button-third:hover{
-        background-color: $colorText_Border;
-        color: white;
-    }
+  }
 
-    .table-view{
-        padding: 10px 30px 10px 30px;
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+  .mat-label {
+    color: $colorText_Border;
+  }
+  //   .mat-form-field-filter {
+  //     font-size: 14px;
+  //     width: 100%;
+  //     background-color: rgb(36, 48, 60);
+  //     color: white;
+  //     margin-bottom: 5px;
+  //   }
+
+  ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: $colorText_Border !important;
+  }
+  ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: $colorText_Border !important;
+  }
+  ::ng-deep
+    .mat-checkbox-checked.mat-accent
+    .mat-checkbox-ripple
+    .mat-ripple-element {
+    opacity: 0.03 !important;
+    background-color: $colorText_Border !important;
+  }
+  .mat-paginator-container {
+    background-color: $colorText_Border;
+  }
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: $colorText_Border !important;
+  }
+  ::ng-deep .mat-checkbox {
+    .mat-checkbox-frame {
+      border-color: $colorText_Border !important;
     }
-    .table-view:hover{
-        background-color: $colorText_Border;
-        color: white;
-        -webkit-transition: background-color 0.5s ease-in;
-        -moz-transition: background-color 0.5s ease-out;
-        -o-transition: background-color 0.5s ease-in;
-        transition: background-color 0.5s ease-out;
-    }
-    .btn__checkbox{
-        border-radius:$colorText_Border ;
-    }
-    ::ng-deep .mat-focused .mat-form-field-label {
-        color: $colorText_Border !important;
-    }
-    ::ng-deep.mat-form-field-ripple {
-        background-color: $backgroundColor !important;;
-    }
-    .filter__input{
-        width: 48em;
-        background-color: $backgroundColor;
-        border-radius: 5px;
-    }
-    
+  }
+  .table__paging {
+    background-color: rgb(36, 48, 60);
+    color: $colorText_Border;
+  }
+
+  .mat-labvel {
+    color: $colorText_Border;
+  }
+  .search-mat-input {
+    color: $colorText_Border;
+  }
+  .table-entities {
+    padding-top: 20px;
+    margin: 0 auto !important;
+    width: 100%;
+  }
+  .header-table {
+    color: $colorText_Border;
+  }
+  .table-data {
+    color: $colorText_Border;
+  }
+  .group-button {
+    text-align: left;
+    margin-top: 19px;
+    margin-bottom: 20px;
+  }
+  .button {
+    border-color: $colorText_Border;
+    height: 40px;
+    background-color: transparent;
+    color: $colorText_Border;
+  }
+
+  .button-primary:hover {
+    background-color: $colorText_Border;
+    color: white;
+  }
+  .button-secondary:hover {
+    background-color: $colorText_Border;
+    color: white;
+  }
+  .button-third:hover {
+    background-color: $colorText_Border;
+    color: white;
+  }
+
+  .table-view:hover {
+    background-color: $colorText_Border;
+    color: white;
+    -webkit-transition: background-color 0.5s ease-in;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-in;
+    transition: background-color 0.5s ease-out;
+  }
+  .btn__checkbox {
+    border-radius: $colorText_Border;
+  }
+  ::ng-deep .mat-focused .mat-form-field-label {
+    color: $colorText_Border !important;
+  }
+  ::ng-deep.mat-form-field-ripple {
+    background-color: $backgroundColor !important;
+  }
+  .filter__input {
+    width: 100%;
+    background-color: $backgroundColor;
+    border-radius: 5px;
+  }
 }
 @media only screen and (min-width: 1439px) {
-    .filter__input{
-        width: 72em;
-    }
-    .Client-Admin-Part02{
-        width: 77em;
-    }
-    .group-button{
-        grid-template-columns: 9em 9em 45em 9em;
-    }
-    .table{
-    width: 94.2%;
-    }
-    .table__paging{
-        width: 94%;
-    }
+  .Client-Admin-Part02 {
+    width: 77em;
+  }
 }
 @media only screen and (min-width: 1779px) {
-    .filter__input{
-        width: 98em;
-    }
-    .Client-Admin-Part02{
-        width: 103em;
-    }
-    .group-button{
-        grid-template-columns: 9em 9em 71em 9em;
-    }
-    .table{
-    width: 95.7%;
-    }
-    .table__paging{
-        width: 95.8%;
-    }
+  .Client-Admin-Part02 {
+    width: 103em;
+  }
 }

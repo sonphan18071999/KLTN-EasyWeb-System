@@ -43,7 +43,7 @@ import { ClientCMSGenerateUpdateUIComponent } from './client/client-preview-cms/
 import { ClientCMSGenerateDeleteUIComponent } from './client/client-preview-cms/client-cms-generate-delete-ui/client-cms-generate-delete-ui.component';
 import { ClientCMSGenerateReadUIComponent } from './client/client-preview-cms/client-cms-generate-read-ui/client-cms-generate-read-ui.component';
 import { ClientCmsGeneratedNavigationComponent } from './client/client-preview-cms/client-cms-generated-navigation/client-cms-generated-navigation.component';
-import { DialogEditTableItemComponent } from './client/dashboard-create-website/dialog-edit-table-item/dialog-edit-table-item.component';
+import { DialogEditTableItemComponent } from './client/dashboard-create-website/client-admin-part02/dialog-edit-table-item/dialog-edit-table-item.component';
 import { DialogEditColumnItemComponent } from './client/dashboard-create-website/client-admin-part03/dialog-edit-column-item/dialog-edit-column-item.component';
 import { ClientCMSHomepageSearchComponent } from './client/client-preview-cms/client-cmshomepage-search/client-cmshomepage-search.component';
 import { StatisticComponent } from './client/statistic/statistic.component';
@@ -52,6 +52,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { EmailDialogComponent } from './client/dashboard-create-website/client-admin-part04/email-dialog/email-dialog.component';
 import { UserInformationComponent } from './client/user-information/user-information.component';
 import { DialogConfigureForeignKeyComponent } from './client/dashboard-create-website/client-admin-part03/dialog-configure-foreign-key/dialog-configure-foreign-key.component';
+
 
 @NgModule({
   declarations: [

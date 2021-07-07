@@ -1,46 +1,75 @@
 <div class="Preview-Website-Container">
   <!-- contain image preview, name of database website, url, button 'site action' -->
   <div class="Preivew-Website-Upper">
-      <div class="Preview-Square">
-          <h2 class="iamge__preview__title">Preview website</h2>
-          <div class="Preview-Square-Below">
-              <label>Status: Not publish yet</label>
-          </div>
+    <div class="Preview-Square">
+      <h2 class="iamge__preview__title">Preview website</h2>
+      <div class="Preview-Square-Below">
+        <label>Status: Not publish yet</label>
       </div>
-      <div class="Preview-Website-Name">
-         <div class="title__action__buttons">
-            <div class="title">
-              <h2 *ngIf="previewData.dataPreview.bussinessName==''">Your Bussiness Name</h2>
-              <h2 *ngIf="previewData.dataPreview.bussinessName"><b>{{previewData.dataPreview.schema}}</b></h2>
-              
-              <span *ngIf="previewData.dataPreview.bussinessName">https://bussinessname.easyweb.com/sites/</span>
-              <span *ngIf="!previewData.dataPreview.bussinessName">https://bussinessname.easyweb.com/sites/</span>
+    </div>
+    <div class="Preview-Website-Name">
+      <div class="title__action__buttons">
+        <div class="title">
+          <h2 *ngIf="previewData.dataPreview.bussinessName == ''">
+            Your Bussiness Name
+          </h2>
+          <h2 *ngIf="previewData.dataPreview.bussinessName">
+            <b>{{ previewData.dataPreview.schema }}</b>
+          </h2>
 
-            </div>
-            <button class="btn-site-action"> Actions <i class="fas fa-sort-down"></i></button>
-         </div>
-         <hr>
-         <div class="Preview-Website-Below">
-          <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <h3 *ngIf="!previewData.dataPreview.schema">Schema name: <b>Unkown</b></h3>
-                  <h3 *ngIf="previewData.dataPreview.schema">Schema name: <b>{{previewData.dataPreview.schema}}</b></h3>
-                </div>
-                <div class="col-sm">
-                  <h3>Port: <b>{{previewData.dataPreview.port}}</b></h3>
-                </div>
-                <div class="col-sm">
-                  <h3 *ngIf="previewData.dataPreview.type==-1">Type: <b>Unknow</b></h3>
-                  <h3 *ngIf="previewData.dataPreview.type==0">Type:<b> Microsoft SQL Server</b></h3>
-                  <h3 *ngIf="previewData.dataPreview.type==1">Type:<b> MySQL</b></h3>
-                  <h3 *ngIf="previewData.dataPreview.type==2">Type:<b> PostgreSQL</b></h3>
-                </div>
-              </div>
-            </div>
+          <span *ngIf="previewData.dataPreview.bussinessName"
+            >https://bussinessname.easyweb.com/sites/</span
+          >
+          <span *ngIf="!previewData.dataPreview.bussinessName"
+            >https://bussinessname.easyweb.com/sites/</span
+          >
+        </div>
+        <button class="btn-site-action" [matMenuTriggerFor]="belowMenu">
+          Actions <i class="fas fa-sort-down"></i>
+        </button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item (click)="openTabPreview()">
+            <mat-icon>visibility</mat-icon> Preview
+          </button>
+          <button mat-menu-item><mat-icon>redo</mat-icon> Reset</button>
+          <button mat-menu-item><mat-icon>delete</mat-icon> Delete</button>
+        </mat-menu>
       </div>
+      <hr />
+      <div class="Preview-Website-Below">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h3 *ngIf="!previewData.dataPreview.schema">
+                Schema name: <b>Unkown</b>
+              </h3>
+              <h3 *ngIf="previewData.dataPreview.schema">
+                Schema name: <b>{{ previewData.dataPreview.schema }}</b>
+              </h3>
+            </div>
+            <div class="col-sm">
+              <h3>
+                Port: <b>{{ previewData.dataPreview.port }}</b>
+              </h3>
+            </div>
+            <div class="col-sm">
+              <h3 *ngIf="previewData.dataPreview.type == -1">
+                Type: <b>Unknow</b>
+              </h3>
+              <h3 *ngIf="previewData.dataPreview.type == 0">
+                Type:<b> Microsoft SQL Server</b>
+              </h3>
+              <h3 *ngIf="previewData.dataPreview.type == 1">
+                Type:<b> MySQL</b>
+              </h3>
+              <h3 *ngIf="previewData.dataPreview.type == 2">
+                Type:<b> PostgreSQL</b>
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
   <!-- contain image preview, name of database website, url, button 'site action' -->
-  
 </div>

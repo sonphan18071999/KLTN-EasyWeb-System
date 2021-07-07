@@ -1,12 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatTableDataSource} from '@angular/material/table';
 import { SelectionModel} from '@angular/cdk/collections';
-import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog} from '@angular/material/dialog';
 import { ClientAdminPart02PopupComponent} from '../client-admin-part02-popup/client-admin-part02-popup.component';
 import { DatabaseTableConfigService } from '../../../api/Client/database-table-config.service';
 import { TableConfigure } from 'src/app/models/TableConfigure';
-import {DialogEditTableItemComponent} from '../dialog-edit-table-item/dialog-edit-table-item.component';
-import { isNull } from '@angular/compiler/src/output/output_ast';
+import {DialogEditTableItemComponent} from './dialog-edit-table-item/dialog-edit-table-item.component';
 import { isNullOrUndefined } from '@swimlane/ngx-datatable';
 
 
@@ -20,7 +19,7 @@ export class ClientAdminPart02Component implements OnInit {
   dataSource = new MatTableDataSource([]);
   selection = new SelectionModel<TableConfigure>(true, []);
   allEntityDbRegister : TableConfigure[]=[];
-  itemChoosed:any;
+  itemChoosed:any=null;
   showActionDropDown: boolean = false;
   allEntityDbRegisterPersistence: TableConfigure[] = [];
   @Output() isActive = new EventEmitter<Number>();
@@ -59,10 +58,16 @@ export class ClientAdminPart02Component implements OnInit {
     return numSelected === numRows;
   }
 
-  popupEntities(item:any){
-    this.dialog.open(ClientAdminPart02PopupComponent,{
+  popupEntities(item: any) {
+    const dialogRef =  this.dialog.open(ClientAdminPart02PopupComponent,{
       width: 'auto',
-      data:{ name:item.name,position:item.position, explicitName:item.explicitName }})
+      data: { name: item.name, position: item.position, explicitName: item.explicitName }
+    });
+
+    dialogRef.afterClosed().subscribe(close => {
+      console.log("Đã close")
+      this.itemChoosed=null
+    })
   }
 
   scrollToTop(){
@@ -81,8 +86,12 @@ export class ClientAdminPart02Component implements OnInit {
     });
   }
 
-  chooseItem(item:any){
-   this.itemChoosed=item;
+  chooseItem(item: any) {
+    if (this.itemChoosed === item) {
+      this.itemChoosed=null
+    }else{
+      this.itemChoosed = item
+    }
   }
   openDialogEdit(){
     const dialogRef = this.dialog.open(DialogEditTableItemComponent,{
@@ -90,6 +99,7 @@ export class ClientAdminPart02Component implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       this.getAllTableConfigure()
+      this.itemChoosed=null
     });
   }
   viewColumns(item:TableConfigure){

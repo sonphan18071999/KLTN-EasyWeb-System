@@ -7,7 +7,7 @@ import {
 import { ToastrService } from 'ngx-toastr';
 import { ConfigureEntityService } from 'src/app/api/Client/configure-entity.service';
 import { TableConfigure } from 'src/app/models/TableConfigure';
-import { DialogData } from '../client-admin-part02/client-admin-part02.component';
+import { DialogData } from '../client-admin-part02.component';
 @Component({
   selector: 'app-dialog-edit-table-item',
   templateUrl: './dialog-edit-table-item.component.html',

@@ -1,36 +1,96 @@
 <div class="Client-Admin-Part04">
-    <h3><b>Fill out information</b></h3>
-    <p><i>With this information, we'll display it on your website homepage.</i></p>
-    <div class="group-input-Part04">
-            <div class="group-input-Part04-top">
-                <div class="group-input-Part04-top-left">
-                    <div class="img__container">
-                        <img  [src]="imageSrc || 'http://placehold.it/180'" alt="Bussiness image" class="img">
-                    </div>
-                    <input type="file" class="choose" (change)="readURL($event);">
-                </div>
-                <div class="group-input-Part04-top-right">
-                    <p>Bussiness Name</p>
-                    <input type="text" placeholder="Ex: Facebook, Google ..." [(ngModel)]="bussinessName">
-                    <p>Location</p>
-                    <input type="text" placeholder="Entity's name" [(ngModel)]="location">
-                    <p>Email</p>
-                    <input type="email" placeholder="Ex: facebook@facebook.com" [(ngModel)]="email">
-                    <p>Contact</p>
-                    <input type="number" min="0" maxlength="12" placeholder="Ex: 08 123 456" [(ngModel)]="contact">
-                </div>
-            </div>
-            <div class="group-input-Part04-under">
-               <div></div>
-                <div class="group-input-Part04-under-input">
-                    <p>Brief Description</p>
-                    <textarea rows="4" [(ngModel)]="briefDescription" class="bussiness__description"></textarea>
-                    <p>Actions</p>
-                    <div class="group-button-Part04">
-                        <button class="button button-primary" (click)="onSubmitUserInfo()">Submit</button>
-                        <button class="button button-secondary" (click)="onResetUserInfo()">Reset</button>
-                    </div>
-               </div>
-            </div>
+  <h3><b>Fill out information</b></h3>
+  <p>
+    <i>With this information, we'll display it on your website homepage.</i>
+  </p>
+  <div class="group-input-Part04">
+    <div class="group-input-Part04-top">
+      <div class="group-input-Part04-top-left">
+        <div class="img__container">
+          <img
+            [src]="imageSrc || 'http://placehold.it/180'"
+            alt="Bussiness image"
+            class="img"
+          />
+        </div>
+        <input type="file" class="choose" (change)="readURL($event)" />
+      </div>
+      <div class="group-input-Part04-top-right">
+        <p>Bussiness Name</p>
+        <input
+          type="text"
+          class="bussiness__input p-2"
+          placeholder="Ex: Facebook, Google ..."
+          [(ngModel)]="bussinessName"
+        />
+        <p>Location</p>
+        <input
+          type="text"
+          class="bussiness__input p-2"
+          placeholder="Entity's name"
+          [(ngModel)]="location"
+        />
+        <p>Email</p>
+        <input
+          type="email"
+          class="bussiness__input p-2"
+          placeholder="Ex: facebook@facebook.com"
+          [(ngModel)]="email"
+        />
+        <p>Contact</p>
+        <input
+          type="number"
+          class="p-2"
+          min="0"
+          maxlength="12"
+          placeholder="Ex: 08 123 456"
+          [(ngModel)]="contact"
+        />
+        <p>Brief Description</p>
+        <textarea
+          rows="4"
+          [(ngModel)]="briefDescription"
+          class="bussiness__description"
+        ></textarea>
+        <div></div>
+        <div></div>
+        <p>Template</p>
+        <mat-form-field appearance="fill" class="pr-3">
+          <mat-label>Please choose one</mat-label>
+          <mat-select>
+            <mat-option value="option1">Framework: Angular 12</mat-option>
+            <mat-option value="option3">Library: React</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>Authentication</p>
+        <mat-radio-group
+          aria-label="Select an option"
+          class="authentication_group"
+        >
+          <mat-radio-button class="radio mr-2" value="1">Yes</mat-radio-button>
+          <mat-radio-button value="radio 2">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
     </div>
+    <div class="group-input-Part04-under">
+      <div></div>
+      <div class="group-input-Part04-under-input">
+        <p>Actions</p>
+        <div class="group-button-Part04">
+          <button
+            class="btn button button-primary"
+            (click)="onSubmitUserInfo()"
+          >
+            Submit
+          </button>
+          <button
+            class="btn button button-secondary"
+            (click)="onResetUserInfo()"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

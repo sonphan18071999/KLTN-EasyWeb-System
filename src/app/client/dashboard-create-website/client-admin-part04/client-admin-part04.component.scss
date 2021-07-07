@@ -1,177 +1,202 @@
-
 @media only screen and (min-width: 1023px) {
-    .Client-Admin-Part04{
-        margin-left: 20px;
-        width: 53em;
-        height: auto;
-        border-color: rgb(54,159,217);
-        border-style: solid;
-        padding-bottom: 30px;
-        margin-top: 20px;
-        text-align: center;
-    }   
-    
-    .Client-Admin-Part04 h3{
-        font-size: 20px;
-        padding-top: 30px;
-    }
-    .Client-Admin-Part04{
-            margin-left: 20px;
-            width: 53em;
-            height: auto;
-            border-color: rgb(54,159,217);
-            border-style: solid;
-            padding-bottom: 30px;
-            margin-top: 20px;
-            text-align: center;
-        }   
-        .Client-Admin-Part04 h3{
-        font-size: 20px;
-        padding-top: 30px;
-    }
-    .group-input-Part04{
-        display: block;
-    }
-    .group-input-Part04-top{
-        display: grid;
-        grid-template-columns: 14em auto;
-        margin: 0 auto !important;
-        padding-top: 10px;
-    }
-    .group-input-Part04-top-left{
-        height: 200px;
-        width: auto;
-        display: block;
-        margin-right: 2em;
-        .img__container{
-            height: 12em;
-            border-width: 1px;
-            border-style: solid;
-            overflow: hidden;
-        }
-        .get-logo-customer{
-            border-color: black;
-            background-color: transparent;
-            height: 200px;
-            width: 200px;
-            border-style: solid;
-            border-width: 1px;
-        }
-        .get-logo-customer:hover{
-            background-color: transparent;
-        }
-    }
+  .authentication_group {
+    display: flex;
+    flex-direction: column;
+  }
 
-    
-    .group-input-Part04-top-right{
-        display: grid;
-        grid-template-columns:14em 25em;
-        height: auto;
-        text-align: left;
-        grid-gap: 20px 0px;
+  .Client-Admin-Part04 {
+    margin-left: 20px;
+    width: 53em;
+    height: auto;
+    border-color: rgb(54, 159, 217);
+    border-style: solid;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .Client-Admin-Part04 h3 {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+  .Client-Admin-Part04 {
+    margin-left: 20px;
+    width: 53em;
+    height: auto;
+    border-color: rgb(54, 159, 217);
+    border-style: solid;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .Client-Admin-Part04 h3 {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+  .group-input-Part04 {
+    display: block;
+  }
+  .group-input-Part04-top {
+    display: grid;
+    grid-template-columns: 14em auto;
+    margin: 0 auto !important;
+    padding-top: 10px;
+  }
+  .group-input-Part04-top-left {
+    height: 200px;
+    width: auto;
+    display: block;
+    margin-right: 2em;
+    .img__container {
+      height: 12em;
+      border-width: 1px;
+      border-style: solid;
+      overflow: hidden;
     }
-    .group-input-Part04-top-right input{
-        max-height: 40px;
-        outline: none !important;
-        background-color: rgb(36,48,60);
-        border-color: rgb(54,159,217);
-        border-width: 1px;
-        color: rgb(54,159,217);
-        margin-right: 20px;
+    .get-logo-customer {
+      border-color: black;
+      background-color: transparent;
+      height: 200px;
+      width: 200px;
+      border-style: solid;
+      border-width: 1px;
     }
-    .group-input-Part04-under{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 14em auto;
-        text-align: left;
+    .get-logo-customer:hover {
+      background-color: transparent;
     }
-    .group-input-Part04-under-input{
-        padding-top: 20px;
-        display: grid;
-        grid-template-columns: 14em auto;
-        grid-gap: 20px 0px;
-    }
-  
-    .group-button-Part04{
-        display: grid;
-        grid-template-columns: 140px 140px;
-        grid-gap: 0px 40px;
-    }
-    .button{
-        background-color: transparent;
-        border-color:rgb(54,159,217);
-        border-width: 1px;
-        border-style: solid;
-        color:rgb(54,159,217);
-        padding: 10px 40px 10px 40px;
-        max-height: 40px;
-    }
-    .button-primary:hover{
-        background-color: rgb(54,159,217);
-        color: white;
-    }
-    .button-secondary:hover{
-        background-color: rgb(211,87,193);
-        color: white;
-    }
-    .choose::-webkit-file-upload-button{
-        margin-top: 1em;
-        color: white;
-        display: inline-block;
-        background: transparent;
-        border-color:rgb(54,159,217);
-        border-width: 1px;
-        padding: 7px 15px ;
-        font-weight: 700;
-        border-radius: 3px;
-        white-space: nowrap;
-        cursor: pointer;
-        font-size: 10pt;
-        border-radius: 15px;
-        height: 3em;
-    }
-    .choose{
-        width: 11em;
-    }
-    .bussiness__description{
-        width: 23.5em;
-        background-color: rgb(36,48,60);
-        outline: none;
-        color: rgb(54,159,217);
-        border-color: rgb(54,159,217);
-    }
-    .img{
-        width: 100%;
-    }
+  }
+
+  .group-input-Part04-top-right {
+    display: grid;
+    grid-template-columns: 14em 25em;
+    height: auto;
+    text-align: left;
+    grid-gap: 20px 0px;
+  }
+  .group-input-Part04-top-right input {
+    max-height: 40px;
+    outline: none !important;
+    background-color: rgb(36, 48, 60);
+    border-color: rgb(54, 159, 217);
+    border-width: 1px;
+    color: rgb(54, 159, 217);
+    margin-right: 20px;
+  }
+  .group-input-Part04-under {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 14em auto;
+    text-align: left;
+  }
+  .group-input-Part04-under-input {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 14em auto;
+    grid-gap: 20px 0px;
+  }
+
+  .group-button-Part04 {
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-gap: 0px 40px;
+  }
+  .button {
+    background-color: transparent;
+    border-color: rgb(54, 159, 217);
+    border-width: 1px;
+    border-style: solid;
+    color: rgb(54, 159, 217);
+    padding: 10px 40px 10px 40px;
+    max-height: 40px;
+  }
+  .button-primary:hover {
+    background-color: rgb(54, 159, 217);
+    color: white;
+  }
+  .button-secondary:hover {
+    background-color: rgb(211, 87, 193);
+    color: white;
+  }
+  .choose::-webkit-file-upload-button {
+    margin-top: 1em;
+    color: white;
+    display: inline-block;
+    background: transparent;
+    border-color: rgb(54, 159, 217);
+    border-width: 1px;
+    padding: 7px 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 10pt;
+    border-radius: 15px;
+    height: 3em;
+  }
+  .choose {
+    width: 11em;
+  }
+  .bussiness__description {
+    width: 23.5em;
+    background-color: rgb(36, 48, 60);
+    outline: none;
+    color: rgb(54, 159, 217);
+    border-color: rgb(54, 159, 217);
+  }
+  .img {
+    width: 100%;
+  }
+  ::ng-deep .mat-radio-outer-circle {
+    border-color: rgb(54, 159, 217) !important;
+  }
+  ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle,
+  .mat-radio-button.mat-accent
+    .mat-radio-ripple
+    .mat-ripple-element:not(.mat-radio-persistent-ripple),
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple,
+  .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: rgb(54, 159, 217) !important;
+  }
+  ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: rgb(54, 159, 217) !important;
+  }
+  ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: rgb(54, 159, 217) !important;
+  }
+  mat-label {
+    color: rgb(54, 159, 217) !important;
+  }
 }
 @media only screen and (min-width: 1439px) {
-    .group-input-Part04-top-right{
-        grid-template-columns: 8em 24em 8em 23em;
-    }
-    .group-input-Part04-under-input{
-        grid-template-columns: 8em auto;
-    }
+  .group-input-Part04-top-right {
+    grid-template-columns: 8em 24em 8em 23em;
+  }
+  .group-input-Part04-under-input {
+    grid-template-columns: 8em auto;
+  }
 
-    .bussiness__description {
-        width: 53.5em;
-    }
+  .bussiness__description {
+    width: 53.5em;
+  }
 }
 @media only screen and (min-width: 1779px) {
-    .group-input-Part04{
-        margin: 0 auto;
-        width: 80em;
-    }
-    .Client-Admin-Part04{
-        width: 103em;
-    }
-    .img__container{
-        width: 17em;
-        height: 20em;
-    }
-    .group-input-Part04-top{
-        grid-template-columns: 19em auto;
-    }
-    .group-input-Part04-under{
-        grid-template-columns: 19em auto;
-    }
+  .group-input-Part04 {
+    margin: 0 auto;
+    width: 80em;
+  }
+  .Client-Admin-Part04 {
+    width: 103em;
+  }
+  .img__container {
+    width: 17em;
+    height: 20em;
+  }
+  .group-input-Part04-top {
+    grid-template-columns: 19em auto;
+  }
+  .group-input-Part04-under {
+    grid-template-columns: 19em auto;
+  }
 }

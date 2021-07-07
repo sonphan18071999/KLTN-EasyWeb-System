@@ -21,8 +21,8 @@ const routes: Routes = [
     {path:'part-02',component:ClientAdminPart02Component},
     {path:'website/create',component:DashboardCreateWebsiteIndexComponent},
     {path:'website/statistic/:id', component: StatisticComponent },
-    {path:'website/user/:id',component:UserInformationComponent},
-      { path: '**', component: ClientAdminDashboardIndexComponent }]
+    { path: 'website/user/:id', component: UserInformationComponent },
+    { path: '**', component: ClientAdminDashboardIndexComponent }]
   },
   {path:'**',component:ClientIndexComponent}
 ];

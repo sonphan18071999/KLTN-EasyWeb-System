@@ -35,21 +35,28 @@
         <div class="group-button">
           <button
             class="btn button button-secondary pa-2"
+            [disabled]="selectedItem === null"
             (click)="editColumn()"
           >
             <i class="far fa-edit"></i>Edit
           </button>
           <button
-            class="btn button button-third pa-4"
+            class="btn button button-third pa-2"
+            [disabled]="selectedItem === null"
             (click)="hideColumnConfigure()"
           >
             <i class="far fa-eye-slash"></i>Hide
           </button>
-          <button class="btn button button-third" (click)="setForeignKey()">
+          <button
+            class="btn button button-third pa-2"
+            [disabled]="selectedItem === null"
+            (click)="setForeignKey()"
+          >
             <i class="fas fa-link"></i>Foreign Key
           </button>
           <button
             class="btn button button-secondary float-right btn__submit pad2"
+            [disabled]="selectedItem === null"
             (click)="SubmitColumns()"
           >
             <i class="fas fa-upload"></i> Submit
