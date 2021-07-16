@@ -50,13 +50,7 @@ $backgroundColor: rgb(36, 48, 60);
   .mat-label {
     color: $colorText_Border;
   }
-  //   .mat-form-field-filter {
-  //     font-size: 14px;
-  //     width: 100%;
-  //     background-color: rgb(36, 48, 60);
-  //     color: white;
-  //     margin-bottom: 5px;
-  //   }
+
 
   ::ng-deep.mat-form-field-underline {
     /*change color of underline*/
@@ -147,11 +141,6 @@ $backgroundColor: rgb(36, 48, 60);
   }
   ::ng-deep.mat-form-field-ripple {
     background-color: $backgroundColor !important;
-  }
-  .filter__input {
-    width: 100%;
-    background-color: $backgroundColor;
-    border-radius: 5px;
   }
 }
 @media only screen and (min-width: 1439px) {

@@ -52,6 +52,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { EmailDialogComponent } from './client/dashboard-create-website/client-admin-part04/email-dialog/email-dialog.component';
 import { UserInformationComponent } from './client/user-information/user-information.component';
 import { DialogConfigureForeignKeyComponent } from './client/dashboard-create-website/client-admin-part03/dialog-configure-foreign-key/dialog-configure-foreign-key.component';
+import { SearchEntitiesComponent } from './client/dashboard-create-website/client-admin-part02/search-entities/search-entities.component';
 
 
 @NgModule({
@@ -93,6 +94,7 @@ import { DialogConfigureForeignKeyComponent } from './client/dashboard-create-we
     EmailDialogComponent,
     UserInformationComponent,
     DialogConfigureForeignKeyComponent,
+    SearchEntitiesComponent,
   ],
   imports: [
     BrowserModule,

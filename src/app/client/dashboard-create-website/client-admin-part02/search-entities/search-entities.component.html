@@ -1,0 +1,10 @@
+<mat-form-field class="mat-form-field-filter filter__input mt-3 col-12">
+  <mat-label class="mat-label">Search...</mat-label>
+  <input
+    class="search-mat-input"
+    matInput
+    [(ngModel)]="searchword"
+    (input)="searchThis()"
+    #input
+  />
+</mat-form-field>

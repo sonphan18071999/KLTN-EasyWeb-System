@@ -1,0 +1,10 @@
+$colorText_Border: rgb(54, 159, 217);
+$backgroundColor: rgb(36, 48, 60);
+.filter__input {
+  width: 100%;
+  background-color: $backgroundColor;
+  border-radius: 5px;
+}
+.mat-label {
+  color: $colorText_Border;
+}

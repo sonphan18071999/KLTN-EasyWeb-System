@@ -24,13 +24,7 @@ export class ClientAdminPart02Component implements OnInit {
   allEntityDbRegisterPersistence: TableConfigure[] = [];
   @Output() isActive = new EventEmitter<Number>();
 
-  applyFilter(event: Event) {
-    var filterValue = (event.target as HTMLInputElement).value;
-    if (isNullOrUndefined(filterValue) || filterValue==='') {
-      this.getAllTableConfigure();
-    }
-    this.allEntityDbRegister = this.allEntityDbRegisterPersistence.filter(item => item.explicitName?.toLocaleLowerCase().toString().includes(filterValue) || item.name?.toLocaleLowerCase().toString().includes(filterValue));
-  }
+  
 
   constructor(public dialog: MatDialog,
             private databaseTableConfigService : DatabaseTableConfigService) { }
@@ -76,6 +70,15 @@ export class ClientAdminPart02Component implements OnInit {
 
   SubmitEntities(){
     this.isActive.emit(3);
+  }
+
+  searchThis(data: any) {
+  //   const trimmedKeyword = data.split("")
+  //   this.allEntityDbRegister.filter(item => {
+  //     return trimmedKeyword.every(word => {
+  //       if(item.name.some(word)))
+  //     })
+  //  })
   }
 
   getAllTableConfigure(){

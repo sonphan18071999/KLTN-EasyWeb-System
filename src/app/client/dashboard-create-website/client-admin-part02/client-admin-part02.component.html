@@ -9,15 +9,9 @@
     <div class="table-entities">
       <div class="row d-flex justify-content-center">
         <div class="col-11">
-          <mat-form-field class="mat-form-field-filter filter__input mt-3">
-            <mat-label class="mat-label">Search...</mat-label>
-            <input
-              class="search-mat-input"
-              matInput
-              (keyup)="applyFilter($event)"
-              #input
-            />
-          </mat-form-field>
+          <app-search-entities
+            (searchcriteria)="searchThis($event)"
+          ></app-search-entities>
         </div>
       </div>
       <div *ngIf="allEntityDbRegister.length <= 0" class="mat-spinner">

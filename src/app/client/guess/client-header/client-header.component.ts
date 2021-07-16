@@ -13,4 +13,7 @@ export class ClientHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navigateToCommunity() {
+    window.location.href="https://easy-web-blog.herokuapp.com"
+  }
 }
