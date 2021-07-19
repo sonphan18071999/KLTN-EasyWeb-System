@@ -7,13 +7,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchEntitiesComponent implements OnInit {
  
-  @Output() searchcriteria = new EventEmitter<String>();
-  searchword=''
+  @Output() searchCriteria = new EventEmitter<String>();
+  searchWord=''
   constructor() { }
 
   ngOnInit(): void {
   }
   searchThis() {
-    this.searchcriteria.emit(this.searchword)
+    this.searchCriteria.emit(this.searchWord)
   }
 }

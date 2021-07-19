@@ -7,6 +7,7 @@ import { DatabaseTableConfigService } from '../../../api/Client/database-table-c
 import { TableConfigure } from 'src/app/models/TableConfigure';
 import {DialogEditTableItemComponent} from './dialog-edit-table-item/dialog-edit-table-item.component';
 import { isNullOrUndefined } from '@swimlane/ngx-datatable';
+import * as Fuse from 'fuse.js';
 
 
 @Component({
@@ -22,9 +23,9 @@ export class ClientAdminPart02Component implements OnInit {
   itemChoosed:any=null;
   showActionDropDown: boolean = false;
   allEntityDbRegisterPersistence: TableConfigure[] = [];
+  isSearching: boolean = false;
+  listDataSearch: any;
   @Output() isActive = new EventEmitter<Number>();
-
-  
 
   constructor(public dialog: MatDialog,
             private databaseTableConfigService : DatabaseTableConfigService) { }
@@ -59,7 +60,6 @@ export class ClientAdminPart02Component implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(close => {
-      console.log("Đã close")
       this.itemChoosed=null
     })
   }
@@ -72,13 +72,15 @@ export class ClientAdminPart02Component implements OnInit {
     this.isActive.emit(3);
   }
 
-  searchThis(data: any) {
-  //   const trimmedKeyword = data.split("")
-  //   this.allEntityDbRegister.filter(item => {
-  //     return trimmedKeyword.every(word => {
-  //       if(item.name.some(word)))
-  //     })
-  //  })
+  async searchThis(data: any):Promise<void> {
+    if (data) {
+      
+    this.isSearching = true;
+    const fuse = new Fuse(this.allEntityDbRegister, { keys: ["name"] });
+    this.listDataSearch = fuse.search(data);
+    } else
+      this.isSearching=false
+    
   }
 
   getAllTableConfigure(){

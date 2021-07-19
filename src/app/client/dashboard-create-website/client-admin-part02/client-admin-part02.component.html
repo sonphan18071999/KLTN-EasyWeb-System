@@ -10,7 +10,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-11">
           <app-search-entities
-            (searchcriteria)="searchThis($event)"
+            (searchCriteria)="searchThis($event)"
           ></app-search-entities>
         </div>
       </div>
@@ -54,20 +54,53 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col" class="th__item">
-                    Name <i class="fas fa-info-circle"></i>
+                    Name <i class="ml-2 fas fa-info-circle small"></i>
                   </th>
                   <th
                     scope="col"
                     data-editable="true"
                     class="th__item th--custom--name"
                   >
-                    Explicit Name
+                    Explicit Name <i class="ml-2 fas fa-info-circle small"></i>
                   </th>
-                  <th scope="col" class="th__item">Actions In Database</th>
-                  <th scope="col" class="th__item">Actions</th>
+                  <th scope="col" class="th__item">
+                    Actions In Database
+                    <i class="ml-2 fas fa-info-circle small"></i>
+                  </th>
+                  <th scope="col" class="th__item">
+                    Actions <i class="ml-2 fas fa-info-circle small"></i>
+                  </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody *ngIf="isSearching">
+                <tr *ngFor="let item of listDataSearch">
+                  <td>
+                    <mat-checkbox
+                      class="btn__checkbox"
+                      type="checkbox"
+                      (click)="chooseItem(item)"
+                    ></mat-checkbox>
+                  </td>
+                  <td *ngIf="item.isHidden">
+                    <s>{{ item.name }}</s>
+                  </td>
+                  <td *ngIf="!item.isHidden">{{ item.name }}</td>
+                  <td *ngIf="item.isHidden">
+                    <s>{{ item.explicitName }}</s>
+                  </td>
+                  <td *ngIf="!item.isHidden">{{ item.explicitName }}</td>
+                  <td>{{ item.actionGroup }}</td>
+                  <td>
+                    <button
+                      class="button button-primary"
+                      (click)="viewColumns(item)"
+                    >
+                      View Detail
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="!isSearching">
                 <tr *ngFor="let item of allEntityDbRegister">
                   <td>
                     <mat-checkbox
