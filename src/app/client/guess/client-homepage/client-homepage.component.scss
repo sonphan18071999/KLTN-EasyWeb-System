@@ -1,166 +1,169 @@
-.index-container{
-    width: 100%;
-    background: white;
-    height: 2880px;
+.index-container {
+  width: 100%;
+  background: white;
+  height: 2880px;
 }
-.banner-01{
-    background: url("../../../../assets/images/banner_02.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 770px;
-    margin-bottom: 20px;
+.banner-01 {
+  background: url("../../../../assets/images/banner_02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 770px;
+  margin-bottom: 20px;
 }
-.button{
-    padding: 5px 50px 5px 50px;
-    border-radius: 50px;
-    border-style: solid;
-    height: 40px;
-    color: white;
-    border-color: rgb(9,102,246);
-    background-color: transparent;
-    font-size: 20px;
-    border-width: 3px;
-    letter-spacing: 2px;
+.button {
+  padding: 5px 50px 5px 50px;
+  border-radius: 50px;
+  border-style: solid;
+  height: 40px;
+  color: white;
+  border-color: rgb(9, 102, 246);
+  background-color: transparent;
+  font-size: 20px;
+  border-width: 3px;
+  letter-spacing: 2px;
 }
-.banner-01 h3{
-    color: white;
-    padding-top: 300px;
-    margin-left: 250px;
-    line-height: 1.5;
-    font-size: 38px;
+.banner-01 h3 {
+  color: white;
+  padding-top: 300px;
+  margin-left: 250px;
+  line-height: 1.5;
+  font-size: 38px;
 }
-.button-explore{
-    // margin-left: 250px;
-    width: 180px;
+.button-explore {
+  // margin-left: 250px;
+  width: 180px;
   height: 58px;
   cursor: pointer;
   position: absolute;
   left: 250px;
   top: 420px;
   background: transparent;
-  border: 0px solid #91C9FF;
+  border: 0px solid #91c9ff;
   outline: none;
   transition: 1s ease-in-out;
 }
 
 svg {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }
-.button-explore:hover{
-    transition: 1s ease-in-out;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
 }
-.button-explore:hover svg{
-    stroke-dashoffset: -490;
+.button-explore:hover {
+  transition: 1s ease-in-out;
 }
-.simplify-section{
-    padding-top: 50px;
-    width: 980px;
-    margin: auto;
-    padding-bottom: 50px;
+.button-explore:hover svg {
+  stroke-dashoffset: -490;
 }
-.simplify-section h3{
-    font-size: 38px;
-    color: white;
+.simplify-section {
+  padding-top: 50px;
+  width: 980px;
+  margin: auto;
+  padding-bottom: 50px;
 }
-.simplify-section p{
-    color: white;
+.simplify-section h3 {
+  font-size: 38px;
+  color: white;
 }
-.image-display{
-    display: flex;
-    height: 1045px;
-    overflow: hidden;
+.simplify-section p {
+  color: white;
 }
-.simplify-section-container{
-    background-color: rgb(0,126,101);
-    height: 1400px;
-    text-align: center;
+.image-display {
+  display: flex;
+  height: 1045px;
+  overflow: hidden;
 }
-.CustomerCompliance{
-    height: 600px;
-    background-origin: white;
+.simplify-section-container {
+  background-color: rgb(0, 126, 101);
+  height: 1400px;
+  text-align: center;
 }
-.CustomerCompliance-Container{
-    background-color: rgb(1, 11, 46);
-    margin-top: 100px;
-    height: 500px;
-    text-align: center;
+.CustomerCompliance {
+  height: 600px;
+  background-origin: white;
 }
-.CustomerCompliance-Container h2{
-    color: white;
-    padding-top: 50px;
+.CustomerCompliance-Container {
+  background-color: rgb(1, 11, 46);
+  margin-top: 100px;
+  height: 500px;
+  text-align: center;
 }
-.CustomerCompliance-Cirlcle-01{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 855px;
-    left: 115px;
+.CustomerCompliance-Container h2 {
+  color: white;
+  padding-top: 50px;
 }
-.CustomerCompliance-Cirlcle-02{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 1300px;
-    left: 1040px;
+.CustomerCompliance-Cirlcle-01 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 855px;
+  left: 115px;
 }
-.CustomerCompliance-Cirlcle-03{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 1200px;
-    left: 950px;
+.CustomerCompliance-Cirlcle-02 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 1300px;
+  left: 1040px;
+}
+.CustomerCompliance-Cirlcle-03 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 1200px;
+  left: 950px;
 }
 
-i{
-    font-size: 15px;
+i {
+  font-size: 15px;
 }
-.CustomerDescription{
-    color: white;
-    line-height: 2em;
-    width: 960px;
-    margin: auto;
+.CustomerDescription {
+  color: white;
+  line-height: 2em;
+
+  margin: auto;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
-.button-let-go{
-    width: 280px;
-    height: 58px;
-    cursor: pointer;
-    left: 250px;
-    top: 420px;
-    background: transparent;
-    border: 0px solid #91C9FF;
-    outline: none;
-    transition: 1s ease-in-out;
+.button-let-go {
+  width: 280px;
+  height: 58px;
+  cursor: pointer;
+  left: 250px;
+  top: 420px;
+  background: transparent;
+  border: 0px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
 }
-.button-let-go:hover{
-    transition: 1s ease-in-out;
+.button-let-go:hover {
+  transition: 1s ease-in-out;
 }
-.button-let-go:hover svg{
-    stroke-dashoffset: -490;
+.button-let-go:hover svg {
+  stroke-dashoffset: -490;
 }
-.svg-let-go{
-   position: absolute;
-   top: 2690px;
+.svg-let-go {
+  position: absolute;
+  top: 2690px;
+}
+.img__review {
+  max-height: 15em;
 }

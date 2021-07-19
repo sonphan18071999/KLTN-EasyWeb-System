@@ -53,7 +53,9 @@
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col" class="th__item">Name</th>
+                  <th scope="col" class="th__item">
+                    Name <i class="fas fa-info-circle"></i>
+                  </th>
                   <th
                     scope="col"
                     data-editable="true"
@@ -74,8 +76,14 @@
                       (click)="chooseItem(item)"
                     ></mat-checkbox>
                   </td>
-                  <td>{{ item.name }}</td>
-                  <td>{{ item.explicitName }}</td>
+                  <td *ngIf="item.isHidden">
+                    <s>{{ item.name }}</s>
+                  </td>
+                  <td *ngIf="!item.isHidden">{{ item.name }}</td>
+                  <td *ngIf="item.isHidden">
+                    <s>{{ item.explicitName }}</s>
+                  </td>
+                  <td *ngIf="!item.isHidden">{{ item.explicitName }}</td>
                   <td>{{ item.actionGroup }}</td>
                   <td>
                     <button
