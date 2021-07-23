@@ -16,4 +16,8 @@ export class ClientHeaderComponent implements OnInit {
   navigateToCommunity() {
     window.location.href="https://easy-web-blog.herokuapp.com"
   }
+
+  navigateToDemo() {
+    window.location.href="https://demo-easy-web-generator.herokuapp.com"
+  }
 }

@@ -10,6 +10,7 @@ import { DashboardCreateWebsiteIndexComponent } from '../app/client/dashboard-cr
 import { StatisticComponent } from './client/statistic/statistic.component';
 import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
 import { UserInformationComponent } from './client/user-information/user-information.component';
+
 const routes: Routes = [
   { path: '', component: ClientIndexComponent },
   { path: 'login', component: ClientLoginComponent },
