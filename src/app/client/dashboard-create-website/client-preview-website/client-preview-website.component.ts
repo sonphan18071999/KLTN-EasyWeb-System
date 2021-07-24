@@ -16,6 +16,6 @@ export class ClientPreviewWebsiteComponent implements OnInit {
   ngOnInit(): void {
   }
   openTabPreview() {
-    window.open(`http://localhost:4200/website/preview`)
+    window.open(`https://demo-easy-web-generator.herokuapp.com`)
   }
 }

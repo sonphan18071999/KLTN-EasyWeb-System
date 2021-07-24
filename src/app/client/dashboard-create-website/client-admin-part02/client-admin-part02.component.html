@@ -89,7 +89,11 @@
                     <s>{{ item.explicitName }}</s>
                   </td>
                   <td *ngIf="!item.isHidden">{{ item.explicitName }}</td>
-                  <td>{{ item.actionGroup }}</td>
+                  <td *ngIf="!item.isHidden">{{ item.actionGroup }}</td>
+                  <td *ngIf="item.isHidden">
+                    <s>{{ item.actionGroup }}</s>
+                  </td>
+
                   <td>
                     <button
                       class="button button-primary"

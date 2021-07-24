@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from 'src/app/api/Client/database.service';
 
 @Component({
   selector: 'app-email-dialog',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailDialogComponent implements OnInit {
 
-  constructor() { }
+  user: any={};
 
-  ngOnInit(): void {
+  constructor(private databaseService: DatabaseService) { }
+  
+  async ngOnInit(): Promise<void> {
+    await this.databaseService.getUserInformation().subscribe(ok => {
+      this.user = ok
+    })
   }
 
 }

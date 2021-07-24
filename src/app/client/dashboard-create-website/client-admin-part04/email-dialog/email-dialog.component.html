@@ -1,7 +1,14 @@
-<h1 mat-dialog-title>Easy Web: Information </h1>
-<div mat-dialog-content>
-  <h4>An email just send to your email. Please check your email.</h4>
-</div>
-<div mat-dialog-actions>
-  <button mat-stroked-button [mat-dialog-close] color="primary">Ok</button>
-</div>
+<mat-card>
+  <h1 mat-dialog-title>Easy Web: Information</h1>
+  <mat-progress-bar mode="query"></mat-progress-bar>
+  <div mat-dialog-content>
+    <h4 class="mt-4">
+      The <b>Easy-Web</b> is working on your database, it's take about minutes
+      to finish. After that we'll send website to <b> {{ user.email }}</b
+      >. Please check your email.
+    </h4>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-stroked-button [mat-dialog-close] color="primary">Ok</button>
+  </div>
+</mat-card>

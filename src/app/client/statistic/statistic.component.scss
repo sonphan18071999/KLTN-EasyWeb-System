@@ -7,8 +7,8 @@ $textColor: rgb(54, 159, 217);
   color: $textColor;
 }
 .table__th {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .table {
   color: $textColor;
@@ -26,18 +26,32 @@ $textColor: rgb(54, 159, 217);
 .sub_title {
   color: $textColor;
 }
+
 .paginator {
   background: rgb(36, 48, 60);
   color: $textColor;
 }
+
 .mat-spinner ::ng-deep .mat-progress-spinner circle,
 .mat-spinner circle {
   stroke: $textColor;
 }
+
 .mat-spinner {
   display: block;
   width: 10em;
   margin: 0 auto;
   padding-top: 5em;
   padding-bottom: 2em;
+}
+
+.state {
+  width: 1em;
+  height: 1em;
+  &--progress {
+    background-color: #f1a80a;
+  }
+  &--finish {
+    background-color: #0d9e49;
+  }
 }

@@ -1,7 +1,7 @@
 <div class="statistic__container">
   <div class="statistic">
     <mat-card class="card__statistic">
-      <h1 class="h1__title">Statistic</h1>
+      <h1 class="h1__title"><b>Statistic</b></h1>
       <p class="sub_title">
         <i>All of your database processed and processing</i>
       </p>
@@ -13,12 +13,12 @@
         *ngIf="paginationListDBRegistered.length > 0"
       >
         <thead>
-          <th class="table__th" scope="col"><h2>Type</h2></th>
-          <th class="table__th" scope="col"><h2>Database Name</h2></th>
-          <th class="table__th" scope="col"><h2>Bussiness Name</h2></th>
-          <th class="table__th" scope="col"><h2>Source API</h2></th>
-          <th class="table__th" scope="col"><h2>Source Angular</h2></th>
-          <th class="table__th" scope="col"><h2>Status</h2></th>
+          <th class="table__th" scope="col">TYPE</th>
+          <th class="table__th" scope="col">DATABASE NAME</th>
+          <th class="table__th" scope="col">BUSINESS NAME</th>
+          <th class="table__th" scope="col">SOURCE API</th>
+          <th class="table__th" scope="col">SOURCE ANGULAR</th>
+          <th class="table__th" scope="col">STATUS</th>
         </thead>
         <tbody *ngFor="let item of paginationListDBRegistered">
           <tr class="tr--hover">
@@ -38,8 +38,14 @@
               >
             </td>
             <td *ngIf="!item.clientAppDownloadLink">---</td>
-            <td *ngIf="item.apiDownloadLink">Finished</td>
-            <td *ngIf="!item.apiDownloadLink">Processing</td>
+            <td class="d-flex" *ngIf="item.apiDownloadLink">
+              <div class="state state--finish rounded-circle mr-2"></div>
+              <span>Finished</span>
+            </td>
+            <td class="d-flex" *ngIf="!item.apiDownloadLink">
+              <div class="state state--progress rounded-circle mr-2"></div>
+              <span>Processing</span>
+            </td>
           </tr>
         </tbody>
       </table>

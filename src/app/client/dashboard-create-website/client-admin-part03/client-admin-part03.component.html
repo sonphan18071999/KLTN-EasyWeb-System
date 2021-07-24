@@ -105,13 +105,32 @@
               >
               </mat-checkbox>
             </td>
-            <td>{{ item.explicitName }}</td>
-            <td>{{ item.dataType }}</td>
-            <td>{{ item.ordinalPosition }}</td>
-            <td>{{ item.displayComponent }}</td>
-            <td>{{ item.isHidden }}</td>
-            <td>{{ item.isNullable }}</td>
-            <td>
+            <td *ngIf="item.isHidden">
+              <s>{{ item.explicitName }}</s>
+            </td>
+            <td *ngIf="item.isHidden">
+              <s>{{ item.dataType }}</s>
+            </td>
+            <td *ngIf="item.isHidden">
+              <s>{{ item.ordinalPosition }}</s>
+            </td>
+            <td *ngIf="item.isHidden">
+              <s>{{ item.displayComponent }}</s>
+            </td>
+            <td *ngIf="item.isHidden">
+              <s>{{ item.isHidden }}</s>
+            </td>
+            <td *ngIf="item.isHidden">
+              <s>{{ item.isNullable }}</s>
+            </td>
+
+            <td *ngIf="!item.isHidden">{{ item.explicitName }}</td>
+            <td *ngIf="!item.isHidden">{{ item.dataType }}</td>
+            <td *ngIf="!item.isHidden">{{ item.ordinalPosition }}</td>
+            <td *ngIf="!item.isHidden">{{ item.displayComponent }}</td>
+            <td *ngIf="!item.isHidden">{{ item.isHidden }}</td>
+            <td *ngIf="!item.isHidden">{{ item.isNullable }}</td>
+            <td *ngIf="!item.isHidden">
               <button class="button button-primary">View Detail</button>
             </td>
           </tr>
