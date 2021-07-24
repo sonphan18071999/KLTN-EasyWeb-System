@@ -5,7 +5,6 @@
       <p class="sub_title">
         <i>All of your database processed and processing</i>
       </p>
-      <hr />
       <div *ngIf="paginationListDBRegistered.length <= 0">
         <p class="sub_title">There is no records to shown...</p>
       </div>
@@ -17,7 +16,8 @@
           <th class="table__th" scope="col"><h2>Type</h2></th>
           <th class="table__th" scope="col"><h2>Database Name</h2></th>
           <th class="table__th" scope="col"><h2>Bussiness Name</h2></th>
-          <th class="table__th" scope="col"><h2>URL Source Download</h2></th>
+          <th class="table__th" scope="col"><h2>Source API</h2></th>
+          <th class="table__th" scope="col"><h2>Source Angular</h2></th>
           <th class="table__th" scope="col"><h2>Status</h2></th>
         </thead>
         <tbody *ngFor="let item of paginationListDBRegistered">
@@ -32,6 +32,12 @@
               >
             </td>
             <td *ngIf="!item.apiDownloadLink">---</td>
+            <td *ngIf="item.clientAppDownloadLink">
+              <a href="{{ item.clientAppDownloadLink }}"
+                ><p>{{ item.clientAppDownloadLink }}</p></a
+              >
+            </td>
+            <td *ngIf="!item.clientAppDownloadLink">---</td>
             <td *ngIf="item.apiDownloadLink">Finished</td>
             <td *ngIf="!item.apiDownloadLink">Processing</td>
           </tr>

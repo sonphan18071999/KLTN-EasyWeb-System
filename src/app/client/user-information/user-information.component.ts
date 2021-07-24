@@ -14,7 +14,7 @@ export class UserInformationComponent implements OnInit {
   constructor(private databaseService: DatabaseService) { }
   ngOnInit(): void {
     this.databaseService.getUserInformation().subscribe(ok => {
-      this.user=ok
+      this.user = ok
     })
   }
 }

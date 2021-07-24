@@ -18,7 +18,11 @@
         </div>
         <div class="show--hide--table">
           <p><b>Show/Hide table</b></p>
-          <mat-checkbox class="table--hidden" [(ngModel)]="isInUse">
+          <mat-checkbox
+            class="table--hidden"
+            (change)="toggleCheckValue()"
+            [checked]="isInUse"
+          >
             In use
           </mat-checkbox>
         </div>

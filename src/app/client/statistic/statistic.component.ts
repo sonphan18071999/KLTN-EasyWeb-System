@@ -29,7 +29,6 @@ export class StatisticComponent implements OnInit {
     });
   }
   getPaginationListDB(event: any) {
-    console.log(event)
       let startIndex = (event.pageIndex) * event.pageSize;
       let endIndex = (event.pageIndex) * event.pageSize + event.pageSize;
       this.paginationListDBRegistered = this.fetchedListDBRegister.slice(startIndex, endIndex);

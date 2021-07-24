@@ -18,7 +18,7 @@ export class DialogEditTableItemComponent implements OnInit {
   actionUpdate: boolean = false;
   actionCreate: boolean = false;
   actionDelete: boolean = false;
-  isInUse: boolean = false;
+  isInUse: boolean = true;
   idDbRegistered: any = '';
   entityConfigure: any = null;
   constructor(
@@ -32,6 +32,7 @@ export class DialogEditTableItemComponent implements OnInit {
     this.idDbRegistered = localStorage.getItem('idDbRegistered');
     this.checkStatusActions();
     this.isInUse = this.checkIsHiddenEntity();
+    console.log(this.data)
   }
 
   checkIsHiddenEntity() {
@@ -60,6 +61,8 @@ export class DialogEditTableItemComponent implements OnInit {
     if (this.data.explicitName.length <= 0) {
       this.toast.error(`Explicit name can't be empty`, `EasyWeb: Information`);
     }
+
+    console.log(this.isInUse)
     let actions = this.getStringStatusActions();
     this.entityConfigure = {
       name: this.data.name,
@@ -68,7 +71,7 @@ export class DialogEditTableItemComponent implements OnInit {
       actionGroup: actions,
       id: this.data.key,
     };
-    this.configureEntity
+    await this.configureEntity
       .updateEntityConfigure(this.idDbRegistered, this.entityConfigure)
       .subscribe((ok) =>
         this.toast.success(
@@ -77,6 +80,13 @@ export class DialogEditTableItemComponent implements OnInit {
         )
       );
   }
+
+  toggleCheckValue() {
+    // this.isInUse = !this.isInUse;
+    console.log(this.isInUse)
+    return this.isInUse
+  }
+
   getStringStatusActions() {
     let actions = '';
     if (this.actionCreate) {

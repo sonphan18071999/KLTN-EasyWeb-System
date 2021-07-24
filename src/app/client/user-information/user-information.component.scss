@@ -20,9 +20,7 @@ $textColor: rgb(54, 159, 217);
   padding-bottom: 2em;
   width: 100%;
 }
-.input-group {
-  width: 70%;
-}
+
 ::ng-deep .mat-focused {
   color: $textColor !important;
 }

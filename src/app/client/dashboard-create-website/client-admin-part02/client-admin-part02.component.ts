@@ -83,9 +83,9 @@ export class ClientAdminPart02Component implements OnInit {
     
   }
 
-  getAllTableConfigure(){
+  async getAllTableConfigure(){
     var idDbRegistered = localStorage.getItem("idDbRegistered");
-    this.databaseTableConfigService.fetchTableConfig(idDbRegistered).subscribe(ok=>{
+    await this.databaseTableConfigService.fetchTableConfig(idDbRegistered).subscribe(ok=>{
       this.databaseTableConfigService.setTableConfig(ok);
       this.allEntityDbRegister=ok;
     });
@@ -98,12 +98,12 @@ export class ClientAdminPart02Component implements OnInit {
       this.itemChoosed = item
     }
   }
-  openDialogEdit(){
+  async openDialogEdit(){
     const dialogRef = this.dialog.open(DialogEditTableItemComponent,{
       data:{name:this.itemChoosed.name,key:this.itemChoosed.id, explicitName:this.itemChoosed.explicitName, actions:this.itemChoosed.actionGroup,isHidden:this.itemChoosed.isHidden}
     });
-    dialogRef.afterClosed().subscribe(result => {
-      this.getAllTableConfigure()
+    await dialogRef.afterClosed().subscribe(result => {
+     this.getAllTableConfigure()
       this.itemChoosed=null
     });
   }

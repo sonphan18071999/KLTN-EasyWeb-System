@@ -1,11 +1,12 @@
 <div class="user__information">
   <mat-card class="card__information">
-    <h2 class="title">User Information</h2>
-    <p class="sub__title">
+    <h2 class="title px-4">User Information</h2>
+    <p class="sub__title px-4">
       <i>Your information will alway be safe with EasyWeb</i>
     </p>
-    <div class="user__last">
-      <form class="input-group mb-3">
+    <hr class="mx-4" style="border-color: rgb(54, 159, 217)" />
+    <div class="user__last mt-4">
+      <form class="input-group mb-3 px-4">
         <mat-form-field class="form--ahalf">
           <mat-label class="mat__label">First name</mat-label>
           <input
@@ -18,7 +19,7 @@
           />
         </mat-form-field>
 
-        <mat-form-field class="form--ahalf">
+        <mat-form-field class="form--ahalf px-4 pr-0">
           <mat-label class="mat__label">Last name</mat-label>
           <input
             matInput
@@ -31,7 +32,7 @@
         </mat-form-field>
       </form>
     </div>
-    <mat-form-field class="input-group mb-3">
+    <mat-form-field class="input-group mb-3 px-4">
       <mat-label class="mat__label"> User name </mat-label>
       <input
         matInput
@@ -42,7 +43,7 @@
         disabled
       />
     </mat-form-field>
-    <mat-form-field class="input-group mb-3">
+    <mat-form-field class="input-group mb-3 px-4">
       <mat-label class="mat__label"> Email </mat-label>
       <input
         matInput
@@ -55,37 +56,16 @@
         disabled
       />
     </mat-form-field>
-    <mat-form-field class="input-group mb-3">
-      <mat-label class="mat__label"> Password </mat-label>
-      <input
-        matInput
-        type="password"
-        placeholder="Password"
-        [(ngModel)]="user.password"
-        [ngModelOptions]="{ standalone: true }"
-        class="input"
-        value="user.password"
-        disabled
-      />
-    </mat-form-field>
-    <p>
+
+    <div class="px-4 mb-4">
       <button
         mat-stroked-button
-        class="btn__back"
+        class="btn__back mr-4 pl-4 pr-4"
         routerLinkActive="router-link-active"
       >
         <mat-icon>edit</mat-icon>
         Edit
       </button>
-      <button
-        mat-stroked-button
-        class="btn__back"
-        [routerLink]="['/client/admin/index']"
-        routerLinkActive="router-link-active"
-      >
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Back</span>
-      </button>
-    </p>
+    </div>
   </mat-card>
 </div>

@@ -40,7 +40,7 @@ export class DatabaseService {
   }
   saveBussinessName(id: any, databaseName: string) {
     let header = this.GetHeader()
-    return this.httpClient.put<any>(this.rootApiService.URL + 'DbConnection/RegisterBussinessName?dbGuid=' + id + '&bussinessName=' + databaseName,{headers:header});
+    return this.httpClient.put<any>(this.rootApiService.URL + `DbConnection/RegisterBussinessName?dbGuid=` + `${id}` + `&bussinessName=` + `${databaseName}`,{headers:header});
   }
 
   registerNewUser(user:User){
