@@ -1,0 +1,16 @@
+$colorText_Border: rgb(54, 159, 217);
+$backgroundColor: rgb(36, 48, 60);
+
+.email__dialog {
+  background-color: $backgroundColor;
+  color: $colorText_Border;
+  width: 30em;
+  border-radius: 10px;
+}
+
+.email__dialog .mat-dialog-container {
+  padding: 0 !important;
+}
+
+.ng-star-inserted {
+}

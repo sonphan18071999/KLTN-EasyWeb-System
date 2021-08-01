@@ -56,7 +56,6 @@
           </button>
           <button
             class="btn button button-secondary float-right btn__submit pad2"
-            [disabled]="selectedItem === null"
             (click)="SubmitColumns()"
           >
             <i class="fas fa-upload"></i> Submit
@@ -130,7 +129,7 @@
             <td *ngIf="!item.isHidden">{{ item.displayComponent }}</td>
             <td *ngIf="!item.isHidden">{{ item.isHidden }}</td>
             <td *ngIf="!item.isHidden">{{ item.isNullable }}</td>
-            <td *ngIf="!item.isHidden">
+            <td>
               <button class="button button-primary">View Detail</button>
             </td>
           </tr>

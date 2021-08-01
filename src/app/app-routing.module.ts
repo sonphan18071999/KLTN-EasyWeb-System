@@ -10,11 +10,13 @@ import { DashboardCreateWebsiteIndexComponent } from '../app/client/dashboard-cr
 import { StatisticComponent } from './client/statistic/statistic.component';
 import { ClientRegisterComponent } from './client/guess/client-register/client-register.component';
 import { UserInformationComponent } from './client/user-information/user-information.component';
+import { EmailDialogComponent } from './client/dashboard-create-website/client-admin-part04/email-dialog/email-dialog.component';
 
 const routes: Routes = [
   { path: '', component: ClientIndexComponent },
   { path: 'login', component: ClientLoginComponent },
   { path: 'register-account', component: ClientRegisterComponent },
+  { path: 'email', component: EmailDialogComponent },
   { path: 'client/admin', component:ClientAdminDashboardComponent,
     children:[
     {path:'index',component:ClientAdminDashboardIndexComponent},

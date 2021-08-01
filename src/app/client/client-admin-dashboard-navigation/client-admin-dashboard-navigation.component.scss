@@ -1,49 +1,59 @@
-
-.navigation-container{
-    width: 100%;
-    background-color: #24303C;
-    height: 100%;
-    overflow: hidden;
+.navigation-container {
+  width: 28em;
+  background-color: #24303c;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  margin-top: 5em;
 }
-ul{
-    padding-top: 2em;
-    list-style: none;
-    margin-left: 0px;
-    padding-left: 0px;
+ul {
+  padding-top: 2em;
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
 }
-ul li{
-    width: 100%;
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    color: rgb(82, 181, 235);
-    font-size: 15px;
-    height: 60px;
-    outline: none;
-}
-
-ul li i{
-    float:left;
-    padding-left: 50px;
-    margin-right: -100px;
-    color: rgb(82, 181, 235);
-    font-size: 18px;
-}
-span{
-    float: left;
-    margin-left: 110px;
+ul li {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: rgb(82, 181, 235);
+  font-size: 15px;
+  height: 60px;
+  outline: none;
 }
 
-ul li:hover{
-    cursor: pointer;
-    background-color:  rgb(172, 64, 172);
-    color: white;
+ul li i {
+  float: left;
+  padding-left: 50px;
+  margin-right: -100px;
+  color: rgb(82, 181, 235);
+  font-size: 18px;
+}
+span {
+  float: left;
+  margin-left: 110px;
 }
 
-
-.button-exit{
-    position: relative;
-    bottom: 0px;
-    
+ul li:hover {
+  cursor: pointer;
+  background-color: rgb(172, 64, 172);
+  color: white;
 }
 
+.button-exit {
+  position: relative;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 1440px) {
+  .navigation-container {
+    width: 21em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation-container {
+    width: 16em;
+  }
+}

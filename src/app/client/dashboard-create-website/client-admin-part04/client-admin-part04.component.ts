@@ -31,21 +31,23 @@ export class ClientAdminPart04Component implements OnInit {
   }
   async onSubmitUserInfo() {
     this.previewService.dataPreview.bussinessName = this.bussinessName;
-
     this.pushItemToArr('bussinessName',this.bussinessName)
     this.pushItemToArr('location', this.location)
     this.pushItemToArr('email', this.email)
     this.pushItemToArr('contact', this.contact.toString())
     this.pushItemToArr('briefDescription', this.briefDescription)
-    // this.pushItemToArr('imageSrc',this.imageSrc);
     await this.databaseService.saveBussinessInformation(this.idDbRegistered, this.arrObj).subscribe(info => {
-        this.databaseService.saveBussinessName(this.idDbRegistered,this.bussinessName);
         this.databaseService.getGeneratorProject(this.idDbRegistered).subscribe(ok => {
           this.dialog.open(EmailDialogComponent);
         });
     }, er => {
         this.toast.warning("Something went wrong","Easy Web: Warning")
     })
+    await this.databaseService.saveBussinessName(this.idDbRegistered, this.bussinessName).subscribe(data => {
+      console.log(data)
+    }, er => {
+      console.log(er)
+    });
 
   }
   pushItemToArr(name:any, value:any){

@@ -168,6 +168,11 @@
   mat-label {
     color: rgb(54, 159, 217) !important;
   }
+
+  ::ng-deep .mat-dialog-container {
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
 }
 @media only screen and (min-width: 1439px) {
   .group-input-Part04-top-right {
