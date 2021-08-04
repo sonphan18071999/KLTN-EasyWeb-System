@@ -1,3 +1,4 @@
+import { ContentObserver } from '@angular/cdk/observers';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
@@ -43,11 +44,18 @@ export class ClientAdminPart04Component implements OnInit {
     }, er => {
         this.toast.warning("Something went wrong","Easy Web: Warning")
     })
+
     await this.databaseService.saveBussinessName(this.idDbRegistered, this.bussinessName).subscribe(data => {
       console.log(data)
     }, er => {
       console.log(er)
     });
+    
+    await this.databaseService.uploadLogoBusiness(this.idDbRegistered, this.imageSrc).subscribe(data => {
+      console.log(data);
+    }, er => {
+      console.log(er)
+    })
 
   }
   pushItemToArr(name:any, value:any){

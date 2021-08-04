@@ -39,7 +39,7 @@ export class DatabaseService {
     return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/CreateMasterConfig?dbGuid='+idDatabaseRegister,obj,{headers:header});
   }
   saveBussinessName(id: any, databaseName: string) {
-    let header = this.GetHeader()
+    let header = this.GetHeader();
     return this.httpClient.put<any>(this.rootApiService.URL + `DbConnection/RegisterBussinessName?dbGuid=${id}&bussinessName=${databaseName}`,{headers:header});
   }
 
@@ -48,12 +48,12 @@ export class DatabaseService {
   }
 
   uploadLogoBusiness(idDatabaseRegister:any,img:any){
-    let header = this.GetHeader()
-    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/UploadImage?dbGuid='+idDatabaseRegister,img,{headers:header});
+    let header = this.GetHeader();
+    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/UploadImage?dbGuid='+idDatabaseRegister,{"img":img},{headers:header});
   }
 
   getGeneratorProject(idDatabaseRegister:any){
-    let header = this.GetHeader()
+    let header = this.GetHeader();
     return this.httpClient.get<any>('http://vuonghuynhsolutions.tech:5000/create-api/' + idDatabaseRegister, { headers: header });
   }
 
