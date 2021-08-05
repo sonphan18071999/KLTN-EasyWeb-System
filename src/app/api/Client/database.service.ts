@@ -25,22 +25,26 @@ export class DatabaseService {
   }
 
   registerClientDatabase(obj:any){
-    let header = this.GetHeader();
-     return this.httpClient.post<any>(this.rootApiService.URL+'DbConnection/RegisterNewDatabase',obj,{headers:header});
+     return this.httpClient.post<any>(this.rootApiService.URL+'DbConnection/RegisterNewDatabase',obj,{headers:this.GetHeader()});
   }
   
+  createRegisterClientDatabase(idDb: any) {
+    return this.httpClient.post<any>(this.rootApiService.URL+`CustomerDbProcess/CreateSystemTable?dbGuid=` +`${idDb}`,{},{headers:this.GetHeader()});
+  }
+
+  populateDefaultConfig(idDb: any) {
+    return this.httpClient.get<any>(this.rootApiService.URL+`CustomerDbProcess/PopulateDefaultSchemaConfig?dbGuid=` +`${idDb}`,{headers:this.GetHeader()});
+  }
+
   getListDatabaseRegistered(){
-    let header = this.GetHeader();
-    return this.httpClient.get<any>(this.rootApiService.URL+'CustomerDbStatistics/GetStatistics',{headers:header});
+    return this.httpClient.get<any>(this.rootApiService.URL+'CustomerDbStatistics/GetStatistics',{headers:this.GetHeader()});
   }
 
   saveBussinessInformation(idDatabaseRegister:any, obj:any){
-    let header = this.GetHeader()
-    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/CreateMasterConfig?dbGuid='+idDatabaseRegister,obj,{headers:header});
+    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/CreateMasterConfig?dbGuid='+idDatabaseRegister,obj,{headers:this.GetHeader()});
   }
   saveBussinessName(id: any, databaseName: string) {
-    let header = this.GetHeader();
-    return this.httpClient.put<any>(this.rootApiService.URL + `DbConnection/RegisterBussinessName?dbGuid=${id}&bussinessName=${databaseName}`,{headers:header});
+    return this.httpClient.put<any>(this.rootApiService.URL + `DbConnection/RegisterBussinessName?dbGuid=${id}&bussinessName=${databaseName}`,{headers:this.GetHeader()});
   }
 
   registerNewUser(user:User){
@@ -48,17 +52,14 @@ export class DatabaseService {
   }
 
   uploadLogoBusiness(idDatabaseRegister:any,img:any){
-    let header = this.GetHeader();
-    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/UploadImage?dbGuid='+idDatabaseRegister,{"img":img},{headers:header});
+    return this.httpClient.post<any>(this.rootApiService.URL+'MasterConfig/UploadImage?dbGuid='+idDatabaseRegister,{"img":img},{headers:this.GetHeader()});
   }
 
   getGeneratorProject(idDatabaseRegister:any){
-    let header = this.GetHeader();
-    return this.httpClient.get<any>('http://vuonghuynhsolutions.tech:5000/create-api/' + idDatabaseRegister, { headers: header });
+    return this.httpClient.get<any>('http://vuonghuynhsolutions.tech:5000/create-api/' + idDatabaseRegister, { headers: this.GetHeader() });
   }
 
   getUserInformation() {
-    let header = this.GetHeader()
-    return this.httpClient.get<any>(this.rootApiService.URL+'User',{headers:header})
+    return this.httpClient.get<any>(this.rootApiService.URL+'User',{headers:this.GetHeader()})
   }
 }

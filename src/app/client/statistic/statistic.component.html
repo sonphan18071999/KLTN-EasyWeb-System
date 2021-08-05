@@ -1,10 +1,12 @@
 <div class="statistic__container">
   <div class="statistic">
-    <mat-card class="card__statistic">
+    <mat-card class="card__statistic mb-3">
       <h1 class="h1__title"><b>Statistic</b></h1>
       <p class="sub_title">
         <i>All of your database processed and processing</i>
       </p>
+    </mat-card>
+    <mat-card class="card__statistic">
       <div *ngIf="paginationListDBRegistered.length <= 0">
         <p class="sub_title">There is no records to shown...</p>
       </div>

@@ -44,7 +44,7 @@ export class ClientAdminPart04Component implements OnInit {
     }, er => {
         this.toast.warning("Something went wrong","Easy Web: Warning")
     })
-
+    
     await this.databaseService.saveBussinessName(this.idDbRegistered, this.bussinessName).subscribe(data => {
       console.log(data)
     }, er => {
