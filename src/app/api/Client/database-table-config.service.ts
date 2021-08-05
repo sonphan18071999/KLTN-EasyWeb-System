@@ -10,7 +10,7 @@ export class DatabaseTableConfigService {
   token:any;
   headers: HttpHeaders = new HttpHeaders();
   rootApiService = new RootApiService();
-  tableInDatabase=[]
+  tableInDatabase:any
 
   constructor(private httpClient:HttpClient) { 
 
@@ -32,8 +32,9 @@ export class DatabaseTableConfigService {
   setTableConfig(data:any){
     return this.tableInDatabase=data;
   }
-  getTableConfig(){
-    return this.tableInDatabase;
+  
+  getTableConfig() {
+    return this.tableInDatabase.filter((item:any)=>!(item.isHidden));
   }
   getColumnInTableById(guid:any, tableId:any){
     var header = this.GetHeader();

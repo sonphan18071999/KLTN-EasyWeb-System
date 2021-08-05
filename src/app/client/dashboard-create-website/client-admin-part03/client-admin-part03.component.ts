@@ -25,6 +25,7 @@ export class ClientAdminPart03Component implements OnInit {
 
   ngOnInit(): void {
     this.listTables = this.databaseTableConfigService.getTableConfig();
+    console.log(this.listTables)
   }
 
   chooseItem(item: any) {
